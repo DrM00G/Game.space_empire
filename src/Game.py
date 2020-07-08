@@ -14,7 +14,7 @@ class Game:
         self.planets = []
 
     def generate(self):
-        self.players = [Player(self.CP,i + 1,Game) for i in range(2)]
+        self.players = [Player(self.CP,i + 1,self) for i in range(2)]
         self.planets = [Planet(coord) for coord in self.player_coords]
         for s in range(2):
             self.players[s].army_set_up(self.player_coords[s])
