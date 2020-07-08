@@ -1,5 +1,4 @@
 import random
-from Game import Game
 from Planet import Planet
 from Units.Unit import Unit
 from Units.Scout import Scout
@@ -13,7 +12,7 @@ from Units.ShipYard import ShipYard
 from Units.Base import Base
 from Units.Decoy import Decoy
 class Player:
-    def __init__(self,playerCP,PlayerNumb):
+    def __init__(self,playerCP,PlayerNumb,Game):
       self.units = [] 
       self.playerCP = 20
       self.PlayerNumb = PlayerNumb
@@ -21,6 +20,8 @@ class Player:
       self.attack_technology = 0
       self.speed_technology = 0
       self.ship_yard_technology = 1
+      self.Game = Game
+
 
     def get_credits(self,planets):
       for planet in planets:
@@ -36,7 +37,7 @@ class Player:
 
     def new_unit(self):
       techs = [self.attack_technology,self.defense_technology,self.speed_technology]
-      for planet in game.planets:
+      for planet in Game.planets:
         coords = [planet.coords[0],planet.coords[1]]
         army_choices=[[Scout(coords,self,len(self.units),techs),6,.5],[Decoy(coords,self,len(self.units),techs),1,.5],[ShipYard(coords,self,len(self.units),techs),6,.5],[Colony_ship(coords,self,len(self.units),techs),8,.5],[Destroyer(coords,self,len(self.units),techs),9,1],
                       [Cruiser(coords,self,len(self.units),techs),12,1.5],[Battlecruiser(coords,self,len(self.units),techs),15,2],[Battleship(coords,self,len(self.units),techs),20,2.5],[Dreadnaught(coords,self,len(self.units),techs),24,3],
