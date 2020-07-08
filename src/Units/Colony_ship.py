@@ -1,3 +1,4 @@
+from Units.Unit import Unit
 class Colony_ship(Unit):
     def __init__(self, coords, player,unit_number,tech):#0 is att, 1 is def, 2 is spd, not sure how to do it differantly while keeping the army set up code clean
         super().__init__(coords, player)

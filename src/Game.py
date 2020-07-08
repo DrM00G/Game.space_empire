@@ -1,6 +1,8 @@
 import random
-import matplotlib.pyplot as plt
-from matplotlib.ticker import MultipleLocator
+from Player import Player
+from Planet import Planet
+
+
 
 class Game:
     def __init__(self):
@@ -53,38 +55,7 @@ class Game:
 
 
 
-    def labeled_scatter_plot(self, gridsize=[7,7], fontsize=10):
-        fig, ax = plt.subplots()
-        ax.xaxis.set_minor_locator(MultipleLocator(0.5))
-        ax.yaxis.set_minor_locator(MultipleLocator(0.5))
-        team_color = "red"
-        for i in range(len(self.players)):
-            for unit in self.players[i].units:
-                if unit.exist == True:
-                    if i==0:
-                        team_color = 'red'
-                    else:
-                        team_color = 'blue'
-                    x = unit.coordinates[0]
-                    y = unit.coordinates[1]
-                    color = team_color
-                    label = unit.name+""+str(unit.unit_number)
-                    ax.text(x, y, label, fontsize=fontsize, color=color, horizontalalignment='center', verticalalignment='center')
-
-        for planet in self.planets:
-            if planet.colony_status == False:
-              plt.gca().add_patch(plt.Circle(planet.coords, radius=.5, fc='orange'))
-            elif planet.player_control == 1:
-              plt.gca().add_patch(plt.Circle(planet.coords, radius=.5, fc='purple'))
-            elif planet.player_control == 2:
-              plt.gca().add_patch(plt.Circle(planet.coords, radius=.5, fc='green'))
-
-        x_max, y_max = gridsize
-        plt.xlim(-0.5 ,x_max-0.5)
-        plt.ylim(-0.5, y_max-0.5)
-
-        plt.grid(which='minor')
-        plt.show()
+    
 
 
 

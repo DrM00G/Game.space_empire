@@ -1,3 +1,5 @@
+from Units.Unit import Unit
+
 class Scout(Unit):
     def __init__(self, coords, player,unit_number,tech):
         super().__init__(coords, player)
