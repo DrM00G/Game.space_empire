@@ -12,10 +12,10 @@ from Units.ShipYard import ShipYard
 from Units.Base import Base
 from Units.Decoy import Decoy
 class Player:
-    def __init__(self,playerCP,PlayerNumb,Game):
+    def __init__(self,playerCP.player_num,Game):
       self.units = [] 
       self.playerCP = 20
-      self.PlayerNumb = PlayerNumb
+      self.player_num =.player_num
       self.defense_technology = 0
       self.attack_technology = 0
       self.speed_technology = 0
@@ -25,7 +25,7 @@ class Player:
 
     def get_credits(self,planets):
       for planet in planets:
-        if planet.player_control == self.PlayerNumb:
+        if planet.player_control == self.player_num:
             self.playerCP = self.playerCP + planet.health
 
     def spend_credits(self):
@@ -43,7 +43,7 @@ class Player:
                       [Cruiser(coords,self,len(self.units),techs),12,1.5],[Battlecruiser(coords,self,len(self.units),techs),15,2],[Battleship(coords,self,len(self.units),techs),20,2.5],[Dreadnaught(coords,self,len(self.units),techs),24,3],
                       [Base(coords,self,len(self.units),techs),0,1]]
         hull_capacity=0
-        if planet.player_control == self.PlayerNumb:
+        if planet.player_control == self.player_num:
           hull_capacity = planet.ship_yards*self.ship_yard_technology
           choice = random.randint(0, 9)
           if self.playerCP >= army_choices[choice][1] and hull_capacity >= army_choices[choice][2]*2:
@@ -72,25 +72,25 @@ class Player:
         if self.attack_technology < 3 and self.playerCP - ((self.attack_technology*10)+20) >= 0:
           self.playerCP = self.playerCP - ((self.attack_technology*10)+20)
           self.attack_technology = self.attack_technology + 1
-          print("Player "+str(self.PlayerNumb)+": ^Attack Technology: "+str(self.attack_technology-1)+"->"+str(self.attack_technology))
+          print("Player "+str(self.player_num)+": ^Attack Technology: "+str(self.attack_technology-1)+"->"+str(self.attack_technology))
 
       elif upgrade_catagory == 0:#defense
         if self.defense_technology < 3 and self.playerCP - ((self.defense_technology*10)+20) >= 0:
           self.playerCP = self.playerCP - ((self.defense_technology*10)+20)
           self.defense_technology = self.defense_technology + 1
-          print("Player "+str(self.PlayerNumb)+": ^Defense Technology: "+str(self.defense_technology-1)+"->"+str(self.defense_technology))
+          print("Player "+str(self.player_num)+": ^Defense Technology: "+str(self.defense_technology-1)+"->"+str(self.defense_technology))
 
       elif upgrade_catagory == 2:#sped
         if self.speed_technology < 2 and self.playerCP - ((self.speed_technology*30)+90) >= 0:
           self.playerCP = self.playerCP - ((self.speed_technology*30)+90)
           self.speed_technology = self.speed_technology + 1
-          print("Player "+str(self.PlayerNumb)+": ^Speed Technology: "+str(self.speed_technology-1)+"->"+str(self.speed_technology))
+          print("Player "+str(self.player_num)+": ^Speed Technology: "+str(self.speed_technology-1)+"->"+str(self.speed_technology))
 
       elif upgrade_catagory == 3:#ship size
        if self.ship_yard_technology < 6 and self.playerCP - ((self.ship_yard_technology*5)+10) >= 0:
         self.playerCP = self.playerCP - ((self.ship_yard_technology*5)+10)
         self.ship_yard_technology = self.ship_yard_technology + 1
-        print("Player "+str(self.PlayerNumb)+": ^Ship Size Technology: "+str(self.ship_yard_technology-1)+"->"+str(self.ship_yard_technology))
+        print("Player "+str(self.player_num)+": ^Ship Size Technology: "+str(self.ship_yard_technology-1)+"->"+str(self.ship_yard_technology))
 
     def decay(self):
       for unit in self.units:
