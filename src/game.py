@@ -6,33 +6,28 @@ from players.rand_player import RandPlayer
 from planet import Planet
 from board import Board
 from combat_engine import Combat_Engine
+from movement_engine import MovementEngine
+from EconomicEngine import Economic_Engine
 
 class Game:
-    def __init__(self,does_print, predetermined_roll = None):
+    def __init__(self,does_print, predetermined_roll = None,planet_amount=9):
         self.predetermined_roll = predetermined_roll
         self.does_print = does_print
         self.turn_numb = 0
         self.winner = None
-        self.CP = 20
+        self.CP = 0
         self.players = 2
-        self.player_coords = [[2,0],[2,4]] 
+        self.player_coords = [[2, 0], [2, 4]]
         self.planets = []
         self.board = Board()
         self.combat_engine = Combat_Engine(self)
+        self.movement_engine = MovementEngine(self)
+        self.economic_engine = Economic_Engine(self)
+        self.planet_amount=planet_amount
 
-    # def update_board(self):#need to change
-    #   self.board.positions = [[[[],[]] for x in range(7)] for y in range(7)]
-    #   for planet in self.planets:
-    #     if planet.colony_status == True:
-    #       self.board.positions[planet.coords[1]][planet.coords[0]][0].append(["Colony",planet.player_control,planet])
-    #     else:
-    #       self.board.positions[planet.coords[1]][planet.coords[0]][0].append(["Planet",planet.colony_status,planet])
-    #   for player in self.players:
-    #     for unit in player.units:
-    #       if unit.exist == True:
-    #         self.board.positions[unit.coordinates[1]][unit.coordinates[0]][1].append([unit.name,player.player_num,unit])
-      
 
+
+ 
 
     def generate(self):
         self.players = [CombatPlayer(self.CP,1,self,True),CombatPlayer(self.CP,2,self,True)]
@@ -118,9 +113,9 @@ class Game:
 
     def economic_phase(self):
         for i in range(len(self.players)):
-          self.players[i].get_credits(self.planets)
-          self.players[i].decay()
-          self.players[i].spend_credits()
+            self.economic_engine.get_credits(self.planets,self.players[i])
+            self.economic_engine.decay(self.players[i])
+            self.economic_engine.spend_credits(self.players[i])
         self.add_colonies()
         self.establish_shipyard()
 
@@ -128,10 +123,47 @@ class Game:
         self.turn_numb += 1
         self.boolean_print("----------movement Phase---------")
         self.movement_phase()
-        self.boolean_print("--------do da combat---------")
+        self.boolean_print("--------Combat phase---------")
         self.attack_phase(False)
-        self.boolean_print("---------$$$ TIME-----------")
+        self.boolean_print("---------Economic Phase-----------")
         self.economic_phase()
+
+    def locate_combat(self):
+        coords = []
+        for y in self.board.positions:
+            for x in y:
+                if len(x[1]) > 1:
+                    for unit_index in range(len(x[1]) - 1):
+                      for other_unit_index in range(len(x[1]) - 1):
+                        if x[1][unit_index][1] != x[1][other_unit_index][1]:
+                            if x[1][unit_index][2].exist == True and x[1][other_unit_index][2].exist == True:
+                                coords.append([
+                                    y.index(x),
+                                    self.board.positions.index(y)
+                                ])
+                elif len(x[1]) + len(x[0]) > 1:
+                    for planet in x[0]:
+                        if planet[1] != False:
+                            for unit in x[1]:
+                                if (unit[0] != "Colony ship"
+                                        and unit[0] != "ShipYard"
+                                        and unit[0] != "Decoy"):
+                                    if (planet[1] != unit[1]):
+                                        coords.append([
+                                            y.index(x),
+                                            self.board.positions.index(y)
+                                        ])
+        return coords
+
+    def show_winner(self):
+        self.boolean_print("Turn: " + str(self.turn_numb))
+        for player in self.players:
+            self.boolean_print("Player " + str(player.player_num) + " Techs:")
+            self.boolean_print("Defense: " + str(player.defense_technology) +
+                               ", Attack: " + str(player.attack_technology) +
+                               ", Speed: " + str(player.speed_technology) +
+                               ", Ship size: " +
+                               str(player.ship_yard_technology))
         
   
     def locate_combat(self):
@@ -169,6 +201,12 @@ class Game:
     def run_to_completion(self, round_limit):
         self.establish_shipyard()
         while True:
+            player1_check = [
+                i for i in self.players[0].units if i.exist is not False
+            ]
+            player2_check = [
+                i for i in self.players[1].units if i.exist is not False
+            ]
             player1_check = [i for i in self.players[0].units if i.exist is not False]
             player2_check = [i for i in self.players[1].units if i.exist is not False]
             if self.turn_numb >= round_limit:
@@ -185,6 +223,6 @@ class Game:
             if len(player2_check) == 0:
                 self.winner = "Winner: Player 1"
                 break
-            
+
             self.complete_turn()
             self.state()

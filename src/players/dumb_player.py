@@ -14,6 +14,7 @@ from units.decoy import Decoy
 
 
 
+
 class DumbPlayer(Player):
     def __init__(self,playerCP,player_num,Game,dumb):
         super().__init__(self,player_num,Game,dumb)
