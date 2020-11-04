@@ -11,3 +11,4 @@ player_0_scout_locations = [tuple(u.coordinates) for u in game_state.players[0].
 player_1_scout_locations = [tuple(u.coordinates) for u in game_state.players[1].units if u.name == 'Scout']
 assert set(player_0_scout_locations) == set([(4,0), (4,0), (4,0)]),"Coords are "+str(player_0_scout_locations)
 assert set(player_1_scout_locations) == set([(4,4), (4,4), (4,4)]),"Coords are "+str(player_0_scout_locations)
+#Still working on getting it working
