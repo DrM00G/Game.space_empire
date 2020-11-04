@@ -83,6 +83,8 @@ class Game:
       if self.does_print:
         self.boolean_print(str)
 
+
+
     def state(self):
         self.boolean_print("Turn: "+str(self.turn_numb))
         for i in range(len(self.players)):
@@ -128,6 +130,10 @@ class Game:
         self.boolean_print("---------Economic Phase-----------")
         self.economic_phase()
 
+    def generate_state(self):
+      copy_game = self
+      return copy_game
+  
     def locate_combat(self):
         coords = []
         for y in self.board.positions:
