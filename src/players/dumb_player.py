@@ -16,8 +16,8 @@ from units.decoy import Decoy
 
 
 class DumbPlayer(Player):
-    def __init__(self,playerCP,player_num,Game,dumb):
-        super().__init__(self,player_num,Game,dumb)
+    def __init__(self,playerCP,player_num,Game,stratagy):
+        super().__init__(self,player_num,Game,stratagy)
         self.player_type = "dumb"
         self.playerCP = playerCP
         self.player_num = player_num
@@ -26,7 +26,7 @@ class DumbPlayer(Player):
         self.speed_technology = 0
         self.ship_yard_technology = 1
         self.Game = Game
-        self.dumb_status = dumb
+        self.dumb_status = stratagy
 
     def spend_credits(self):
       self.new_unit()

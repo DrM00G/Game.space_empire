@@ -10,6 +10,8 @@ from units.colony_ship import Colony_ship
 from units.ship_yard import ShipYard
 from units.base import Base
 from units.decoy import Decoy
+from strategies.dumb_strategy import DumbStrategy
+
 
 
 class Player:
@@ -22,7 +24,9 @@ class Player:
         self.speed_technology = 0
         self.ship_yard_technology = 1
         self.Game = Game
-        self.stratagy = stratagy
+        if stratagy == "DumbStrategy":
+          self.stratagy = DumbStrategy(self.player_num)
+
 
     def army_set_up(self, coords):
         techs = [
