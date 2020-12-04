@@ -26,6 +26,7 @@ class Player:
         self.Game = Game
         if stratagy == "DumbStrategy":
           self.strategy = DumbStrategy(self.player_num)
+          self.state_strat = "Dumb"
 
 
     def army_set_up(self, coords):
@@ -53,14 +54,14 @@ class Player:
 #Everything from here down was taken from "rand_player"
 
 
-    def spend_credits(self):
-        decision = self.strategy.decide_purchases()[0]
+    def spend_credits(self,game_state):
+        decision = self.strategy.decide_purchases(game_state)[0]
         if decision == "Unit Buy":
-            self.new_unit()
+            self.new_unit(game_state)
         else:
-            self.unit_upgrade()
+            self.unit_upgrade(game_state)
 
-    def new_unit(self):
+    def new_unit(self,game_state):
         techs = [
             self.attack_technology, self.defense_technology,
             self.speed_technology
@@ -82,7 +83,7 @@ class Player:
             hull_capacity = 0
             if planet.player_control == self.player_num:
                 hull_capacity = planet.ship_yards * self.ship_yard_technology
-                choice = self.strategy.decide_purchases()[1]
+                choice = self.strategy.decide_purchases(game_state)[1]
                 if self.playerCP >= army_choices[choice][
                         1] and hull_capacity >= army_choices[choice][2] * 2:
                     if choice == 9:
@@ -91,9 +92,9 @@ class Player:
                             planet.base_status = 1
                             self.playerCP = self.playerCP - army_choices[
                                 choice][1]
-                            print("made unit:" +
-                                  self.units[len(self.units) - 1].name + " " +
-                                  str(len(self.units)))
+                            # print("made unit:" +
+                            #       self.units[len(self.units) - 1].name + " " +
+                            #       str(len(self.units)))
                             self.Game.board.add_unit_to_board(
                                 self.units[len(self.units) - 1],
                                 self.player_num)
@@ -103,23 +104,23 @@ class Player:
                             self.units.append(army_choices[choice][0])
                             self.playerCP = self.playerCP - army_choices[
                                 choice][1]
-                            print("made unit:" +
-                                  self.units[len(self.units) - 1].name + " " +
-                                  str(len(self.units)))
+                            # print("made unit:" +
+                            #       self.units[len(self.units) - 1].name + " " +
+                            #       str(len(self.units)))
                             self.Game.board.add_unit_to_board(
                                 self.units[len(self.units) - 1],
                                 self.player_num)
                     else:
                         self.units.append(army_choices[choice][0])
                         self.playerCP = self.playerCP - army_choices[choice][1]
-                        print("made unit:" +
-                              self.units[len(self.units) - 1].name + " " +
-                              str(len(self.units)))
+                        # print("made unit:" +
+                        #       self.units[len(self.units) - 1].name + " " +
+                        #       str(len(self.units)))
                         self.Game.board.add_unit_to_board(
                             self.units[len(self.units) - 1], self.player_num)
 
-    def unit_upgrade(self):
-        upgrade_catagory = self.strategy.decide_purchases()[2]  #0:defense 1:offense 2:speed 3: ship yard
+    def unit_upgrade(self,game_state):
+        upgrade_catagory = self.strategy.decide_purchases(game_state)[2]  #0:defense 1:offense 2:speed 3: ship yard
 
         if upgrade_catagory == 1:  #offense
             if self.attack_technology < 1 and self.playerCP - (

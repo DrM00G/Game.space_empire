@@ -56,8 +56,7 @@ class Game:
                   planet[2].colony_status = True
                   planet[2].player_control = unit[1]
                   planet[1] = unit[1]
-                  if self.does_self.boolean_print:
-                    self.boolean_print("Player "+str(planet[2].player_control)+": Creat Colony at "+str(y.index(x))+","+str(self.board.positions.index(y)))
+                  self.boolean_print("Player "+str(planet[2].player_control)+": Creat Colony at "+str(y.index(x))+","+str(self.board.positions.index(y)))
                   planet[0] = "Colony"
                   break
       
@@ -117,7 +116,7 @@ class Game:
         for i in range(len(self.players)):
             self.economic_engine.get_credits(self.planets,self.players[i])
             self.economic_engine.decay(self.players[i])
-            self.economic_engine.spend_credits(self.players[i])
+            self.players[i].spend_credits(self.generate_state())
         self.add_colonies()
         self.establish_shipyard()
 
@@ -131,8 +130,21 @@ class Game:
         self.economic_phase()
 
     def generate_state(self):
-      copy_game = self
-      return copy_game
+      state={"Turn":self.turn_numb,
+      "Players":[
+        {
+          "Player Number": player.player_num,
+          "CP": player.playerCP,
+          "Stratagy": player.state_strat,
+          "Units": [
+            {"Name": unit.name,
+            "Coordinates":unit.coordinates} for unit in player.units
+            ]
+        } for player in self.players
+      ],
+      "Planets":[planet.coords for planet in self.planets]
+      }
+      return state
   
     def locate_combat(self):
         coords = []
