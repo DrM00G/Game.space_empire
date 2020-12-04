@@ -61,50 +61,7 @@ class MovementEngine:
                     elif Move == 4:  #down
                         unit.coordinates = (unit.coordinates[0],
                                             unit.coordinates[1] - 1)
-                else:
-                    if unit.player.player_type != "combat":
-                        if unit.coordinates[1] != 0:
-                            Move = 4
-                        else:
-                            Move = 0
-
-                        unit.player.Game.board.update_position(
-                            unit.player, self, Move)
-
-
-                        if Move == 0:  #stay
-                            unit.coordinates = (unit.coordinates[0],
-                                                unit.coordinates[1])
-                        elif Move == 4:  #down
-                            unit.coordinates = (unit.coordinates[0],
-                                                unit.coordinates[1] - 1)
-                    else:
-                        if unit.coordinates[1] > 2:
-                            Move = 4
-                        elif unit.coordinates[1] < 2:
-                            Move = 3
-                        else:
-                            Move = 0
-
-
-                    if Move == 0:  #stay
-                        unit.player.Game.board.update_position(
-                            unit.player, unit, Move)
-                        unit.coordinates = (unit.coordinates[0],
-                                            unit.coordinates[1])
-                    elif Move == 3:  #up
-                        if unit.coordinates[1] != 6:
-                            unit.player.Game.board.update_position(
-                                unit.player, unit, Move)
-                            unit.coordinates = (unit.coordinates[0],
-                                                unit.coordinates[1] + 1)
-                    elif Move == 4:  #down
-                        if unit.coordinates[1] != 0:
-                            unit.player.Game.board.update_position(
-                                unit.player, unit, Move)
-                            unit.coordinates = (unit.coordinates[0],
-                                                unit.coordinates[1] - 1)
-
+                
 
         unit.player.game.boolean_print("Unit " + str(unit.unit_number) + " (" +
                                        unit.name + ") moves to " +

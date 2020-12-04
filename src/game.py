@@ -30,7 +30,7 @@ class Game:
  
 
     def generate(self):
-        self.players = [CombatPlayer(self.CP,1,self,True),CombatPlayer(self.CP,2,self,True)]
+        self.players = [Player(self.CP,1,self,"DumbStrategy"),Player(self.CP,2,self,"DumbStrategy")]
         self.planets = [Planet(coord,True,self.player_coords.index(coord)+1) for coord in self.player_coords]
         for s in range(2):
             self.players[s].army_set_up(self.player_coords[s])
