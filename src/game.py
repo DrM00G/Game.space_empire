@@ -35,7 +35,7 @@ class Game:
         for s in range(2):
             self.players[s].army_set_up(self.player_coords[s])
 
-        possible_coords = [[x,y] for x in range(7) for y in range(7) if x != 2 or (y != 2 and y != 4)]
+        possible_coords = [[x,y] for x in range(5) for y in range(5) if x != 2 or (y != 2 and y != 4)]
 
         for n in range(7):
           choice = possible_coords[random.randrange(len(possible_coords))]
@@ -105,9 +105,9 @@ class Game:
               if unit.exist == True:
                 if unit.name == 'ShipYard':
                   if unit.landed == False:
-                    unit.move(n+1)
+                    self.movement_engine.move(n+1,unit,self.generate_state())
                 else:
-                  unit.move(n+1)
+                  self.movement_engine.move(n+1,unit,self.generate_state())
 
     def attack_phase(self,test_log):
       self.combat_engine.resolve_combat(self.players,test_log)

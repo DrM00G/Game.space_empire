@@ -24,15 +24,15 @@ class Board:
 
       moving_unit = self.positions[unit.coordinates[1]][unit.coordinates[0]][1].pop(index_pos)
 
-      if Move == 0:#stay
+      if Move == "Stay":#stay
         self.positions[unit.coordinates[1]][unit.coordinates[0]][1].append(moving_unit)
-      elif Move == 1:#right
+      elif Move == "Right":#right
         self.positions[unit.coordinates[1]][unit.coordinates[0]+1][1].append(moving_unit)
-      elif Move == 2:#left
+      elif Move == "Left":#left
         self.positions[unit.coordinates[1]][unit.coordinates[0]-1][1].append(moving_unit)
-      elif Move == 3:#up
+      elif Move == "Up":#up
         self.positions[unit.coordinates[1]+1][unit.coordinates[0]][1].append(moving_unit)
-      elif Move == 4:#down
+      elif Move == "Down":#down
         self.positions[unit.coordinates[1]-1][unit.coordinates[0]][1].append(moving_unit)
       
       # for y in self.positions:

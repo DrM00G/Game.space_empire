@@ -25,7 +25,7 @@ class Player:
         self.ship_yard_technology = 1
         self.Game = Game
         if stratagy == "DumbStrategy":
-          self.stratagy = DumbStrategy(self.player_num)
+          self.strategy = DumbStrategy(self.player_num)
 
 
     def army_set_up(self, coords):
@@ -54,7 +54,7 @@ class Player:
 
 
     def spend_credits(self):
-        decision = self.stratagy.decide_purchases()[0]
+        decision = self.strategy.decide_purchases()[0]
         if decision == "Unit Buy":
             self.new_unit()
         else:
@@ -82,7 +82,7 @@ class Player:
             hull_capacity = 0
             if planet.player_control == self.player_num:
                 hull_capacity = planet.ship_yards * self.ship_yard_technology
-                choice = self.stratagy.decide_purchases()[1]
+                choice = self.strategy.decide_purchases()[1]
                 if self.playerCP >= army_choices[choice][
                         1] and hull_capacity >= army_choices[choice][2] * 2:
                     if choice == 9:
@@ -119,7 +119,7 @@ class Player:
                             self.units[len(self.units) - 1], self.player_num)
 
     def unit_upgrade(self):
-        upgrade_catagory = self.stratagy.decide_purchases()[2]  #0:defense 1:offense 2:speed 3: ship yard
+        upgrade_catagory = self.strategy.decide_purchases()[2]  #0:defense 1:offense 2:speed 3: ship yard
 
         if upgrade_catagory == 1:  #offense
             if self.attack_technology < 1 and self.playerCP - (

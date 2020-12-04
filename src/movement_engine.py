@@ -8,7 +8,7 @@ class MovementEngine:
         self.board = self.game.board
 
 
-    def move(self, phase, unit):
+    def move(self, phase, unit,game_state):
         if unit.exist == True:
             if phase == 1:  #works
                 moves = int((unit.speed) / 4) + 1
@@ -17,56 +17,39 @@ class MovementEngine:
             else:  #works
                 moves = int((unit.speed + 1) / 3)
             # unit.player.game.boolean_print("phase: "+str(phase)+" Speed: "+str(self.speed)+" Moves: "+str(moves))
-            move_made = 0
-            print(self.generate_movement_state(phase))
+            # print(self.generate_movement_state(phase))
             for i in range(moves):
-                if unit.player.dumb_status == False:
 
-                    for n in range(2):
-                        for m in range(2):
-                            if unit.coordinates[
-                                    0] == n * 6 and unit.coordinates[
-                                        1] == m * 6:
-                                Move = random.choice([0, 1 + n, 3 + m])
-                                move_made = 1
 
-                    if move_made == 0:
-                        for n in range(2):
-                            for m in range(2):
-                                if unit.coordinates[n] == m * 6:
-                                    Move = random.choice([
-                                        0, 1 + m * (1 - n), 3 - n,
-                                        4 - n * (1 - m)
-                                    ])
-                                    move_made = 1
+                    # if move_made == 0:
+                    #     Move = random.randint(0, 4)
+                    Move = unit.player.strategy.decide_ship_movement(unit,game_state)
 
-                    if move_made == 0:
-                        Move = random.randint(0, 4)
 
                     unit.player.Game.board.update_position(
                         unit.player, unit, Move)
 
-                    if Move == 0:  #stay
+                    if Move == "Stay":  #stay
                         unit.coordinates = (unit.coordinates[0],
                                             unit.coordinates[1])
-                    elif Move == 1:  #right
+                    elif Move == "Right":  #right
                         unit.coordinates = (unit.coordinates[0] + 1,
                                             unit.coordinates[1])
-                    elif Move == 2:  #left
+                    elif Move == "Left":  #left
                         unit.coordinates = (unit.coordinates[0] - 1,
                                             unit.coordinates[1])
-                    elif Move == 3:  #up
+                    elif Move == "Up":  #up
                         unit.coordinates = (unit.coordinates[0],
                                             unit.coordinates[1] + 1)
-                    elif Move == 4:  #down
+                    elif Move == "Down":  #down
                         unit.coordinates = (unit.coordinates[0],
                                             unit.coordinates[1] - 1)
                 
 
-        unit.player.game.boolean_print("Unit " + str(unit.unit_number) + " (" +
-                                       unit.name + ") moves to " +
-                                       str(unit.coordinates[0]) + "," +
-                                       str(unit.coordinates[1]))
+        # unit.player.game.boolean_print("Unit " + str(unit.unit_number) + " (" +
+        #                                unit.name + ") moves to " +
+        #                                str(unit.coordinates[0]) + "," +
+        #                                str(unit.coordinates[1]))
 
     def generate_movement_state(self,round):
       state_dict={"round": round}
