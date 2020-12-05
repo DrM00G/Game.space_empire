@@ -139,7 +139,8 @@ class Game:
           "Units": [
             {"Name": unit.name,
             "Coordinates":unit.coordinates} for unit in player.units
-            ]
+            ],
+          "Technology":{"Defense Technology": player.defense_technology,"Attack Technology": player.attack_technology,"Speed Technology": player.speed_technology,"Ship Size Technology": player.ship_yard_technology}
         } for player in self.players
       ],
       "Planets":[planet.coords for planet in self.planets]

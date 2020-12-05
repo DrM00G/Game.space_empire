@@ -13,3 +13,6 @@ class DumbStrategy:
 
     def decide_purchases(self,game_state):
       return["Unit Buy",0]#referance the "army_choices" int in player to see what number is what. IF OTHER OPTIONS, RETURN WITH A RANDOM. IF TECH COULD BE UPGRADED, IT WOULD BE LAST POSITION
+
+    def decide_which_ship_to_attack(attacking_ship, game_state):
+      return

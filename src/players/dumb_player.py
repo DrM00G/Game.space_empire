@@ -46,3 +46,4 @@ class DumbPlayer(Player):
             self.playerCP = self.playerCP - army_choices[choice][1]
             print("made unit:"+self.units[len(self.units)-1].name+" "+str(len(self.units)))
             self.Game.board.add_unit_to_board(self.units[len(self.units)-1],self.player_num)
+
