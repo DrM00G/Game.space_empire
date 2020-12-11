@@ -1,8 +1,6 @@
 import random
 from players.player import Player
-from players.dumb_player import DumbPlayer
-from players.combat_player import CombatPlayer
-from players.rand_player import RandPlayer
+
 from planet import Planet
 from board import Board
 from combat_engine import Combat_Engine
@@ -25,9 +23,6 @@ class Game:
         self.economic_engine = Economic_Engine(self)
         self.planet_amount=planet_amount
 
-
-
- 
 
     def generate(self):
         self.players = [Player(self.CP,1,self,"DumbStrategy"),Player(self.CP,2,self,"DumbStrategy")]
@@ -72,7 +67,6 @@ class Game:
                 if planet[2].ship_yards < 4:
 
                   if unit[0] == "ShipYard" and unit[1]==planet[1]:
-                    # self.boolean_print("Succses")
                     planet[2].ship_yards = planet[2].ship_yards + 1
                     unit[2].landed = True
                     unit[2].exist = False

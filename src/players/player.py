@@ -42,14 +42,6 @@ class Player:
         for yard in range(4):
             self.units.append(ShipYard(coords, self, len(self.units), techs))
 
-    def get_credits(self, planets):
-        for planet in planets:
-            if planet.player_control == self.player_num:
-                #self.playerCP = self.playerCP + planet.health
-                self.playerCP = self.playerCP + 20
-                print(str(self.player_num))
-                print(self.playerCP)
-
 
 #Everything from here down was taken from "rand_player"
 
@@ -92,9 +84,7 @@ class Player:
                             planet.base_status = 1
                             self.playerCP = self.playerCP - army_choices[
                                 choice][1]
-                            # print("made unit:" +
-                            #       self.units[len(self.units) - 1].name + " " +
-                            #       str(len(self.units)))
+
                             self.Game.board.add_unit_to_board(
                                 self.units[len(self.units) - 1],
                                 self.player_num)
@@ -104,18 +94,14 @@ class Player:
                             self.units.append(army_choices[choice][0])
                             self.playerCP = self.playerCP - army_choices[
                                 choice][1]
-                            # print("made unit:" +
-                            #       self.units[len(self.units) - 1].name + " " +
-                            #       str(len(self.units)))
+
                             self.Game.board.add_unit_to_board(
                                 self.units[len(self.units) - 1],
                                 self.player_num)
                     else:
                         self.units.append(army_choices[choice][0])
                         self.playerCP = self.playerCP - army_choices[choice][1]
-                        # print("made unit:" +
-                        #       self.units[len(self.units) - 1].name + " " +
-                        #       str(len(self.units)))
+
                         self.Game.board.add_unit_to_board(
                             self.units[len(self.units) - 1], self.player_num)
 

@@ -17,13 +17,10 @@ class Economic_Engine:
                     unit.delete()
                     player.Game.boolean_print("Unit " + str(unit.unit_number) +
                                             " decayed")
-        # print(str(player.playerCP))
 
 
     def get_credits(self, planets, player):
         for planet in planets:
             if planet.player_control == player.player_num:
-                #self.playerCP = self.playerCP + planet.health
                 player.playerCP = player.playerCP + 20
-                # print(str(player.player_num))
-                # print(player.playerCP)
+

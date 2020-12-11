@@ -12,14 +12,9 @@ class Board:
       for player in players:
         for unit in player.units:
           self.positions[unit.coordinates[1]][unit.coordinates[0]][1].append([unit.name,player.player_num,unit])
-#[player.player_num - 1]
 
     def update_position(self,player,unit,Move):
-      # print(Move)
-      # print("--------------------------------------")
-      # print(str(Move)+" DONE DID IT "+str(unit.coordinates[0])+","+str(unit.coordinates[1])+" "+unit.name)
-              
-      # print(self.positions[unit.coordinates[1]][unit.coordinates[0]][1])
+
       index_pos = self.positions[unit.coordinates[1]][unit.coordinates[0]][1].index([unit.name,player.player_num,unit])
 
       moving_unit = self.positions[unit.coordinates[1]][unit.coordinates[0]][1].pop(index_pos)
@@ -35,12 +30,6 @@ class Board:
       elif Move == "Down":#down
         self.positions[unit.coordinates[1]-1][unit.coordinates[0]][1].append(moving_unit)
       
-      # for y in self.positions:
-      #   for x in y:
-      #     for unit in x[1]:
-      #       if unit == moving_unit:
-      #         print(str(y.index(x))+","+str(self.positions.index(y)))
-      # print("--------------------------------------")
-     
+
     def add_unit_to_board(self,unit,player_num):
       self.positions[unit.coordinates[1]][unit.coordinates[0]][1].append([unit.name,player_num,unit])

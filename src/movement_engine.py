@@ -16,13 +16,11 @@ class MovementEngine:
                 moves = int((unit.speed) / 3) + 1
             else:  #works
                 moves = int((unit.speed + 1) / 3)
-            # unit.player.game.boolean_print("phase: "+str(phase)+" Speed: "+str(self.speed)+" Moves: "+str(moves))
-            # print(self.generate_movement_state(phase))
+
             for i in range(moves):
 
 
-                    # if move_made == 0:
-                    #     Move = random.randint(0, 4)
+
                     Move = unit.player.strategy.decide_ship_movement(unit,game_state)
 
 
@@ -46,10 +44,6 @@ class MovementEngine:
                                             unit.coordinates[1] - 1)
                 
 
-        # unit.player.game.boolean_print("Unit " + str(unit.unit_number) + " (" +
-        #                                unit.name + ") moves to " +
-        #                                str(unit.coordinates[0]) + "," +
-        #                                str(unit.coordinates[1]))
 
     def generate_movement_state(self,round):
       state_dict={"round": round}

@@ -30,4 +30,4 @@ class CombatStrategy:
         return["Unit Buy",0]
 
     def decide_which_ship_to_attack(attacking_ship, game_state):
-      return#REFACTOR COMBAT TO UTILIZE THIS
+      return 'highest'#REFACTOR
