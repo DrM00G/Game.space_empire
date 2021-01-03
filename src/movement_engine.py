@@ -27,21 +27,10 @@ class MovementEngine:
                     unit.player.Game.board.update_position(
                         unit.player, unit, Move)
 
-                    if Move == "Stay":  #stay
-                        unit.coordinates = (unit.coordinates[0],
-                                            unit.coordinates[1])
-                    elif Move == "Right":  #right
-                        unit.coordinates = (unit.coordinates[0] + 1,
-                                            unit.coordinates[1])
-                    elif Move == "Left":  #left
-                        unit.coordinates = (unit.coordinates[0] - 1,
-                                            unit.coordinates[1])
-                    elif Move == "Up":  #up
-                        unit.coordinates = (unit.coordinates[0],
-                                            unit.coordinates[1] + 1)
-                    elif Move == "Down":  #down
-                        unit.coordinates = (unit.coordinates[0],
-                                            unit.coordinates[1] - 1)
+                    
+                    unit.coordinates = (unit.coordinates[0]+Move[0],
+                                            unit.coordinates[1]+Move[1])
+                    
                 
 
 

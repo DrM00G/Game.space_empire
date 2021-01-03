@@ -5,7 +5,7 @@ from planet import Planet
 from board import Board
 from combat_engine import Combat_Engine
 from movement_engine import MovementEngine
-from EconomicEngine import Economic_Engine
+from economic_engine import Economic_Engine
 
 class Game:
     def __init__(self,does_print, predetermined_roll = None,planet_amount=9):
@@ -47,13 +47,14 @@ class Game:
             if planet[0] != "Colony":#means theres not a colony there
               for unit in x[1]:
                 if unit[0] == "Colony ship":
-                  unit[2].exist = False
-                  planet[2].colony_status = True
-                  planet[2].player_control = unit[1]
-                  planet[1] = unit[1]
-                  self.boolean_print("Player "+str(planet[2].player_control)+": Creat Colony at "+str(y.index(x))+","+str(self.board.positions.index(y)))
-                  planet[0] = "Colony"
-                  break
+                  if self.player[unit[1]].stratagy.will_colonize_planet(self.player[unit[1]].coordinates, self.generate_state()):
+                    unit[2].exist = False
+                    planet[2].colony_status = True
+                    planet[2].player_control = unit[1]
+                    planet[1] = unit[1]
+                    self.boolean_print("Player "+str(planet[2].player_control)+": Creat Colony at "+str(y.index(x))+","+str(self.board.positions.index(y)))
+                    planet[0] = "Colony"
+                    break
       
       
                   

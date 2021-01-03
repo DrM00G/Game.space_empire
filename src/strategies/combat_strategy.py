@@ -7,27 +7,36 @@ class CombatStrategy:
       return False
 
     def decide_ship_movement(self,ship, game_state):
-      if ship.coordinates[1]<2:
-        return "Up"
-      elif ship.coordinates[1]>2:
-        return "Down"
-      if ship.coordinates[0]<2:
-        return "Right"
-      elif ship.coordinates[1]>2:
-        return "Left"
+      if ship.coordinates[1]<4:
+        return (0,1)
       else:
         return"Stay"
 
 
     def decide_purchases(self,game_state):
+      return_dic = {
+            'units': [],
+            'technology': [] 
+        }
+
       if game_state['Players'][self.player_num-1]['Technology']['Ship Size Technology']>2:
-        return["Upgrade",3]
+        return_dic['technology'].append('Ship Size')
       elif self.next_buy == 'Destroyers':
         self.next_buy = 'Scout'
-        return["Unit Buy",4]
+        return_dic['technology'].append('Destroyers')
       elif self.next_buy == 'Scout':
         self.next_buy = 'Destroyers'
-        return["Unit Buy",0]
+        return_dic['technology'].append('Scout')
+      return return_dic
 
-    def decide_which_ship_to_attack(attacking_ship, game_state):
-      return 'highest'#REFACTOR
+    def will_colonize_planet(self, coordinates, game_state):
+      return False
+
+    def decide_removals(self, game_state):
+      return[0]#meaning that generally, just removing the oldest ship will do the trick
+
+    def decide_which_ship_to_attack(self, combat_state, game_state):
+      return 0#The first in the combat state
+
+    def decide_which_units_to_screen(self, combat_state):
+      return []

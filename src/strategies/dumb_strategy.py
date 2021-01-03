@@ -7,9 +7,9 @@ class DumbStrategy:
 
     def decide_ship_movement(self,ship, game_state):
       if ship.coordinates[0]<4:
-        return "Right"
+        return (1,0)
       else:
-        return "Stay"#if theres a specific place in mind, write code for that lazy
+        return (0,0)#if theres a specific place in mind, write code for that lazy
 
     def decide_purchases(self,game_state):
       return["Unit Buy",0]#referance the "army_choices" int in player to see what number is what. IF OTHER OPTIONS, RETURN WITH A RANDOM. IF TECH COULD BE UPGRADED, IT WOULD BE LAST POSITION

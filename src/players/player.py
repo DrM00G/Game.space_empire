@@ -48,9 +48,9 @@ class Player:
 
     def spend_credits(self,game_state):
         decision = self.strategy.decide_purchases(game_state)[0]
-        if decision == "Unit Buy":
+        if len(decision['units']) > 0:
             self.new_unit(game_state)
-        else:
+        if len(decision['technology']) > 0:
             self.unit_upgrade(game_state)
 
     def new_unit(self,game_state):
@@ -75,7 +75,7 @@ class Player:
             hull_capacity = 0
             if planet.player_control == self.player_num:
                 hull_capacity = planet.ship_yards * self.ship_yard_technology
-                choice = self.strategy.decide_purchases(game_state)[1]
+                choice = self.strategy.decide_purchases(game_state)["units"][1]
                 if self.playerCP >= army_choices[choice][
                         1] and hull_capacity >= army_choices[choice][2] * 2:
                     if choice == 9:
