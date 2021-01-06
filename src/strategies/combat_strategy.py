@@ -36,7 +36,22 @@ class CombatStrategy:
       return[0]#meaning that generally, just removing the oldest ship will do the trick
 
     def decide_which_ship_to_attack(self, combat_state, game_state):
-      return 0#The first in the combat state
+      for ship in combat_state['order']:
+        if ship['player']!=self.player_num:
+          return combat_state['order'].index(ship)
+          break
+      
 
     def decide_which_units_to_screen(self, combat_state):
-      return []
+      player_count = 0
+      enemy_count = 0
+      screens = []
+      for ship in combat_state['order']:
+        if ship['player']!=self.player_num:
+          enemy_count++
+      for ship in combat_state['order']:
+        if ship['player']==self.player_num:
+          player_count++
+          if player_count >= enemy_count:
+            screens.append(combat_state['order'].index(ship))
+      return screens
