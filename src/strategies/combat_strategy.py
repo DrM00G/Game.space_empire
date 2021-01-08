@@ -33,7 +33,7 @@ class CombatStrategy:
       return False
 
     def decide_removals(self, game_state):
-      return[0]#meaning that generally, just removing the oldest ship will do the trick
+      return[0]#This would remove the oldest ship, however, need to make this more complicated to remove multiple ships, currently this needs to be run mutliple times and doesn't account for ships that have no cost to maintain.
 
     def decide_which_ship_to_attack(self, combat_state, game_state):
       for ship in combat_state['order']:
