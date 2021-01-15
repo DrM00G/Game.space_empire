@@ -62,9 +62,10 @@ class Combat_Engine:
         combat_states_arr.append({'location': coords,'order': [{'player': unit[1], 'unit': unit[2].unit_number} for unit in self.game.board.positions[coords[1]][coords[0]][1]]})
         return(combat_states_arr)
 
-    def combat_state(self)
+    def combat_state(self):
       for coords in self.game.locate_combat():
-        state = {coords:[{'player':self.board.positions[coords[1]][coords[0]][1][1],'player':self.board.positions[coords[1]][coords[0]][1][2].unit_number}]for coords inself.game.locate_combat()}
+        state = {coords:[{'player':[self.board.positions[coords[1]][coords[0]][1][i][1],self.board.positions[coords[1]][coords[0]][1][i][2].unit_number] for i in range(len(self.board.positions[coords[1]][coords[0]][1]))}]for coords in self.game.locate_combat()}
+        return state
 
     def resolve_combat(self, players, test_log):
         self.players = players
