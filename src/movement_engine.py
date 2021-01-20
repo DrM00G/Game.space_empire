@@ -9,7 +9,7 @@ class MovementEngine:
 
 
     def move(self, phase, unit,game_state):
-        if unit.exist == True:
+        if unit.exist == True :
             if phase == 1:  #works
                 moves = int((unit.speed) / 4) + 1
             elif phase == 2:  #works
