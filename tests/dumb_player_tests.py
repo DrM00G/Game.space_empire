@@ -7,17 +7,17 @@ game.generate()
 game.establish_shipyard()
 
 game_state = game.generate_state()
-print(game_state)
-player_0_scout_locations = [tuple(u['Coordinates']) for u in game_state['Players'][0]['Units'] if u['Name'] == 'Scout']
-player_1_scout_locations = [tuple(u['Coordinates']) for u in game_state['Players'][1]['Units'] if u['Name'] == 'Scout']
+# print(game_state)
+player_0_scout_locations = [tuple(u['coords']) for u in game_state['players'][0]['units'] if u['type'] == 'Scout']
+player_1_scout_locations = [tuple(u['coords']) for u in game_state['players'][1]['units'] if u['type'] == 'Scout']
 assert set(player_0_scout_locations) == set([(2,0), (2,0), (2,0)]),"Coords are "+str(player_0_scout_locations)
 assert set(player_1_scout_locations) == set([(2,4), (2,4), (2,4)]),"Coords are "+str(player_1_scout_locations)
 print("Scount set up succesful")
 
 game.movement_phase()
 game_state = game.generate_state()
-player_0_scout_locations = [tuple(u['Coordinates']) for u in game_state['Players'][0]['Units'] if u['Name'] == 'Scout']
-player_1_scout_locations = [tuple(u['Coordinates']) for u in game_state['Players'][1]['Units'] if u['Name'] == 'Scout']
+player_0_scout_locations = [tuple(u['coords']) for u in game_state['players'][0]['Units'] if u['type'] == 'Scout']
+player_1_scout_locations = [tuple(u['coords']) for u in game_state['players'][1]['Units'] if u['type'] == 'Scout']
 assert set(player_0_scout_locations) == set([(4,0), (4,0), (4,0)]),"Coords are "+str(player_0_scout_locations)
 assert set(player_1_scout_locations) == set([(4,4), (4,4), (4,4)]),"Coords are "+str(player_1_scout_locations)
 print("Turn 1 Movement Phase succesful")

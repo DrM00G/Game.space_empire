@@ -139,15 +139,17 @@ class Game:
           "player_num": player.player_num,
           "cp": player.playerCP,
           "Stratagy": player.state_strat,
-          "Units": [
+          "units": [
             {"type": unit.name,
+            "unit number":unit.unit_number,
             "coords":unit.coordinates,
-            "Technology":{"defense": player.defense_technology,"attack": player.attack_technology,"movement": player.speed_technology},
+            "technology":{"defense": unit.defense,"attack": unit.strength,"movement": unit.speed},
             "hits_left":unit.armor
-            }for unit in player.units],#ADD COLONIE FIXES
+            }for unit in player.units if unit.exist],#ADD COLONIE FIXES
+            'technology': {'attack': player.attack_technology, 'defense': player.defense_technology, 'movement': player.speed_technology, 'shipsize': player.ship_yard_technology}
         } for player in self.players
       ],
-      "Planets":[planet.coords for planet in self.planets],'unit_data': {
+      "planets":[planet.coords for planet in self.planets],'unit_data': {
         'Battleship': {'cp_cost': 20, 'hullsize': 3, 'shipsize_needed': 5, 'tactics': 5, 'attack': 5, 'defense': 2, 'maintenance': 3},
         'Battlecruiser': {'cp_cost': 15, 'hullsize': 2, 'shipsize_needed': 4, 'tactics': 4, 'attack': 5, 'defense': 1, 'maintenance': 2},
         'Cruiser': {'cp_cost': 12, 'hullsize': 2, 'shipsize_needed': 3, 'tactics': 3, 'attack': 4, 'defense': 1, 'maintenance': 2},

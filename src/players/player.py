@@ -10,7 +10,7 @@ from units.colony_ship import Colony_ship
 from units.ship_yard import ShipYard
 from units.base import Base
 from units.decoy import Decoy
-from strategies.riley_dumb import DumbStrategy
+from strategies.dumb_strategy import DumbStrategy
 
 
 
