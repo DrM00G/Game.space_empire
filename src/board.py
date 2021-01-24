@@ -1,6 +1,7 @@
 class Board:
-    def __init__(self):
-      self.positions = [[[[],[]] for x in range(5)] for y in range(5)]
+    def __init__(self,board_size):
+      self.board_size = board_size
+      self.positions = [[[[],[]] for x in range(board_size[0])] for y in range(board_size[1])]
 
 
     def setup(self,planets,players):

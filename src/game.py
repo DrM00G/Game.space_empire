@@ -18,7 +18,8 @@ class Game:
         self.player_coords = [[2, 0], [2, 4]]
         self.home_coords = self.player_coords
         self.planets = []
-        self.board = Board()
+        self.board_size=[5,5]
+        self.board = Board(self.board_size)
         self.combat_engine = Combat_Engine(self)
         self.movement_engine = MovementEngine(self)
         self.economic_engine = Economic_Engine(self)
@@ -131,6 +132,7 @@ class Game:
     def generate_state(self):
       state={"turn":self.turn_numb,
           'phase': self.phase, # Can be 'Movement', 'Economic', or 'Combat'
+          'board_size': self.board_size,
           'round': self.move_round, # if the phase is movement, then round is 1, 2, or 3
           'player_whose_turn': self.player_whose_turn, # index of player whose turn it is (or whose ship is attacking during battle),
           'winner': None,
@@ -142,7 +144,7 @@ class Game:
           "Stratagy": player.state_strat,
           "units": [
             {"type": unit.name,
-            "unit number":unit.unit_number,
+            "unit_num":unit.unit_number,
             "coords":unit.coordinates,
             "technology":{"defense": unit.defense,"attack": unit.strength,"movement": unit.speed},
             "hits_left":unit.armor
