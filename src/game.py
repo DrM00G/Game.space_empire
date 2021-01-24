@@ -16,6 +16,7 @@ class Game:
         self.CP = 0
         self.players = 2
         self.player_coords = [[2, 0], [2, 4]]
+        self.home_coords = self.player_coords
         self.planets = []
         self.board = Board()
         self.combat_engine = Combat_Engine(self)
@@ -28,7 +29,7 @@ class Game:
 
 
     def generate(self):
-        self.players = [Player(self.CP,1,self,"DumbStrategy"),Player(self.CP,2,self,"DumbStrategy")]
+        self.players = [Player(self.CP,0,self,"DumbStrategy"),Player(self.CP,1,self,"DumbStrategy")]
         self.planets = [Planet(coord,True,self.player_coords.index(coord)+1) for coord in self.player_coords]
         for s in range(2):
             self.players[s].army_set_up(self.player_coords[s])
@@ -135,7 +136,7 @@ class Game:
           'winner': None,
           'players': [
             {
-          'home_coords': (6,3),#Need to fix colonies first
+          'home_coords': self.home_coords[player.player_num],
           "player_num": player.player_num,
           "cp": player.playerCP,
           "Stratagy": player.state_strat,
