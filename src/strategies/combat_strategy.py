@@ -17,12 +17,13 @@ class CombatStrategy:#WORKS WITH GEORGE
             'units': [],
             'technology': [] 
         }
+      current_cp = game_state['players'][self.player_num]['cp']
       new_shipsize= game_state['players'][self.player_num]['technology']['shipsize']
-      if game_state['players'][self.player_num]['technology']['shipsize']<2:
-        new_shipsize= game_state['players'][self.player_num]['technology']['shipsize']+1
-        return_dic['technology'].append('shipsize')
+      while current_cp>=game_state['technology_data']['shipsize'][new_shipsize-1] and game_state['players'][self.player_num]['technology']['shipsize']<2:
+          current_cp-=game_state['technology_data']['shipsize'][new_shipsize-1]
+          new_shipsize= new_shipsize+1
+          return_dic['technology'].append('shipsize')
       if new_shipsize>=2:
-        current_cp = game_state['players'][self.player_num]['cp']
         while current_cp>=game_state['unit_data'][self.next_buy]['cp_cost']:
           current_cp-=game_state['unit_data']['Scout']['cp_cost']
           if self.next_buy == 'Destroyer':
