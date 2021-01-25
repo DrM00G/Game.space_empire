@@ -25,12 +25,13 @@ class CombatStrategy:#WORKS WITH GEORGE
           return_dic['technology'].append('shipsize')
       if new_shipsize>=2:
         while current_cp>=game_state['unit_data'][self.next_buy]['cp_cost']:
-          current_cp-=game_state['unit_data']['Scout']['cp_cost']
           if self.next_buy == 'Destroyer':
             self.next_buy = 'Scout'
+            current_cp-=game_state['unit_data']['Destroyer']['cp_cost']
             return_dic['units'].append({'type': 'Destroyer', 'coords': game_state['players'][self.player_num]['home_coords']})
           elif self.next_buy == 'Scout':
             self.next_buy = 'Destroyer'
+            current_cp-=game_state['unit_data']['Scout']['cp_cost']
             return_dic['units'].append({'type': 'Scout', 'coords': game_state['players'][self.player_num]['home_coords']})
       return return_dic
 
