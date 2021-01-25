@@ -1,5 +1,5 @@
 class CombatStrategy:#WORKS WITH GEORGE
-    def __init__(sel1f,player_num):
+    def __init__(self,player_num):
         self.player_num = player_num
         self.next_buy = 'Destroyer'
 
@@ -22,7 +22,9 @@ class CombatStrategy:#WORKS WITH GEORGE
         new_shipsize= game_state['players'][self.player_num]['technology']['shipsize']+1
         return_dic['technology'].append('shipsize')
       if new_shipsize>=2:
-        if game_state['players'][self.player_num]['cp']>=game_state['unit_data'][self.next_buy]['cp_cost']:
+        current_cp = game_state['players'][self.player_num]['cp']
+        while current_cp>=game_state['unit_data'][self.next_buy]['cp_cost']:
+          current_cp-=game_state['unit_data']['Scout']['cp_cost']
           if self.next_buy == 'Destroyer':
             self.next_buy = 'Scout'
             return_dic['units'].append({'type': 'Destroyer', 'coords': game_state['players'][self.player_num]['home_coords']})
