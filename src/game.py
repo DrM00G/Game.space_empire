@@ -8,7 +8,7 @@ from movement_engine import MovementEngine
 from economic_engine import Economic_Engine
 
 class Game:
-    def __init__(self,does_print, predetermined_roll = None,planet_amount=9):
+    def __init__(self,does_print, predetermined_roll = None,planet_amount=9, board_size = [5,5]):
         self.predetermined_roll = predetermined_roll
         self.does_print = does_print
         self.turn_numb = 0
@@ -18,7 +18,7 @@ class Game:
         self.player_coords = [[2, 0], [2, 4]]
         self.home_coords = self.player_coords
         self.planets = []
-        self.board_size=[5,5]
+        self.board_size=board_size
         self.board = Board(self.board_size)
         self.combat_engine = Combat_Engine(self)
         self.movement_engine = MovementEngine(self)
@@ -30,8 +30,8 @@ class Game:
 
 
     def generate(self):
-        self.players = [Player(self.CP,0,self,"DumbStrategy"),Player(self.CP,1,self,"DumbStrategy")]
-        self.planets = [Planet(coord,True,self.player_coords.index(coord)+1) for coord in self.player_coords]
+        self.players = [Player(self.CP,0,self,"DumbStrategy",self.player_coords[0]),Player(self.CP,1,self,"DumbStrategy",self.player_coords[1])]
+        self.planets = [Planet(coord,self.player_coords.index(coord)+1) for coord in self.player_coords]
         for s in range(2):
             self.players[s].army_set_up(self.player_coords[s])
 

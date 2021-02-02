@@ -15,7 +15,7 @@ from strategies.dumb_strategy import DumbStrategy
 
 
 class Player:
-    def __init__(self, playerCP, player_num, Game, stratagy):
+    def __init__(self, playerCP, player_num, Game, stratagy,starting_coord):
         self.units = []
         self.playerCP = playerCP
         self.player_num = player_num
@@ -24,6 +24,7 @@ class Player:
         self.speed_technology = 0
         self.ship_yard_technology = 1
         self.Game = Game
+        self.home_colony = Cruiser(starting_coord, self,)
         if stratagy == "DumbStrategy":
           self.strategy = DumbStrategy(self.player_num)
           self.state_strat = "Dumb"
