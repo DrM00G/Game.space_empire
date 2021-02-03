@@ -11,6 +11,7 @@ class Colonyship(Unit):
         self.armor = 2
         self.name = 'Colony Ship'
         self.combat_ready = False
+        
 
     def colonize(self):
       self.exists=False

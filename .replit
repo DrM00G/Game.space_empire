@@ -1,2 +1,2 @@
-run = "python tests/test_new_game.py"
+run = "python tests/dumb_tests_new_game.py"
 language = "python3"

@@ -16,7 +16,7 @@ class MovementEngine:
 
                     Move = unit.player.strat.decide_ship_movement(unit.unit_index,game_state)
 
-                    print(str(unit.coords)+","+str(Move))
+                    # print(str(unit.coords)+","+str(Move))
                     self.board.update_position(unit, Move)
 
                     

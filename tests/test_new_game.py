@@ -5,7 +5,7 @@ from strategies.dumb_strategy import DumbStrategy
 from player import Player
 
 
-game=Game(board_size=[5,5],die_mode="random")
+game=Game(board_size=[5,5],die_mode="random",sided_die=6)
 player0_strats=DumbStrategy(0)
 player1_strats=DumbStrategy(1)
 

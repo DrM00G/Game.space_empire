@@ -11,4 +11,5 @@ class Scout(Unit):
         self.armor = 2
         self.name = 'Scout'
         self.combat_ready = True
+        
 

@@ -9,3 +9,6 @@ class Board:
 
     def add_to_board(self,unit):
       self.board_dict[unit.coords]["units"].append(unit)
+
+    def remove_from_board(self,unit):
+      self.board_dict[unit.coords]["units"].remove(unit)

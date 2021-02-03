@@ -5,7 +5,7 @@ from planet import Planet
 from board import Board
 
 class Game:
-    def __init__(self,board_size=[5,5],die_mode="random"):
+    def __init__(self,board_size=[5,5],die_mode="random",sided_die=10):
       self.board_size=board_size
       self.die_mode=die_mode
       self.planet_nums=0
@@ -16,7 +16,7 @@ class Game:
       self.move_round=0
       self.planets=[]
       self.player_whose_turn= None
-      self.combat = CombatEngine(die_mode)
+      self.combat = CombatEngine(die_mode,sided_die,self.board)
       self.movement = MovementEngine(self.board)
       # self.economy = EconomicEngine(self)
       
@@ -31,6 +31,11 @@ class Game:
         self.phase="Movement"
         for player in self.players:
           player.movement_phase()
+
+    def combat_phase(self):
+        self.phase="Combat"
+        self.combat.complete_combat_phase()
+
 
     def generate_state(self):
         state={"turn":self.turn_numb,
@@ -50,7 +55,8 @@ class Game:
             "unit_num":unit.unit_index,
             "coords":unit.coords,
             "technology":{"defense": unit.defense,"attack": unit.attack,"movement": unit.movement},
-            "hits_left":unit.armor
+            "hits_left":unit.armor,
+            'turn_created':unit.turn_made
             }for unit in player.units if unit.exists],#ADD COLONIE FIXES#attk,defn,mov,shpyd,shpsz
             'technology': {'attack': player.tech[0], 'defense': player.tech[1], 'movement': player.tech[2],'shipyard technology':player.tech[3], 'shipsize': player.tech[4]}
             } for player in self.players

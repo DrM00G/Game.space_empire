@@ -6,3 +6,7 @@ class Unit:
       self.coords=init_coords
       self.turn_made=turn_bought
       self.exists = True
+
+    def destroy(self):
+      self.exists=False
+      self.player.board.remove_from_board(self)
