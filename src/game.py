@@ -1,5 +1,7 @@
 import random
-from players.player import Player
+from combat_engine import CombatEngine
+from movement_engine import MovementEngine
+from planet import Planet
 
 class Game:
     def __init__(self,board_size=[5,5],die_mode="random"):
@@ -7,15 +9,65 @@ class Game:
       self.die_mode=die_mode
       self.planet_nums=0
       self.players=[]
-      self.combat = CombatEngine(self,die_mode)
-      self.movement = MovementEngine(self)
-      self.economy = EconomicEngine(self)
+      self.turn_numb=0
+      self.phase = None
+      self.move_round=0
+      self.planets=[]
+      self.player_whose_turn= None
+      self.combat = CombatEngine(die_mode)
+      self.movement = MovementEngine(board_size)
+      # self.economy = EconomicEngine(self)
       
 
-    def setup(self,player_strats,innit_pos):
-      for p_index in range(len(player_strats)):
-        self.players.append(Player(p_index,player_strats[p_index],innit_pos[p_index],Game=self))
+    def setup(self,players):
+      self.players=players
+      for player in players:
+        self.planets.append(Planet(player.home_colony_pos,colony=True))
+      
 
 
 
-    
+    def generate_state(self):
+        state={"turn":self.turn_numb,
+          'phase': self.phase, # Can be 'Movement', 'Economic', or 'Combat'
+          'board_size': self.board_size,
+          'round': self.move_round, # if the phase is movement, then round is 1, 2, or 3
+          'player_whose_turn': self.player_whose_turn, # index of player whose turn it is (or whose ship is attacking during battle),
+          'winner': None,
+          'players': [
+            {
+          'home_coords': player.home_colony_pos,
+          "player_num": player.player_index,
+          "cp": player.CP,
+          "Stratagy": player.state_strat,
+          "units": [
+            {"type": unit.name,
+            "unit_num":unit.unit_index,
+            "coords":unit.coords,
+            "technology":{"defense": unit.defense,"attack": unit.attack,"movement": unit.movement},
+            "hits_left":unit.armor
+            }for unit in player.units if unit.exists],#ADD COLONIE FIXES#attk,defn,mov,shpyd,shpsz
+            'technology': {'attack': player.tech[0], 'defense': player.tech[1], 'movement': player.tech[2],'shipyard technology':player.tech[3], 'shipsize': player.tech[4]}
+            } for player in self.players
+            ],
+            "planets":[planet.coords for planet in self.planets],'unit_data': {
+            'Battleship': {'cp_cost': 20, 'hullsize': 3, 'shipsize_needed': 5, 'tactics': 5, 'attack': 5, 'defense': 2, 'maintenance': 3},
+            'Battlecruiser': {'cp_cost': 15, 'hullsize': 2, 'shipsize_needed': 4, 'tactics': 4, 'attack': 5, 'defense': 1, 'maintenance': 2},
+            'Cruiser': {'cp_cost': 12, 'hullsize': 2, 'shipsize_needed': 3, 'tactics': 3, 'attack': 4, 'defense': 1, 'maintenance': 2},
+            'Destroyer': {'cp_cost': 9, 'hullsize': 1, 'shipsize_needed': 2, 'tactics': 2, 'attack': 4, 'defense': 0, 'maintenance': 1},
+            'Dreadnaught': {'cp_cost': 24, 'hullsize': 3, 'shipsize_needed': 6, 'tactics': 5, 'attack': 6, 'defense': 3, 'maintenance': 3},
+            'Scout': {'cp_cost': 6, 'hullsize': 1, 'shipsize_needed': 1, 'tactics': 1, 'attack': 3, 'defense': 0, 'maintenance': 1},
+            'Shipyard': {'cp_cost': 3, 'hullsize': 1, 'shipsize_needed': 1, 'tactics': 3, 'attack': 3, 'defense': 0, 'maintenance': 0},
+            'Decoy': {'cp_cost': 1, 'hullsize': 0, 'shipsize_needed': 1, 'tactics': 0, 'attack': 0, 'defense': 0, 'maintenance': 0},
+            'Colonyship': {'cp_cost': 8, 'hullsize': 1, 'shipsize_needed': 1, 'tactics': 0, 'attack': 0, 'defense': 0, 'maintenance': 0},
+            'Base': {'cp_cost': 12, 'hullsize': 3, 'shipsize_needed': 2, 'tactics': 5, 'attack': 7, 'defense': 2, 'maintenance': 0}
+            },
+            'technology_data': {
+            'shipsize': [10, 15, 20, 25, 30],
+            'attack': [20, 30, 40],
+            'defense': [20, 30, 40],
+            'movement': [20, 30, 40, 40, 40],
+            'shipyard': [20, 30]
+            }
+            }   
+        return state

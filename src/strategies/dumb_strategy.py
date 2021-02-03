@@ -24,6 +24,8 @@ class DumbStrategy:#WORKS WITH GEORGE
 
 
     def decide_removal(self, game_state):
+      removal == None
+      while removal == None
       return game_state["players"][self.player_num]["units"][0]["unit_num"]-1#assuming unit number starts at 1
   
     def decide_which_ship_to_attack(self,combat_state, coords, attacker_index):
