@@ -3,26 +3,25 @@ class MovementEngine:
         self.board=board
 
     def move(self, phase, unit,game_state):
-        if unit.exist == True :
+        if unit.exists and unit.can_move:
             if phase == 1:  #works
                 moves = int((unit.movement) / 4) + 1
             elif phase == 2:  #works
                 moves = int((unit.movement) / 3) + 1
-            else:  #works
+            elif 3:  #works
                 moves = int((unit.movement + 1) / 3)
 
             for i in range(moves):
 
 
-                    Move = unit.player.strategy.decide_ship_movement(unit.unit_index,game_state)
+                    Move = unit.player.strat.decide_ship_movement(unit.unit_index,game_state)
 
-
-                    self.board.update_position(
-                        unit.player, unit, Move)
+                    print(str(unit.coords)+","+str(Move))
+                    self.board.update_position(unit, Move)
 
                     
-                    unit.coordinates = (unit.coordinates[0]+Move[0],
-                                            unit.coordinates[1]+Move[1])
+                    unit.coords = (unit.coords[0]+Move[0],
+                                            unit.coords[1]+Move[1])
                     
                 
 

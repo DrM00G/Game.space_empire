@@ -1,8 +1,8 @@
 from units.unit import Unit
 
 class Colony(Unit):
-    def __init__(self,unit_index,p_index,init_coords,turn_bought,tech,home_colony=False):
-        super().__init__(unit_index,p_index,init_coords,turn_bought)
+    def __init__(self,player,unit_index,p_index,init_coords,turn_bought,tech,home_colony=False):
+        super().__init__(player,unit_index,p_index,init_coords,turn_bought)
         self.can_move=False
         self.attack = 0
         self.defense = 1

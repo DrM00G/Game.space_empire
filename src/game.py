@@ -2,12 +2,14 @@ import random
 from combat_engine import CombatEngine
 from movement_engine import MovementEngine
 from planet import Planet
+from board import Board
 
 class Game:
     def __init__(self,board_size=[5,5],die_mode="random"):
       self.board_size=board_size
       self.die_mode=die_mode
       self.planet_nums=0
+      self.board=Board(self.board_size)
       self.players=[]
       self.turn_numb=0
       self.phase = None
@@ -15,7 +17,7 @@ class Game:
       self.planets=[]
       self.player_whose_turn= None
       self.combat = CombatEngine(die_mode)
-      self.movement = MovementEngine(board_size)
+      self.movement = MovementEngine(self.board)
       # self.economy = EconomicEngine(self)
       
 
@@ -23,9 +25,12 @@ class Game:
       self.players=players
       for player in players:
         self.planets.append(Planet(player.home_colony_pos,colony=True))
-      
+        self.board.board_dict[player.home_colony_pos]["planet"]=self.planets[len(self.planets)-1]
 
-
+    def movement_phase(self):
+        self.phase="Movement"
+        for player in self.players:
+          player.movement_phase()
 
     def generate_state(self):
         state={"turn":self.turn_numb,
