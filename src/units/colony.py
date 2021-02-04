@@ -18,3 +18,7 @@ class Colony(Unit):
         self.exists = False
         for unit in self.assets:
           unit.exists=False
+
+    def destroy(self)
+        if self.home_colony:
+          self.player.game.choose_winner(loser=self.player_index)

@@ -39,7 +39,13 @@ class CombatStrategy:#WORKS WITH GEORGE
       return False
 
     def decide_removals(self, game_state):
-      return game_state["player"][self.player_num]["unit"][0]["unit number"]-1#assuming unit number starts at 1#This would remove the oldest ship, however, need to make this more complicated to remove multiple ships, currently this needs to be run mutliple times and doesn't account for ships that have no cost to maintain.
+      u_index=0
+      while True:
+        unit=game_state["players"][self.player_num]["units"][u_index]["type"]
+        if unit != "Colony" and unit != "Colony Ship" and unit != "Shipyard":
+          return game_state["players"][self.player_num]["units"][u_index]["unit_num"]
+        else:
+          u_index=+1#assuming unit number starts at 1#This would remove the oldest ship, however, need to make this more complicated to remove multiple ships, currently this needs to be run mutliple times and doesn't account for ships that have no cost to maintain.
 
     def decide_which_unit_to_attack(self,combat_state, coords, attacker_index):
       for ship in combat_state[coords]:

@@ -16,3 +16,6 @@ print(game.board.board_dict)
 game.movement_phase()
 print("NEXT")
 print(game.board.board_dict)
+print("NEXT")
+
+game.combat_phase()

@@ -1,6 +1,7 @@
 import random
 from combat_engine import CombatEngine
 from movement_engine import MovementEngine
+from economic_engine import EconomicEngine
 from planet import Planet
 from board import Board
 
@@ -15,10 +16,11 @@ class Game:
       self.phase = None
       self.move_round=0
       self.planets=[]
+      self.winner=None
       self.player_whose_turn= None
       self.combat = CombatEngine(die_mode,sided_die,self.board)
       self.movement = MovementEngine(self.board)
-      # self.economy = EconomicEngine(self)
+      self.economy = EconomicEngine(self,self.board)
       
 
     def setup(self,players):
@@ -26,6 +28,11 @@ class Game:
       for player in players:
         self.planets.append(Planet(player.home_colony_pos,colony=True))
         self.board.board_dict[player.home_colony_pos]["planet"]=self.planets[len(self.planets)-1]
+
+    def economic_phase(self):
+        self.phase="Economic"
+        for player in self.players:
+          self.economy.complete_economic_phase(player)
 
     def movement_phase(self):
         self.phase="Movement"
@@ -36,6 +43,15 @@ class Game:
         self.phase="Combat"
         self.combat.complete_combat_phase()
 
+    def choose_winner(self,loser):
+        print("Winner is Player"+str(abs(loser-1)))
+        self.winner=abs(loser-1)
+
+    def run_until_winner(self):
+      while self.winner == None:
+        self.movement_phase()
+        self.combat_phase
+        #self.economic_phase
 
     def generate_state(self):
         state={"turn":self.turn_numb,
@@ -61,24 +77,24 @@ class Game:
             'technology': {'attack': player.tech[0], 'defense': player.tech[1], 'movement': player.tech[2],'shipyard technology':player.tech[3], 'shipsize': player.tech[4]}
             } for player in self.players
             ],
-            "planets":[planet.coords for planet in self.planets],'unit_data': {
-            'Battleship': {'cp_cost': 20, 'hullsize': 3, 'shipsize_needed': 5, 'tactics': 5, 'attack': 5, 'defense': 2, 'maintenance': 3},
-            'Battlecruiser': {'cp_cost': 15, 'hullsize': 2, 'shipsize_needed': 4, 'tactics': 4, 'attack': 5, 'defense': 1, 'maintenance': 2},
-            'Cruiser': {'cp_cost': 12, 'hullsize': 2, 'shipsize_needed': 3, 'tactics': 3, 'attack': 4, 'defense': 1, 'maintenance': 2},
-            'Destroyer': {'cp_cost': 9, 'hullsize': 1, 'shipsize_needed': 2, 'tactics': 2, 'attack': 4, 'defense': 0, 'maintenance': 1},
-            'Dreadnaught': {'cp_cost': 24, 'hullsize': 3, 'shipsize_needed': 6, 'tactics': 5, 'attack': 6, 'defense': 3, 'maintenance': 3},
-            'Scout': {'cp_cost': 6, 'hullsize': 1, 'shipsize_needed': 1, 'tactics': 1, 'attack': 3, 'defense': 0, 'maintenance': 1},
-            'Shipyard': {'cp_cost': 3, 'hullsize': 1, 'shipsize_needed': 1, 'tactics': 3, 'attack': 3, 'defense': 0, 'maintenance': 0},
-            'Decoy': {'cp_cost': 1, 'hullsize': 0, 'shipsize_needed': 1, 'tactics': 0, 'attack': 0, 'defense': 0, 'maintenance': 0},
-            'Colonyship': {'cp_cost': 8, 'hullsize': 1, 'shipsize_needed': 1, 'tactics': 0, 'attack': 0, 'defense': 0, 'maintenance': 0},
-            'Base': {'cp_cost': 12, 'hullsize': 3, 'shipsize_needed': 2, 'tactics': 5, 'attack': 7, 'defense': 2, 'maintenance': 0}
-            },
-            'technology_data': {
-            'shipsize': [10, 15, 20, 25, 30],
-            'attack': [20, 30, 40],
-            'defense': [20, 30, 40],
-            'movement': [20, 30, 40, 40, 40],
-            'shipyard': [20, 30]
-            }
-            }   
+          "planets":[planet.coords for planet in self.planets],'unit_data': {
+          'Battleship': {'cp_cost': 20, 'hullsize': 3, 'shipsize_needed': 5, 'tactics': 5, 'attack': 5, 'defense': 2, 'maintenance': 3},
+          'Battlecruiser': {'cp_cost': 15, 'hullsize': 2, 'shipsize_needed': 4, 'tactics': 4, 'attack': 5, 'defense': 1, 'maintenance': 2},
+          'Cruiser': {'cp_cost': 12, 'hullsize': 2, 'shipsize_needed': 3, 'tactics': 3, 'attack': 4, 'defense': 1, 'maintenance': 2},
+          'Destroyer': {'cp_cost': 9, 'hullsize': 1, 'shipsize_needed': 2, 'tactics': 2, 'attack': 4, 'defense': 0, 'maintenance': 1},
+          'Dreadnaught': {'cp_cost': 24, 'hullsize': 3, 'shipsize_needed': 6, 'tactics': 5, 'attack': 6, 'defense': 3, 'maintenance': 3},
+          'Scout': {'cp_cost': 6, 'hullsize': 1, 'shipsize_needed': 1, 'tactics': 1, 'attack': 3, 'defense': 0, 'maintenance': 1},
+          'Shipyard': {'cp_cost': 3, 'hullsize': 1, 'shipsize_needed': 1, 'tactics': 3, 'attack': 3, 'defense': 0, 'maintenance': 0},
+          'Decoy': {'cp_cost': 1, 'hullsize': 0, 'shipsize_needed': 1, 'tactics': 0, 'attack': 0, 'defense': 0, 'maintenance': 0},
+          'Colonyship': {'cp_cost': 8, 'hullsize': 1, 'shipsize_needed': 1, 'tactics': 0, 'attack': 0, 'defense': 0, 'maintenance': 0},
+          'Base': {'cp_cost': 12, 'hullsize': 3, 'shipsize_needed': 2, 'tactics': 5, 'attack': 7, 'defense': 2, 'maintenance': 0}
+          },
+          'technology_data': {
+          'shipsize': [10, 15, 20, 25, 30],
+          'attack': [20, 30, 40],
+          'defense': [20, 30, 40],
+          'movement': [20, 30, 40, 40, 40],
+          'shipyard': [20, 30]
+          }
+          }   
         return state
