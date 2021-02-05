@@ -7,7 +7,7 @@ class Scout(Unit):
         self.attack = 3 + tech[0]
         self.defense = 1 + tech[1]
         self.tactics = 1
-        self.movement = 1 + tech[2]
+        self.movement = tech[2]
         self.armor = 2
         self.name = 'Scout'
         self.combat_ready = True

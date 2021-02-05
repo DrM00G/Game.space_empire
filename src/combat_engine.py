@@ -84,7 +84,7 @@ class CombatEngine:
         roll=self.rolls[0]
         self.rolls.remove(roll)
         attack=attacker.attack-target.defense
-        if attack>=roll:
+        if attack>=roll or roll==1:
           target.armor-=1
           if target.armor<=0:
             target.destroy()
