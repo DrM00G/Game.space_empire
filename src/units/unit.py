@@ -6,8 +6,10 @@ class Unit:
       self.coords=init_coords
       self.turn_made=turn_bought
       self.exists = True
-      self.screened=False
+      self.screaned=False
 
     def destroy(self):
+      # print("Boing")
+      print(self.unit_index)
       self.exists=False
       self.player.board.remove_from_board(self)

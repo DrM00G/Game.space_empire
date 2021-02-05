@@ -9,7 +9,7 @@ class Colonyship(Unit):
         self.tactics = 0
         self.movement = tech[2]
         self.armor = 2
-        self.name = 'Colony Ship'
+        self.name = 'Colonyship'
         self.combat_ready = False
         
 

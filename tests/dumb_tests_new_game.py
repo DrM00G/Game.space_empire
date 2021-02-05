@@ -4,11 +4,11 @@ from game import Game
 from strategies.dumb_strategy import DumbStrategy
 from player import Player
 
-scout_coords = [[4,0], [4,4]]
-non_scout_coords = [[2,0], [2,4]]
+scout_coords = [(4,0), (4,4)]
+non_scout_coords = [(2,0), (2,4)]
 player_scouts = [3,5,8,10,12]
 
-new_game=Game(board_size=[5,5],die_mode="random",sided_die=6)
+new_game=Game(board_size=[5,5],die_mode="decending",sided_die=6)
 player0_strats=DumbStrategy(0)
 player1_strats=DumbStrategy(1)
 
@@ -39,9 +39,9 @@ for i in range(4):
     check_player(0, player_scouts[i], i+1)
     check_player(1, player_scouts[i], i+1)
     print('Testing',i+1, 'Turn Combat Phase')
-    new_game.complete_combat_phase()
+    new_game.combat_phase()
     print('passed')
-    new_game.complete_economic_phase()
+    new_game.economic_phase()
     print('Testing',i+1, 'Turn Economic Phase')
     check_player(0, player_scouts[i + 1], i+1)
     check_player(1, player_scouts[i + 1], i+1)

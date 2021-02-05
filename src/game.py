@@ -37,6 +37,7 @@ class Game:
     def movement_phase(self):
         self.phase="Movement"
         for player in self.players:
+          print(player.player_index)
           player.movement_phase()
 
     def combat_phase(self):
@@ -49,9 +50,14 @@ class Game:
 
     def run_until_winner(self):
       while self.winner == None:
+        print(self.turn_numb)
         self.movement_phase()
-        self.combat_phase
+        print("1")
+        self.combat_phase()
+        print("2")
         #self.economic_phase
+        self.turn_numb+=1
+      return self.winner
 
     def generate_state(self):
         state={"turn":self.turn_numb,
@@ -72,8 +78,9 @@ class Game:
             "coords":unit.coords,
             "technology":{"defense": unit.defense,"attack": unit.attack,"movement": unit.movement},
             "hits_left":unit.armor,
-            'turn_created':unit.turn_made
-            }for unit in player.units if unit.exists],#ADD COLONIE FIXES#attk,defn,mov,shpyd,shpsz
+            'turn_created':unit.turn_made,
+            'exists':unit.exists
+            }for unit in player.units ],#ADD COLONIE FIXES#attk,defn,mov,shpyd,shpsz
             'technology': {'attack': player.tech[0], 'defense': player.tech[1], 'movement': player.tech[2],'shipyard technology':player.tech[3], 'shipsize': player.tech[4]}
             } for player in self.players
             ],
