@@ -16,13 +16,15 @@ class Colony(Unit):
         self.ship_yard_capacity=0
 
     def destroy_colony(self):
-        self.exists = False
         for unit in self.assets:
           unit.exists=False
 
     def destroy(self):
         if self.home_colony:
           self.player.game.choose_winner(loser=self.player_index)
+        self.exists=False
+        self.player.board.remove_from_board(self)
+        self.destroy_colony()
 
     def calc_shipyards(self):
       spyd_count=0

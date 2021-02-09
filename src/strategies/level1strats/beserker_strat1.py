@@ -5,11 +5,8 @@ class LevelOneBerserkerStrategy:
         self.name = 'berserk'
 
     def decide_ship_movement(self, ship_index, game_state):
-        print("check 1.1")
         ship_coords = game_state['players'][self.player_num]['units'][ship_index]['coords']
-        print("check 1.2")
         route = self.fastest_route(ship_coords, game_state['players'][self.player_num-1]['home_coords'])
-        print("check 1.3")
         if len(route) > 0:
             return tuple(route[0])
         else:
@@ -19,10 +16,10 @@ class LevelOneBerserkerStrategy:
         return -1
         
     def decide_which_unit_to_attack(self, combat_state, location, attacker_index):
-        print(combat_state)
-        for unit in combat_state[tuple(location)]:
-            if unit['player'] != combat_state[tuple(location)][attacker_index]['player']:
-                return combat_state[tuple(location)].index(unit)
+        # print(combat_state)
+      for ship in combat_state[location]:
+        if ship['player']!=self.player_num:
+          return combat_state[location].index(ship)
 
     def directional_input(self, current, goal):
         directions = [[1, 0],[-1, 0],[0, 1],[0, -1],[0,0]]
@@ -40,13 +37,10 @@ class LevelOneBerserkerStrategy:
 
     def fastest_route(self, current, goal):
         route = []
-        print("check 1.01")
         while(tuple(current) != goal):
             # print("check 1.02")
             direc = self.directional_input(current, goal)
             # print("check 1.03")
             route.append(direc)
-            print(str(current)+","+str(goal))
             current  = [current[0] + direc[0], current[1] + direc[1]]
-        print("check 1.05")
         return route

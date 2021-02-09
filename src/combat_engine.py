@@ -1,12 +1,13 @@
 import random
 
 class CombatEngine:
-    def __init__(self,die_mode,sided_die,board):
+    def __init__(self,die_mode,sided_die,board,game):
       self.board=board
       self.die_mode=die_mode
       self.sided_die=sided_die
       self.rolls=[]
       self.roll_die()
+      self.game=game
 
     def roll_die(self):
       if self.die_mode=="random":
@@ -72,14 +73,15 @@ class CombatEngine:
 
     def complete_combat_phase(self):
         self.kill_bystanders(self.locate_combat())
-        while len(self.locate_combat())>0:
+        while len(self.locate_combat())>0 and self.game.winner==None:
           combat_coord=[key for key in self.locate_combat()][0]
           #SCREAN
           order = self.combat_order(combat_coord)
           for unit in order:
-            if unit.exists and combat_coord in [key for key in self.locate_combat()]:
+            if unit.exists and combat_coord in [key for key in self.locate_combat()] and self.game.winner==None and unit.name!="Colony":
               # print(self.locate_combat()[combat_coord])
-              print(str(self.locate_combat()[combat_coord][unit.player.strat.decide_which_unit_to_attack(self.locate_combat(), combat_coord,unit.unit_index)]["type"])+","+str(self.locate_combat()[combat_coord][unit.player.strat.decide_which_unit_to_attack(self.locate_combat(), combat_coord,unit.unit_index)]["type"]))
+              # print(str(self.locate_combat()[combat_coord][unit.player.strat.decide_which_unit_to_attack(self.locate_combat(), combat_coord,unit.unit_index)]["type"])+","+str(self.locate_combat()[combat_coord][unit.player.strat.decide_which_unit_to_attack(self.locate_combat(), combat_coord,unit.unit_index)]["type"]))
+              
               target=self.locate_combat()[combat_coord][unit.player.strat.decide_which_unit_to_attack(self.locate_combat(), combat_coord,unit.unit_index)]
               for vs_unit in order:
                 if vs_unit.unit_index==target["unit_num"] and vs_unit.player_index!=unit.player_index:
@@ -98,6 +100,7 @@ class CombatEngine:
           target.armor-=1
           if target.armor<=0:
             target.destroy()
+
 
 
 

@@ -18,7 +18,7 @@ class Game:
       self.planets=[]
       self.winner=None
       self.player_whose_turn= None
-      self.combat = CombatEngine(die_mode,sided_die,self.board)
+      self.combat = CombatEngine(die_mode,sided_die,self.board,self)
       self.movement = MovementEngine(self.board)
       self.economy = EconomicEngine(self,self.board)
       
@@ -37,7 +37,6 @@ class Game:
     def movement_phase(self):
         self.phase="Movement"
         for player in self.players:
-          print(player.player_index)
           player.movement_phase()
 
     def combat_phase(self):
@@ -45,18 +44,21 @@ class Game:
         self.combat.complete_combat_phase()
 
     def choose_winner(self,loser):
-        print("Winner is Player"+str(abs(loser-1)))
+        # print("Winner is Player"+str(abs(loser-1)))
         self.winner=abs(loser-1)
+        # self.combat_phase().exit()
+        # self.run_until_winner().exit()
 
     def run_until_winner(self):
       while self.winner == None:
-        print(self.turn_numb)
+        # print("Move")
         self.movement_phase()
-        print("1")
+        # print("Fight")
         self.combat_phase()
-        print("2")
         #self.economic_phase
         self.turn_numb+=1
+        # if self.turn_numb>50:
+        #   print(self.board.board_dict)
       return self.winner
 
     def generate_state(self):

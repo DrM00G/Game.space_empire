@@ -10,6 +10,5 @@ class Unit:
 
     def destroy(self):
       # print("Boing")
-      print(self.unit_index)
       self.exists=False
       self.player.board.remove_from_board(self)

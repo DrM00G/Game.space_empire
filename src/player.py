@@ -35,10 +35,8 @@ class Player:
 
     def movement_phase(self):
       for phase in range(3):
-        print(phase+1)
         self.game.move_round=phase+1
         for unit in self.units:
-          print(unit.unit_index)
           self.game.movement.move(phase+1, unit,self.game.generate_state())
  
 
