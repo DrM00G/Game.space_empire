@@ -28,7 +28,7 @@ class CombatEngine:
           if player_count[0]!=0 and player_count[1]!=0:
             combat_dict[coord]={}
             combat_dict[coord]= [
-            {"type": unit.name,"player":unit.player_index,
+            {"type": unit.name,"player_index":unit.player_index,
             "unit_num":unit.unit_index,
             "coords":unit.coords,
             "technology":{"defense": unit.defense,"attack": unit.attack,"movement": unit.movement},
@@ -80,9 +80,9 @@ class CombatEngine:
           for unit in order:
             if unit.exists and combat_coord in [key for key in self.locate_combat()] and self.game.winner==None and unit.name!="Colony":
               # print(self.locate_combat()[combat_coord])
-              # print(str(self.locate_combat()[combat_coord][unit.player.strat.decide_which_unit_to_attack(self.locate_combat(), combat_coord,unit.unit_index)]["type"])+","+str(self.locate_combat()[combat_coord][unit.player.strat.decide_which_unit_to_attack(self.locate_combat(), combat_coord,unit.unit_index)]["type"]))
+              # print(str(self.locate_combat()[combat_coord][unit.player.strat.decide_which_unit_to_attack(self.locate_combat(), combat_coord,unit.unit_index)]["type"])+","+str(self.locate_combat()[combat_coord][unit.player.strat.decide_which_unit_to_attack(self.locate_combat(), combat_coord,unit.unit_index)]["type"]))hidden_game_state_for_combat, combat_state, coords, attacker_index
               
-              target=self.locate_combat()[combat_coord][unit.player.strat.decide_which_unit_to_attack(self.locate_combat(), combat_coord,unit.unit_index)]
+              target=self.locate_combat()[combat_coord][unit.player.strat.decide_which_unit_to_attack(self.locate_combat(),self.locate_combat(), combat_coord,unit.unit_index)]
               for vs_unit in order:
                 if vs_unit.unit_index==target["unit_num"] and vs_unit.player_index!=unit.player_index:
                   enemy=vs_unit

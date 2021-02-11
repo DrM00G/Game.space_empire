@@ -1,2 +1,2 @@
-run = "python tests/dumbvsbeserker_test.py"
+run = "python tests/flankervsbeserker_test.py"
 language = "python3"

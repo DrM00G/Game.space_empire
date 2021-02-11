@@ -15,10 +15,10 @@ class LevelOneBerserkerStrategy:
     def decide_removals(self, player_state):
         return -1
         
-    def decide_which_unit_to_attack(self, combat_state, location, attacker_index):
+    def decide_which_unit_to_attack(self, hidden_game_state, combat_state, location, attacker_index):
         # print(combat_state)
       for ship in combat_state[location]:
-        if ship['player']!=self.player_num:
+        if ship['player_index']!=self.player_num:
           return combat_state[location].index(ship)
 
     def directional_input(self, current, goal):
