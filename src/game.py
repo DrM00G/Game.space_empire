@@ -6,13 +6,14 @@ from planet import Planet
 from board import Board
 import logging 
   
-logging.basicConfig(filename="logs/level1_logs.log", 
+logging.basicConfig(filename="logs/level2_logs.log", 
                     format='%(message)s', 
                     filemode='w') 
 
 
 class Game:
-    def __init__(self,board_size=[5,5],die_mode="random",sided_die=10, simple=False):
+    def __init__(self,board_size=[5,5],die_mode="random",sided_die=10, simple=False,level=1):
+      self.level=level
       self.simple=simple
       self.board_size=board_size
       self.die_mode=die_mode
@@ -21,7 +22,7 @@ class Game:
       self.players=[]
       self.turn_numb=0
       self.phase = None
-      self.logger= logging.getLogger() 
+      self.logger=logging.getLogger() 
       self.logger.setLevel(logging.DEBUG) 
       self.move_round=0
       self.planets=[]
@@ -68,8 +69,8 @@ class Game:
         self.logger.info(self.board.board_dict)
         # print("Fight")
         self.combat_phase()
-
-        #self.economic_phase
+        if self.level==2 and self.turn_numb==0:
+          self.economic_phase()
         # if self.turn_numb>50:
         #   print(self.board.board_dict)
         self.turn_numb+=1

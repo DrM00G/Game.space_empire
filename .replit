@@ -1,2 +1,2 @@
-run = "python tests/flankervsbeserker_test.py"
+run = "python tests/NumberBvsAttackB_level2.py"
 language = "python3"

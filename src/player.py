@@ -14,7 +14,7 @@ class Player:
       self.units=[Colony(self,0,p_index,self.home_colony_pos,0,self.tech,home_colony=True)]
       self.board.add_to_board(self.units[0])
       self.state_strat=player_strat
-      self.CP = 0
+      self.CP = 10
       self.set_up_army(self.game.simple)
 
     def set_up_army(self,simple_army):

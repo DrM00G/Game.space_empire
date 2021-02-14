@@ -54,7 +54,7 @@ class FlankerStrategyLevel1:
         # attack opponent's first ship in combat order
 
         combat_order = combat_state[coords]
-        player_indices = [unit['player_index'] for unit in combat_order]
+        player_indices = [unit['player_num'] for unit in combat_order]
 
         opponent_index = 1 - self.player_index
         for combat_index, unit in enumerate(combat_order):

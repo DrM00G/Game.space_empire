@@ -44,7 +44,8 @@ class EconomicEngine:
       self.restore_shipyards(player)
       shopping_list=player.strat.decide_purchases(self.game.generate_state())
       self.buy_tech(player,shopping_list)
-      self.buy_units(player,shopping_list)
+      if self.game.level==2:
+        self.buy_units(player,shopping_list)
 
 
     def buy_tech(self, player,shopping_list):
@@ -91,8 +92,11 @@ class EconomicEngine:
             self.board.add_to_board(player.units[len(player.units)-1])
 
     def check_purchase(self,player,colony,unit):
-      if self.game.generate_state()["unit_data"][unit['type']]['cp_cost']<=player.CP and self.game.generate_state()["unit_data"][unit['type']]['hullsize']<=colony.ship_yard_capacity and self.game.generate_state()["unit_data"][unit['type']]['shipsize_needed']<=player.tech[4]:
-        return True
+      if self.game.level==2:
+        if self.game.generate_state()["unit_data"][unit['type']]['cp_cost']<=player.CP and self.game.generate_state()["unit_data"][unit['type']]['hullsize']<=colony.ship_yard_capacity and self.game.generate_state()["unit_data"][unit['type']]['shipsize_needed']<=player.tech[4]:
+          return True
+        else:
+          return False
       else:
         return False
 
