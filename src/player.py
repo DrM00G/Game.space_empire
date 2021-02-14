@@ -4,7 +4,7 @@ from units.scout import Scout
 from units.ship_yard import Shipyard
 
 class Player:
-    def __init__(self,p_index,player_strat,init_pos,game,simple_army=False):
+    def __init__(self,p_index,player_strat,init_pos,game):
       self.player_index=p_index
       self.strat=player_strat
       self.home_colony_pos=init_pos
@@ -15,7 +15,7 @@ class Player:
       self.board.add_to_board(self.units[0])
       self.state_strat=player_strat
       self.CP = 0
-      self.set_up_army(simple_army)
+      self.set_up_army(self.game.simple)
 
     def set_up_army(self,simple_army):
       if simple_army:
@@ -34,10 +34,15 @@ class Player:
           self.board.add_to_board(self.units[n+8])
 
     def movement_phase(self):
-      for phase in range(3):
-        self.game.move_round=phase+1
+      if self.game.simple:
+        self.game.move_round=1
         for unit in self.units:
-          self.game.movement.move(phase+1, unit,self.game.generate_state())
+          self.game.movement.move(1, unit,self.game.generate_state())
+      else:
+        for phase in range(3):
+          self.game.move_round=phase+1
+          for unit in self.units:
+            self.game.movement.move(phase+1, unit,self.game.generate_state())
  
 
 

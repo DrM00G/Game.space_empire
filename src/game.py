@@ -4,9 +4,16 @@ from movement_engine import MovementEngine
 from economic_engine import EconomicEngine
 from planet import Planet
 from board import Board
+import logging 
+  
+logging.basicConfig(filename="logs/level1_logs.log", 
+                    format='%(message)s', 
+                    filemode='w') 
+
 
 class Game:
-    def __init__(self,board_size=[5,5],die_mode="random",sided_die=10):
+    def __init__(self,board_size=[5,5],die_mode="random",sided_die=10, simple=False):
+      self.simple=simple
       self.board_size=board_size
       self.die_mode=die_mode
       self.planet_nums=0
@@ -14,6 +21,8 @@ class Game:
       self.players=[]
       self.turn_numb=0
       self.phase = None
+      self.logger= logging.getLogger() 
+      self.logger.setLevel(logging.DEBUG) 
       self.move_round=0
       self.planets=[]
       self.winner=None
@@ -31,16 +40,19 @@ class Game:
 
     def economic_phase(self):
         self.phase="Economic"
+        self.logger.info(str(self.phase)+str(self.turn_numb))
         for player in self.players:
           self.economy.complete_economic_phase(player)
 
     def movement_phase(self):
         self.phase="Movement"
+        self.logger.info(str(self.phase)+str(self.turn_numb))
         for player in self.players:
           player.movement_phase()
 
     def combat_phase(self):
         self.phase="Combat"
+        self.logger.info(str(self.phase)+str(self.turn_numb))
         self.combat.complete_combat_phase()
 
     def choose_winner(self,loser):
@@ -53,12 +65,15 @@ class Game:
       while self.winner == None:
         # print("Move")
         self.movement_phase()
+        self.logger.info(self.board.board_dict)
         # print("Fight")
         self.combat_phase()
+
         #self.economic_phase
-        self.turn_numb+=1
         # if self.turn_numb>50:
         #   print(self.board.board_dict)
+        self.turn_numb+=1
+      self.logger.info("Winner: "+str(self.winner))
       return self.winner
 
     def generate_state(self):

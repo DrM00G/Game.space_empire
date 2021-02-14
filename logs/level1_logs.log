@@ -1,0 +1,910 @@
+Movement0
+{(0, 0): {'units': [], 'planet': None}, (1, 0): {'units': [], 'planet': None}, (2, 0): {'units': [<units.colony.Colony object at 0x7f19d7566670>], 'planet': <planet.Planet object at 0x7f19d7566850>}, (3, 0): {'units': [<units.scout.Scout object at 0x7f19d75666d0>], 'planet': None}, (4, 0): {'units': [], 'planet': None}, (0, 1): {'units': [], 'planet': None}, (1, 1): {'units': [], 'planet': None}, (2, 1): {'units': [<units.scout.Scout object at 0x7f19d7566760>, <units.scout.Scout object at 0x7f19d7566790>], 'planet': None}, (3, 1): {'units': [], 'planet': None}, (4, 1): {'units': [], 'planet': None}, (0, 2): {'units': [], 'planet': None}, (1, 2): {'units': [], 'planet': None}, (2, 2): {'units': [], 'planet': None}, (3, 2): {'units': [], 'planet': None}, (4, 2): {'units': [], 'planet': None}, (0, 3): {'units': [], 'planet': None}, (1, 3): {'units': [], 'planet': None}, (2, 3): {'units': [<units.scout.Scout object at 0x7f19d7566820>, <units.scout.Scout object at 0x7f19d75668b0>, <units.scout.Scout object at 0x7f19d75668e0>], 'planet': None}, (3, 3): {'units': [], 'planet': None}, (4, 3): {'units': [], 'planet': None}, (0, 4): {'units': [], 'planet': None}, (1, 4): {'units': [], 'planet': None}, (2, 4): {'units': [<units.colony.Colony object at 0x7f19d75667f0>], 'planet': <planet.Planet object at 0x7f19d7566940>}, (3, 4): {'units': [], 'planet': None}, (4, 4): {'units': [], 'planet': None}}
+Combat0
+Movement1
+{(0, 0): {'units': [], 'planet': None}, (1, 0): {'units': [], 'planet': None}, (2, 0): {'units': [<units.colony.Colony object at 0x7f19d7566670>], 'planet': <planet.Planet object at 0x7f19d7566850>}, (3, 0): {'units': [], 'planet': None}, (4, 0): {'units': [], 'planet': None}, (0, 1): {'units': [], 'planet': None}, (1, 1): {'units': [], 'planet': None}, (2, 1): {'units': [], 'planet': None}, (3, 1): {'units': [<units.scout.Scout object at 0x7f19d75666d0>], 'planet': None}, (4, 1): {'units': [], 'planet': None}, (0, 2): {'units': [], 'planet': None}, (1, 2): {'units': [], 'planet': None}, (2, 2): {'units': [<units.scout.Scout object at 0x7f19d7566760>, <units.scout.Scout object at 0x7f19d7566790>, <units.scout.Scout object at 0x7f19d7566820>, <units.scout.Scout object at 0x7f19d75668b0>, <units.scout.Scout object at 0x7f19d75668e0>], 'planet': None}, (3, 2): {'units': [], 'planet': None}, (4, 2): {'units': [], 'planet': None}, (0, 3): {'units': [], 'planet': None}, (1, 3): {'units': [], 'planet': None}, (2, 3): {'units': [], 'planet': None}, (3, 3): {'units': [], 'planet': None}, (4, 3): {'units': [], 'planet': None}, (0, 4): {'units': [], 'planet': None}, (1, 4): {'units': [], 'planet': None}, (2, 4): {'units': [<units.colony.Colony object at 0x7f19d75667f0>], 'planet': <planet.Planet object at 0x7f19d7566940>}, (3, 4): {'units': [], 'planet': None}, (4, 4): {'units': [], 'planet': None}}
+Combat1
+Scout2,0 VS Scout1,1 Roll:3
+Scout hit
+Scout destroyed
+Scout3,0 VS Scout2,1 Roll:10
+Scout2,1 VS Scout2,0 Roll:2
+Scout hit
+Scout destroyed
+Scout3,1 VS Scout3,0 Roll:5
+Scout3,0 VS Scout2,1 Roll:2
+Scout hit
+Scout destroyed
+Scout3,1 VS Scout3,0 Roll:8
+Scout3,0 VS Scout3,1 Roll:8
+Scout3,1 VS Scout3,0 Roll:8
+Scout3,0 VS Scout3,1 Roll:7
+Scout3,1 VS Scout3,0 Roll:4
+Scout3,0 VS Scout3,1 Roll:2
+Scout hit
+Scout destroyed
+Movement2
+{(0, 0): {'units': [], 'planet': None}, (1, 0): {'units': [], 'planet': None}, (2, 0): {'units': [<units.colony.Colony object at 0x7f19d7566670>], 'planet': <planet.Planet object at 0x7f19d7566850>}, (3, 0): {'units': [], 'planet': None}, (4, 0): {'units': [], 'planet': None}, (0, 1): {'units': [], 'planet': None}, (1, 1): {'units': [], 'planet': None}, (2, 1): {'units': [], 'planet': None}, (3, 1): {'units': [], 'planet': None}, (4, 1): {'units': [], 'planet': None}, (0, 2): {'units': [], 'planet': None}, (1, 2): {'units': [], 'planet': None}, (2, 2): {'units': [], 'planet': None}, (3, 2): {'units': [<units.scout.Scout object at 0x7f19d75666d0>], 'planet': None}, (4, 2): {'units': [], 'planet': None}, (0, 3): {'units': [], 'planet': None}, (1, 3): {'units': [], 'planet': None}, (2, 3): {'units': [<units.scout.Scout object at 0x7f19d7566790>], 'planet': None}, (3, 3): {'units': [], 'planet': None}, (4, 3): {'units': [], 'planet': None}, (0, 4): {'units': [], 'planet': None}, (1, 4): {'units': [], 'planet': None}, (2, 4): {'units': [<units.colony.Colony object at 0x7f19d75667f0>], 'planet': <planet.Planet object at 0x7f19d7566940>}, (3, 4): {'units': [], 'planet': None}, (4, 4): {'units': [], 'planet': None}}
+Combat2
+Movement3
+{(0, 0): {'units': [], 'planet': None}, (1, 0): {'units': [], 'planet': None}, (2, 0): {'units': [<units.colony.Colony object at 0x7f19d7566670>], 'planet': <planet.Planet object at 0x7f19d7566850>}, (3, 0): {'units': [], 'planet': None}, (4, 0): {'units': [], 'planet': None}, (0, 1): {'units': [], 'planet': None}, (1, 1): {'units': [], 'planet': None}, (2, 1): {'units': [], 'planet': None}, (3, 1): {'units': [], 'planet': None}, (4, 1): {'units': [], 'planet': None}, (0, 2): {'units': [], 'planet': None}, (1, 2): {'units': [], 'planet': None}, (2, 2): {'units': [], 'planet': None}, (3, 2): {'units': [], 'planet': None}, (4, 2): {'units': [], 'planet': None}, (0, 3): {'units': [], 'planet': None}, (1, 3): {'units': [], 'planet': None}, (2, 3): {'units': [], 'planet': None}, (3, 3): {'units': [<units.scout.Scout object at 0x7f19d75666d0>], 'planet': None}, (4, 3): {'units': [], 'planet': None}, (0, 4): {'units': [], 'planet': None}, (1, 4): {'units': [], 'planet': None}, (2, 4): {'units': [<units.colony.Colony object at 0x7f19d75667f0>, <units.scout.Scout object at 0x7f19d7566790>], 'planet': <planet.Planet object at 0x7f19d7566940>}, (3, 4): {'units': [], 'planet': None}, (4, 4): {'units': [], 'planet': None}}
+Combat3
+Scout3,0 VS Colony0,1 Roll:8
+Scout3,0 VS Colony0,1 Roll:1
+Colony hit
+Scout3,0 VS Colony0,1 Roll:7
+Scout3,0 VS Colony0,1 Roll:7
+Scout3,0 VS Colony0,1 Roll:10
+Scout3,0 VS Colony0,1 Roll:1
+Colony hit
+Scout3,0 VS Colony0,1 Roll:8
+Scout3,0 VS Colony0,1 Roll:5
+Scout3,0 VS Colony0,1 Roll:4
+Scout3,0 VS Colony0,1 Roll:10
+Scout3,0 VS Colony0,1 Roll:2
+Colony hit
+Colony destroyed
+Winner: 0
+Movement0
+{(0, 0): {'units': [], 'planet': None}, (1, 0): {'units': [], 'planet': None}, (2, 0): {'units': [<units.colony.Colony object at 0x7f19d7566c70>], 'planet': <planet.Planet object at 0x7f19d7566e20>}, (3, 0): {'units': [<units.scout.Scout object at 0x7f19d7566ca0>], 'planet': None}, (4, 0): {'units': [], 'planet': None}, (0, 1): {'units': [], 'planet': None}, (1, 1): {'units': [], 'planet': None}, (2, 1): {'units': [<units.scout.Scout object at 0x7f19d7566d30>, <units.scout.Scout object at 0x7f19d7566d60>], 'planet': None}, (3, 1): {'units': [], 'planet': None}, (4, 1): {'units': [], 'planet': None}, (0, 2): {'units': [], 'planet': None}, (1, 2): {'units': [], 'planet': None}, (2, 2): {'units': [], 'planet': None}, (3, 2): {'units': [], 'planet': None}, (4, 2): {'units': [], 'planet': None}, (0, 3): {'units': [], 'planet': None}, (1, 3): {'units': [], 'planet': None}, (2, 3): {'units': [<units.scout.Scout object at 0x7f19d7566df0>, <units.scout.Scout object at 0x7f19d7566e80>, <units.scout.Scout object at 0x7f19d7566eb0>], 'planet': None}, (3, 3): {'units': [], 'planet': None}, (4, 3): {'units': [], 'planet': None}, (0, 4): {'units': [], 'planet': None}, (1, 4): {'units': [], 'planet': None}, (2, 4): {'units': [<units.colony.Colony object at 0x7f19d7566dc0>], 'planet': <planet.Planet object at 0x7f19d7566f10>}, (3, 4): {'units': [], 'planet': None}, (4, 4): {'units': [], 'planet': None}}
+Combat0
+Movement1
+{(0, 0): {'units': [], 'planet': None}, (1, 0): {'units': [], 'planet': None}, (2, 0): {'units': [<units.colony.Colony object at 0x7f19d7566c70>], 'planet': <planet.Planet object at 0x7f19d7566e20>}, (3, 0): {'units': [], 'planet': None}, (4, 0): {'units': [], 'planet': None}, (0, 1): {'units': [], 'planet': None}, (1, 1): {'units': [], 'planet': None}, (2, 1): {'units': [], 'planet': None}, (3, 1): {'units': [<units.scout.Scout object at 0x7f19d7566ca0>], 'planet': None}, (4, 1): {'units': [], 'planet': None}, (0, 2): {'units': [], 'planet': None}, (1, 2): {'units': [], 'planet': None}, (2, 2): {'units': [<units.scout.Scout object at 0x7f19d7566d30>, <units.scout.Scout object at 0x7f19d7566d60>, <units.scout.Scout object at 0x7f19d7566df0>, <units.scout.Scout object at 0x7f19d7566e80>, <units.scout.Scout object at 0x7f19d7566eb0>], 'planet': None}, (3, 2): {'units': [], 'planet': None}, (4, 2): {'units': [], 'planet': None}, (0, 3): {'units': [], 'planet': None}, (1, 3): {'units': [], 'planet': None}, (2, 3): {'units': [], 'planet': None}, (3, 3): {'units': [], 'planet': None}, (4, 3): {'units': [], 'planet': None}, (0, 4): {'units': [], 'planet': None}, (1, 4): {'units': [], 'planet': None}, (2, 4): {'units': [<units.colony.Colony object at 0x7f19d7566dc0>], 'planet': <planet.Planet object at 0x7f19d7566f10>}, (3, 4): {'units': [], 'planet': None}, (4, 4): {'units': [], 'planet': None}}
+Combat1
+Scout2,0 VS Scout1,1 Roll:1
+Scout hit
+Scout destroyed
+Scout3,0 VS Scout2,1 Roll:2
+Scout hit
+Scout destroyed
+Scout3,1 VS Scout2,0 Roll:2
+Scout hit
+Scout destroyed
+Scout3,0 VS Scout3,1 Roll:6
+Scout3,1 VS Scout3,0 Roll:3
+Scout hit
+Scout destroyed
+Movement2
+{(0, 0): {'units': [], 'planet': None}, (1, 0): {'units': [], 'planet': None}, (2, 0): {'units': [<units.colony.Colony object at 0x7f19d7566c70>], 'planet': <planet.Planet object at 0x7f19d7566e20>}, (3, 0): {'units': [], 'planet': None}, (4, 0): {'units': [], 'planet': None}, (0, 1): {'units': [], 'planet': None}, (1, 1): {'units': [], 'planet': None}, (2, 1): {'units': [<units.scout.Scout object at 0x7f19d7566eb0>], 'planet': None}, (3, 1): {'units': [], 'planet': None}, (4, 1): {'units': [], 'planet': None}, (0, 2): {'units': [], 'planet': None}, (1, 2): {'units': [], 'planet': None}, (2, 2): {'units': [], 'planet': None}, (3, 2): {'units': [<units.scout.Scout object at 0x7f19d7566ca0>], 'planet': None}, (4, 2): {'units': [], 'planet': None}, (0, 3): {'units': [], 'planet': None}, (1, 3): {'units': [], 'planet': None}, (2, 3): {'units': [], 'planet': None}, (3, 3): {'units': [], 'planet': None}, (4, 3): {'units': [], 'planet': None}, (0, 4): {'units': [], 'planet': None}, (1, 4): {'units': [], 'planet': None}, (2, 4): {'units': [<units.colony.Colony object at 0x7f19d7566dc0>], 'planet': <planet.Planet object at 0x7f19d7566f10>}, (3, 4): {'units': [], 'planet': None}, (4, 4): {'units': [], 'planet': None}}
+Combat2
+Movement3
+{(0, 0): {'units': [], 'planet': None}, (1, 0): {'units': [], 'planet': None}, (2, 0): {'units': [<units.colony.Colony object at 0x7f19d7566c70>, <units.scout.Scout object at 0x7f19d7566eb0>], 'planet': <planet.Planet object at 0x7f19d7566e20>}, (3, 0): {'units': [], 'planet': None}, (4, 0): {'units': [], 'planet': None}, (0, 1): {'units': [], 'planet': None}, (1, 1): {'units': [], 'planet': None}, (2, 1): {'units': [], 'planet': None}, (3, 1): {'units': [], 'planet': None}, (4, 1): {'units': [], 'planet': None}, (0, 2): {'units': [], 'planet': None}, (1, 2): {'units': [], 'planet': None}, (2, 2): {'units': [], 'planet': None}, (3, 2): {'units': [], 'planet': None}, (4, 2): {'units': [], 'planet': None}, (0, 3): {'units': [], 'planet': None}, (1, 3): {'units': [], 'planet': None}, (2, 3): {'units': [], 'planet': None}, (3, 3): {'units': [<units.scout.Scout object at 0x7f19d7566ca0>], 'planet': None}, (4, 3): {'units': [], 'planet': None}, (0, 4): {'units': [], 'planet': None}, (1, 4): {'units': [], 'planet': None}, (2, 4): {'units': [<units.colony.Colony object at 0x7f19d7566dc0>], 'planet': <planet.Planet object at 0x7f19d7566f10>}, (3, 4): {'units': [], 'planet': None}, (4, 4): {'units': [], 'planet': None}}
+Combat3
+Scout3,1 VS Colony0,0 Roll:5
+Scout3,1 VS Colony0,0 Roll:5
+Scout3,1 VS Colony0,0 Roll:10
+Scout3,1 VS Colony0,0 Roll:4
+Scout3,1 VS Colony0,0 Roll:10
+Scout3,1 VS Colony0,0 Roll:1
+Colony hit
+Scout3,1 VS Colony0,0 Roll:10
+Scout3,1 VS Colony0,0 Roll:3
+Scout3,1 VS Colony0,0 Roll:7
+Scout3,1 VS Colony0,0 Roll:7
+Scout3,1 VS Colony0,0 Roll:9
+Scout3,1 VS Colony0,0 Roll:6
+Scout3,1 VS Colony0,0 Roll:9
+Scout3,1 VS Colony0,0 Roll:8
+Scout3,1 VS Colony0,0 Roll:9
+Scout3,1 VS Colony0,0 Roll:5
+Scout3,1 VS Colony0,0 Roll:1
+Colony hit
+Scout3,1 VS Colony0,0 Roll:1
+Colony hit
+Colony destroyed
+Winner: 1
+Movement0
+{(0, 0): {'units': [], 'planet': None}, (1, 0): {'units': [], 'planet': None}, (2, 0): {'units': [<units.colony.Colony object at 0x7f19d757b280>], 'planet': <planet.Planet object at 0x7f19d757b430>}, (3, 0): {'units': [<units.scout.Scout object at 0x7f19d757b2b0>], 'planet': None}, (4, 0): {'units': [], 'planet': None}, (0, 1): {'units': [], 'planet': None}, (1, 1): {'units': [], 'planet': None}, (2, 1): {'units': [<units.scout.Scout object at 0x7f19d757b340>, <units.scout.Scout object at 0x7f19d757b370>], 'planet': None}, (3, 1): {'units': [], 'planet': None}, (4, 1): {'units': [], 'planet': None}, (0, 2): {'units': [], 'planet': None}, (1, 2): {'units': [], 'planet': None}, (2, 2): {'units': [], 'planet': None}, (3, 2): {'units': [], 'planet': None}, (4, 2): {'units': [], 'planet': None}, (0, 3): {'units': [], 'planet': None}, (1, 3): {'units': [], 'planet': None}, (2, 3): {'units': [<units.scout.Scout object at 0x7f19d757b400>, <units.scout.Scout object at 0x7f19d757b490>, <units.scout.Scout object at 0x7f19d757b4c0>], 'planet': None}, (3, 3): {'units': [], 'planet': None}, (4, 3): {'units': [], 'planet': None}, (0, 4): {'units': [], 'planet': None}, (1, 4): {'units': [], 'planet': None}, (2, 4): {'units': [<units.colony.Colony object at 0x7f19d757b3d0>], 'planet': <planet.Planet object at 0x7f19d757b520>}, (3, 4): {'units': [], 'planet': None}, (4, 4): {'units': [], 'planet': None}}
+Combat0
+Movement1
+{(0, 0): {'units': [], 'planet': None}, (1, 0): {'units': [], 'planet': None}, (2, 0): {'units': [<units.colony.Colony object at 0x7f19d757b280>], 'planet': <planet.Planet object at 0x7f19d757b430>}, (3, 0): {'units': [], 'planet': None}, (4, 0): {'units': [], 'planet': None}, (0, 1): {'units': [], 'planet': None}, (1, 1): {'units': [], 'planet': None}, (2, 1): {'units': [], 'planet': None}, (3, 1): {'units': [<units.scout.Scout object at 0x7f19d757b2b0>], 'planet': None}, (4, 1): {'units': [], 'planet': None}, (0, 2): {'units': [], 'planet': None}, (1, 2): {'units': [], 'planet': None}, (2, 2): {'units': [<units.scout.Scout object at 0x7f19d757b340>, <units.scout.Scout object at 0x7f19d757b370>, <units.scout.Scout object at 0x7f19d757b400>, <units.scout.Scout object at 0x7f19d757b490>, <units.scout.Scout object at 0x7f19d757b4c0>], 'planet': None}, (3, 2): {'units': [], 'planet': None}, (4, 2): {'units': [], 'planet': None}, (0, 3): {'units': [], 'planet': None}, (1, 3): {'units': [], 'planet': None}, (2, 3): {'units': [], 'planet': None}, (3, 3): {'units': [], 'planet': None}, (4, 3): {'units': [], 'planet': None}, (0, 4): {'units': [], 'planet': None}, (1, 4): {'units': [], 'planet': None}, (2, 4): {'units': [<units.colony.Colony object at 0x7f19d757b3d0>], 'planet': <planet.Planet object at 0x7f19d757b520>}, (3, 4): {'units': [], 'planet': None}, (4, 4): {'units': [], 'planet': None}}
+Combat1
+Scout2,0 VS Scout1,1 Roll:4
+Scout3,0 VS Scout1,1 Roll:10
+Scout1,1 VS Scout2,0 Roll:9
+Scout2,1 VS Scout2,0 Roll:3
+Scout hit
+Scout destroyed
+Scout3,1 VS Scout3,0 Roll:6
+Scout3,0 VS Scout1,1 Roll:10
+Scout1,1 VS Scout3,0 Roll:8
+Scout2,1 VS Scout3,0 Roll:10
+Scout3,1 VS Scout3,0 Roll:2
+Scout hit
+Scout destroyed
+Movement2
+{(0, 0): {'units': [], 'planet': None}, (1, 0): {'units': [], 'planet': None}, (2, 0): {'units': [<units.colony.Colony object at 0x7f19d757b280>], 'planet': <planet.Planet object at 0x7f19d757b430>}, (3, 0): {'units': [], 'planet': None}, (4, 0): {'units': [], 'planet': None}, (0, 1): {'units': [], 'planet': None}, (1, 1): {'units': [], 'planet': None}, (2, 1): {'units': [<units.scout.Scout object at 0x7f19d757b400>, <units.scout.Scout object at 0x7f19d757b490>, <units.scout.Scout object at 0x7f19d757b4c0>], 'planet': None}, (3, 1): {'units': [], 'planet': None}, (4, 1): {'units': [], 'planet': None}, (0, 2): {'units': [], 'planet': None}, (1, 2): {'units': [], 'planet': None}, (2, 2): {'units': [], 'planet': None}, (3, 2): {'units': [<units.scout.Scout object at 0x7f19d757b2b0>], 'planet': None}, (4, 2): {'units': [], 'planet': None}, (0, 3): {'units': [], 'planet': None}, (1, 3): {'units': [], 'planet': None}, (2, 3): {'units': [], 'planet': None}, (3, 3): {'units': [], 'planet': None}, (4, 3): {'units': [], 'planet': None}, (0, 4): {'units': [], 'planet': None}, (1, 4): {'units': [], 'planet': None}, (2, 4): {'units': [<units.colony.Colony object at 0x7f19d757b3d0>], 'planet': <planet.Planet object at 0x7f19d757b520>}, (3, 4): {'units': [], 'planet': None}, (4, 4): {'units': [], 'planet': None}}
+Combat2
+Movement3
+{(0, 0): {'units': [], 'planet': None}, (1, 0): {'units': [], 'planet': None}, (2, 0): {'units': [<units.colony.Colony object at 0x7f19d757b280>, <units.scout.Scout object at 0x7f19d757b400>, <units.scout.Scout object at 0x7f19d757b490>, <units.scout.Scout object at 0x7f19d757b4c0>], 'planet': <planet.Planet object at 0x7f19d757b430>}, (3, 0): {'units': [], 'planet': None}, (4, 0): {'units': [], 'planet': None}, (0, 1): {'units': [], 'planet': None}, (1, 1): {'units': [], 'planet': None}, (2, 1): {'units': [], 'planet': None}, (3, 1): {'units': [], 'planet': None}, (4, 1): {'units': [], 'planet': None}, (0, 2): {'units': [], 'planet': None}, (1, 2): {'units': [], 'planet': None}, (2, 2): {'units': [], 'planet': None}, (3, 2): {'units': [], 'planet': None}, (4, 2): {'units': [], 'planet': None}, (0, 3): {'units': [], 'planet': None}, (1, 3): {'units': [], 'planet': None}, (2, 3): {'units': [], 'planet': None}, (3, 3): {'units': [<units.scout.Scout object at 0x7f19d757b2b0>], 'planet': None}, (4, 3): {'units': [], 'planet': None}, (0, 4): {'units': [], 'planet': None}, (1, 4): {'units': [], 'planet': None}, (2, 4): {'units': [<units.colony.Colony object at 0x7f19d757b3d0>], 'planet': <planet.Planet object at 0x7f19d757b520>}, (3, 4): {'units': [], 'planet': None}, (4, 4): {'units': [], 'planet': None}}
+Combat3
+Scout1,1 VS Colony0,0 Roll:10
+Scout2,1 VS Colony0,0 Roll:1
+Colony hit
+Scout3,1 VS Colony0,0 Roll:8
+Scout1,1 VS Colony0,0 Roll:5
+Scout2,1 VS Colony0,0 Roll:9
+Scout3,1 VS Colony0,0 Roll:4
+Scout1,1 VS Colony0,0 Roll:4
+Scout2,1 VS Colony0,0 Roll:8
+Scout3,1 VS Colony0,0 Roll:9
+Scout1,1 VS Colony0,0 Roll:9
+Scout2,1 VS Colony0,0 Roll:8
+Scout3,1 VS Colony0,0 Roll:7
+Scout1,1 VS Colony0,0 Roll:3
+Scout2,1 VS Colony0,0 Roll:4
+Scout3,1 VS Colony0,0 Roll:3
+Scout1,1 VS Colony0,0 Roll:9
+Scout2,1 VS Colony0,0 Roll:7
+Scout3,1 VS Colony0,0 Roll:1
+Colony hit
+Scout1,1 VS Colony0,0 Roll:2
+Colony hit
+Colony destroyed
+Winner: 1
+Movement0
+{(0, 0): {'units': [], 'planet': None}, (1, 0): {'units': [], 'planet': None}, (2, 0): {'units': [<units.colony.Colony object at 0x7f19d757b880>], 'planet': <planet.Planet object at 0x7f19d7566e80>}, (3, 0): {'units': [<units.scout.Scout object at 0x7f19d7780a60>], 'planet': None}, (4, 0): {'units': [], 'planet': None}, (0, 1): {'units': [], 'planet': None}, (1, 1): {'units': [], 'planet': None}, (2, 1): {'units': [<units.scout.Scout object at 0x7f19d7700460>, <units.scout.Scout object at 0x7f19d7566c10>], 'planet': None}, (3, 1): {'units': [], 'planet': None}, (4, 1): {'units': [], 'planet': None}, (0, 2): {'units': [], 'planet': None}, (1, 2): {'units': [], 'planet': None}, (2, 2): {'units': [], 'planet': None}, (3, 2): {'units': [], 'planet': None}, (4, 2): {'units': [], 'planet': None}, (0, 3): {'units': [], 'planet': None}, (1, 3): {'units': [], 'planet': None}, (2, 3): {'units': [<units.scout.Scout object at 0x7f19d7566df0>, <units.scout.Scout object at 0x7f19d7566d90>, <units.scout.Scout object at 0x7f19d7566a30>], 'planet': None}, (3, 3): {'units': [], 'planet': None}, (4, 3): {'units': [], 'planet': None}, (0, 4): {'units': [], 'planet': None}, (1, 4): {'units': [], 'planet': None}, (2, 4): {'units': [<units.colony.Colony object at 0x7f19d7566dc0>], 'planet': <planet.Planet object at 0x7f19d7566be0>}, (3, 4): {'units': [], 'planet': None}, (4, 4): {'units': [], 'planet': None}}
+Combat0
+Movement1
+{(0, 0): {'units': [], 'planet': None}, (1, 0): {'units': [], 'planet': None}, (2, 0): {'units': [<units.colony.Colony object at 0x7f19d757b880>], 'planet': <planet.Planet object at 0x7f19d7566e80>}, (3, 0): {'units': [], 'planet': None}, (4, 0): {'units': [], 'planet': None}, (0, 1): {'units': [], 'planet': None}, (1, 1): {'units': [], 'planet': None}, (2, 1): {'units': [], 'planet': None}, (3, 1): {'units': [<units.scout.Scout object at 0x7f19d7780a60>], 'planet': None}, (4, 1): {'units': [], 'planet': None}, (0, 2): {'units': [], 'planet': None}, (1, 2): {'units': [], 'planet': None}, (2, 2): {'units': [<units.scout.Scout object at 0x7f19d7700460>, <units.scout.Scout object at 0x7f19d7566c10>, <units.scout.Scout object at 0x7f19d7566df0>, <units.scout.Scout object at 0x7f19d7566d90>, <units.scout.Scout object at 0x7f19d7566a30>], 'planet': None}, (3, 2): {'units': [], 'planet': None}, (4, 2): {'units': [], 'planet': None}, (0, 3): {'units': [], 'planet': None}, (1, 3): {'units': [], 'planet': None}, (2, 3): {'units': [], 'planet': None}, (3, 3): {'units': [], 'planet': None}, (4, 3): {'units': [], 'planet': None}, (0, 4): {'units': [], 'planet': None}, (1, 4): {'units': [], 'planet': None}, (2, 4): {'units': [<units.colony.Colony object at 0x7f19d7566dc0>], 'planet': <planet.Planet object at 0x7f19d7566be0>}, (3, 4): {'units': [], 'planet': None}, (4, 4): {'units': [], 'planet': None}}
+Combat1
+Scout2,0 VS Scout1,1 Roll:4
+Scout3,0 VS Scout1,1 Roll:5
+Scout1,1 VS Scout2,0 Roll:2
+Scout hit
+Scout destroyed
+Scout2,1 VS Scout3,0 Roll:7
+Scout3,1 VS Scout3,0 Roll:8
+Scout3,0 VS Scout1,1 Roll:3
+Scout hit
+Scout destroyed
+Scout2,1 VS Scout3,0 Roll:2
+Scout hit
+Scout destroyed
+Movement2
+{(0, 0): {'units': [], 'planet': None}, (1, 0): {'units': [], 'planet': None}, (2, 0): {'units': [<units.colony.Colony object at 0x7f19d757b880>], 'planet': <planet.Planet object at 0x7f19d7566e80>}, (3, 0): {'units': [], 'planet': None}, (4, 0): {'units': [], 'planet': None}, (0, 1): {'units': [], 'planet': None}, (1, 1): {'units': [], 'planet': None}, (2, 1): {'units': [<units.scout.Scout object at 0x7f19d7566d90>, <units.scout.Scout object at 0x7f19d7566a30>], 'planet': None}, (3, 1): {'units': [], 'planet': None}, (4, 1): {'units': [], 'planet': None}, (0, 2): {'units': [], 'planet': None}, (1, 2): {'units': [], 'planet': None}, (2, 2): {'units': [], 'planet': None}, (3, 2): {'units': [<units.scout.Scout object at 0x7f19d7780a60>], 'planet': None}, (4, 2): {'units': [], 'planet': None}, (0, 3): {'units': [], 'planet': None}, (1, 3): {'units': [], 'planet': None}, (2, 3): {'units': [], 'planet': None}, (3, 3): {'units': [], 'planet': None}, (4, 3): {'units': [], 'planet': None}, (0, 4): {'units': [], 'planet': None}, (1, 4): {'units': [], 'planet': None}, (2, 4): {'units': [<units.colony.Colony object at 0x7f19d7566dc0>], 'planet': <planet.Planet object at 0x7f19d7566be0>}, (3, 4): {'units': [], 'planet': None}, (4, 4): {'units': [], 'planet': None}}
+Combat2
+Movement3
+{(0, 0): {'units': [], 'planet': None}, (1, 0): {'units': [], 'planet': None}, (2, 0): {'units': [<units.colony.Colony object at 0x7f19d757b880>, <units.scout.Scout object at 0x7f19d7566d90>, <units.scout.Scout object at 0x7f19d7566a30>], 'planet': <planet.Planet object at 0x7f19d7566e80>}, (3, 0): {'units': [], 'planet': None}, (4, 0): {'units': [], 'planet': None}, (0, 1): {'units': [], 'planet': None}, (1, 1): {'units': [], 'planet': None}, (2, 1): {'units': [], 'planet': None}, (3, 1): {'units': [], 'planet': None}, (4, 1): {'units': [], 'planet': None}, (0, 2): {'units': [], 'planet': None}, (1, 2): {'units': [], 'planet': None}, (2, 2): {'units': [], 'planet': None}, (3, 2): {'units': [], 'planet': None}, (4, 2): {'units': [], 'planet': None}, (0, 3): {'units': [], 'planet': None}, (1, 3): {'units': [], 'planet': None}, (2, 3): {'units': [], 'planet': None}, (3, 3): {'units': [<units.scout.Scout object at 0x7f19d7780a60>], 'planet': None}, (4, 3): {'units': [], 'planet': None}, (0, 4): {'units': [], 'planet': None}, (1, 4): {'units': [], 'planet': None}, (2, 4): {'units': [<units.colony.Colony object at 0x7f19d7566dc0>], 'planet': <planet.Planet object at 0x7f19d7566be0>}, (3, 4): {'units': [], 'planet': None}, (4, 4): {'units': [], 'planet': None}}
+Combat3
+Scout2,1 VS Colony0,0 Roll:2
+Colony hit
+Scout3,1 VS Colony0,0 Roll:1
+Colony hit
+Scout2,1 VS Colony0,0 Roll:7
+Scout3,1 VS Colony0,0 Roll:9
+Scout2,1 VS Colony0,0 Roll:5
+Scout3,1 VS Colony0,0 Roll:1
+Colony hit
+Colony destroyed
+Winner: 1
+Movement0
+{(0, 0): {'units': [], 'planet': None}, (1, 0): {'units': [], 'planet': None}, (2, 0): {'units': [<units.colony.Colony object at 0x7f19d7566a90>], 'planet': <planet.Planet object at 0x7f19d75668b0>}, (3, 0): {'units': [<units.scout.Scout object at 0x7f19d7566a00>], 'planet': None}, (4, 0): {'units': [], 'planet': None}, (0, 1): {'units': [], 'planet': None}, (1, 1): {'units': [], 'planet': None}, (2, 1): {'units': [<units.scout.Scout object at 0x7f19d7566400>, <units.scout.Scout object at 0x7f19d7566490>], 'planet': None}, (3, 1): {'units': [], 'planet': None}, (4, 1): {'units': [], 'planet': None}, (0, 2): {'units': [], 'planet': None}, (1, 2): {'units': [], 'planet': None}, (2, 2): {'units': [], 'planet': None}, (3, 2): {'units': [], 'planet': None}, (4, 2): {'units': [], 'planet': None}, (0, 3): {'units': [], 'planet': None}, (1, 3): {'units': [], 'planet': None}, (2, 3): {'units': [<units.scout.Scout object at 0x7f19d7566820>, <units.scout.Scout object at 0x7f19d75667c0>, <units.scout.Scout object at 0x7f19d75664c0>], 'planet': None}, (3, 3): {'units': [], 'planet': None}, (4, 3): {'units': [], 'planet': None}, (0, 4): {'units': [], 'planet': None}, (1, 4): {'units': [], 'planet': None}, (2, 4): {'units': [<units.colony.Colony object at 0x7f19d75667f0>], 'planet': <planet.Planet object at 0x7f19d75663d0>}, (3, 4): {'units': [], 'planet': None}, (4, 4): {'units': [], 'planet': None}}
+Combat0
+Movement1
+{(0, 0): {'units': [], 'planet': None}, (1, 0): {'units': [], 'planet': None}, (2, 0): {'units': [<units.colony.Colony object at 0x7f19d7566a90>], 'planet': <planet.Planet object at 0x7f19d75668b0>}, (3, 0): {'units': [], 'planet': None}, (4, 0): {'units': [], 'planet': None}, (0, 1): {'units': [], 'planet': None}, (1, 1): {'units': [], 'planet': None}, (2, 1): {'units': [], 'planet': None}, (3, 1): {'units': [<units.scout.Scout object at 0x7f19d7566a00>], 'planet': None}, (4, 1): {'units': [], 'planet': None}, (0, 2): {'units': [], 'planet': None}, (1, 2): {'units': [], 'planet': None}, (2, 2): {'units': [<units.scout.Scout object at 0x7f19d7566400>, <units.scout.Scout object at 0x7f19d7566490>, <units.scout.Scout object at 0x7f19d7566820>, <units.scout.Scout object at 0x7f19d75667c0>, <units.scout.Scout object at 0x7f19d75664c0>], 'planet': None}, (3, 2): {'units': [], 'planet': None}, (4, 2): {'units': [], 'planet': None}, (0, 3): {'units': [], 'planet': None}, (1, 3): {'units': [], 'planet': None}, (2, 3): {'units': [], 'planet': None}, (3, 3): {'units': [], 'planet': None}, (4, 3): {'units': [], 'planet': None}, (0, 4): {'units': [], 'planet': None}, (1, 4): {'units': [], 'planet': None}, (2, 4): {'units': [<units.colony.Colony object at 0x7f19d75667f0>], 'planet': <planet.Planet object at 0x7f19d75663d0>}, (3, 4): {'units': [], 'planet': None}, (4, 4): {'units': [], 'planet': None}}
+Combat1
+Scout2,0 VS Scout1,1 Roll:10
+Scout3,0 VS Scout1,1 Roll:5
+Scout1,1 VS Scout2,0 Roll:6
+Scout2,1 VS Scout2,0 Roll:9
+Scout3,1 VS Scout2,0 Roll:1
+Scout hit
+Scout destroyed
+Scout3,0 VS Scout1,1 Roll:8
+Scout1,1 VS Scout3,0 Roll:4
+Scout2,1 VS Scout3,0 Roll:1
+Scout hit
+Scout destroyed
+Movement2
+{(0, 0): {'units': [], 'planet': None}, (1, 0): {'units': [], 'planet': None}, (2, 0): {'units': [<units.colony.Colony object at 0x7f19d7566a90>], 'planet': <planet.Planet object at 0x7f19d75668b0>}, (3, 0): {'units': [], 'planet': None}, (4, 0): {'units': [], 'planet': None}, (0, 1): {'units': [], 'planet': None}, (1, 1): {'units': [], 'planet': None}, (2, 1): {'units': [<units.scout.Scout object at 0x7f19d7566820>, <units.scout.Scout object at 0x7f19d75667c0>, <units.scout.Scout object at 0x7f19d75664c0>], 'planet': None}, (3, 1): {'units': [], 'planet': None}, (4, 1): {'units': [], 'planet': None}, (0, 2): {'units': [], 'planet': None}, (1, 2): {'units': [], 'planet': None}, (2, 2): {'units': [], 'planet': None}, (3, 2): {'units': [<units.scout.Scout object at 0x7f19d7566a00>], 'planet': None}, (4, 2): {'units': [], 'planet': None}, (0, 3): {'units': [], 'planet': None}, (1, 3): {'units': [], 'planet': None}, (2, 3): {'units': [], 'planet': None}, (3, 3): {'units': [], 'planet': None}, (4, 3): {'units': [], 'planet': None}, (0, 4): {'units': [], 'planet': None}, (1, 4): {'units': [], 'planet': None}, (2, 4): {'units': [<units.colony.Colony object at 0x7f19d75667f0>], 'planet': <planet.Planet object at 0x7f19d75663d0>}, (3, 4): {'units': [], 'planet': None}, (4, 4): {'units': [], 'planet': None}}
+Combat2
+Movement3
+{(0, 0): {'units': [], 'planet': None}, (1, 0): {'units': [], 'planet': None}, (2, 0): {'units': [<units.colony.Colony object at 0x7f19d7566a90>, <units.scout.Scout object at 0x7f19d7566820>, <units.scout.Scout object at 0x7f19d75667c0>, <units.scout.Scout object at 0x7f19d75664c0>], 'planet': <planet.Planet object at 0x7f19d75668b0>}, (3, 0): {'units': [], 'planet': None}, (4, 0): {'units': [], 'planet': None}, (0, 1): {'units': [], 'planet': None}, (1, 1): {'units': [], 'planet': None}, (2, 1): {'units': [], 'planet': None}, (3, 1): {'units': [], 'planet': None}, (4, 1): {'units': [], 'planet': None}, (0, 2): {'units': [], 'planet': None}, (1, 2): {'units': [], 'planet': None}, (2, 2): {'units': [], 'planet': None}, (3, 2): {'units': [], 'planet': None}, (4, 2): {'units': [], 'planet': None}, (0, 3): {'units': [], 'planet': None}, (1, 3): {'units': [], 'planet': None}, (2, 3): {'units': [], 'planet': None}, (3, 3): {'units': [<units.scout.Scout object at 0x7f19d7566a00>], 'planet': None}, (4, 3): {'units': [], 'planet': None}, (0, 4): {'units': [], 'planet': None}, (1, 4): {'units': [], 'planet': None}, (2, 4): {'units': [<units.colony.Colony object at 0x7f19d75667f0>], 'planet': <planet.Planet object at 0x7f19d75663d0>}, (3, 4): {'units': [], 'planet': None}, (4, 4): {'units': [], 'planet': None}}
+Combat3
+Scout1,1 VS Colony0,0 Roll:3
+Scout2,1 VS Colony0,0 Roll:2
+Colony hit
+Scout3,1 VS Colony0,0 Roll:6
+Scout1,1 VS Colony0,0 Roll:8
+Scout2,1 VS Colony0,0 Roll:4
+Scout3,1 VS Colony0,0 Roll:7
+Scout1,1 VS Colony0,0 Roll:9
+Scout2,1 VS Colony0,0 Roll:2
+Colony hit
+Scout3,1 VS Colony0,0 Roll:10
+Scout1,1 VS Colony0,0 Roll:4
+Scout2,1 VS Colony0,0 Roll:1
+Colony hit
+Colony destroyed
+Winner: 1
+Movement0
+{(0, 0): {'units': [], 'planet': None}, (1, 0): {'units': [], 'planet': None}, (2, 0): {'units': [<units.colony.Colony object at 0x7f19d7566520>], 'planet': <planet.Planet object at 0x7f19d757b820>}, (3, 0): {'units': [<units.scout.Scout object at 0x7f19d75664f0>], 'planet': None}, (4, 0): {'units': [], 'planet': None}, (0, 1): {'units': [], 'planet': None}, (1, 1): {'units': [], 'planet': None}, (2, 1): {'units': [<units.scout.Scout object at 0x7f19d7566370>, <units.scout.Scout object at 0x7f19d75662e0>], 'planet': None}, (3, 1): {'units': [], 'planet': None}, (4, 1): {'units': [], 'planet': None}, (0, 2): {'units': [], 'planet': None}, (1, 2): {'units': [], 'planet': None}, (2, 2): {'units': [], 'planet': None}, (3, 2): {'units': [], 'planet': None}, (4, 2): {'units': [], 'planet': None}, (0, 3): {'units': [], 'planet': None}, (1, 3): {'units': [], 'planet': None}, (2, 3): {'units': [<units.scout.Scout object at 0x7f19d7566160>, <units.scout.Scout object at 0x7f19d757b8e0>, <units.scout.Scout object at 0x7f19d757b910>], 'planet': None}, (3, 3): {'units': [], 'planet': None}, (4, 3): {'units': [], 'planet': None}, (0, 4): {'units': [], 'planet': None}, (1, 4): {'units': [], 'planet': None}, (2, 4): {'units': [<units.colony.Colony object at 0x7f19d7566310>], 'planet': <planet.Planet object at 0x7f19d757b970>}, (3, 4): {'units': [], 'planet': None}, (4, 4): {'units': [], 'planet': None}}
+Combat0
+Movement1
+{(0, 0): {'units': [], 'planet': None}, (1, 0): {'units': [], 'planet': None}, (2, 0): {'units': [<units.colony.Colony object at 0x7f19d7566520>], 'planet': <planet.Planet object at 0x7f19d757b820>}, (3, 0): {'units': [], 'planet': None}, (4, 0): {'units': [], 'planet': None}, (0, 1): {'units': [], 'planet': None}, (1, 1): {'units': [], 'planet': None}, (2, 1): {'units': [], 'planet': None}, (3, 1): {'units': [<units.scout.Scout object at 0x7f19d75664f0>], 'planet': None}, (4, 1): {'units': [], 'planet': None}, (0, 2): {'units': [], 'planet': None}, (1, 2): {'units': [], 'planet': None}, (2, 2): {'units': [<units.scout.Scout object at 0x7f19d7566370>, <units.scout.Scout object at 0x7f19d75662e0>, <units.scout.Scout object at 0x7f19d7566160>, <units.scout.Scout object at 0x7f19d757b8e0>, <units.scout.Scout object at 0x7f19d757b910>], 'planet': None}, (3, 2): {'units': [], 'planet': None}, (4, 2): {'units': [], 'planet': None}, (0, 3): {'units': [], 'planet': None}, (1, 3): {'units': [], 'planet': None}, (2, 3): {'units': [], 'planet': None}, (3, 3): {'units': [], 'planet': None}, (4, 3): {'units': [], 'planet': None}, (0, 4): {'units': [], 'planet': None}, (1, 4): {'units': [], 'planet': None}, (2, 4): {'units': [<units.colony.Colony object at 0x7f19d7566310>], 'planet': <planet.Planet object at 0x7f19d757b970>}, (3, 4): {'units': [], 'planet': None}, (4, 4): {'units': [], 'planet': None}}
+Combat1
+Scout2,0 VS Scout1,1 Roll:10
+Scout3,0 VS Scout1,1 Roll:2
+Scout hit
+Scout destroyed
+Scout2,1 VS Scout2,0 Roll:8
+Scout3,1 VS Scout2,0 Roll:5
+Scout2,0 VS Scout2,1 Roll:1
+Scout hit
+Scout destroyed
+Scout3,0 VS Scout3,1 Roll:1
+Scout hit
+Scout destroyed
+Movement2
+{(0, 0): {'units': [], 'planet': None}, (1, 0): {'units': [], 'planet': None}, (2, 0): {'units': [<units.colony.Colony object at 0x7f19d7566520>], 'planet': <planet.Planet object at 0x7f19d757b820>}, (3, 0): {'units': [], 'planet': None}, (4, 0): {'units': [], 'planet': None}, (0, 1): {'units': [], 'planet': None}, (1, 1): {'units': [], 'planet': None}, (2, 1): {'units': [], 'planet': None}, (3, 1): {'units': [], 'planet': None}, (4, 1): {'units': [], 'planet': None}, (0, 2): {'units': [], 'planet': None}, (1, 2): {'units': [], 'planet': None}, (2, 2): {'units': [], 'planet': None}, (3, 2): {'units': [<units.scout.Scout object at 0x7f19d75664f0>], 'planet': None}, (4, 2): {'units': [], 'planet': None}, (0, 3): {'units': [], 'planet': None}, (1, 3): {'units': [], 'planet': None}, (2, 3): {'units': [<units.scout.Scout object at 0x7f19d7566370>, <units.scout.Scout object at 0x7f19d75662e0>], 'planet': None}, (3, 3): {'units': [], 'planet': None}, (4, 3): {'units': [], 'planet': None}, (0, 4): {'units': [], 'planet': None}, (1, 4): {'units': [], 'planet': None}, (2, 4): {'units': [<units.colony.Colony object at 0x7f19d7566310>], 'planet': <planet.Planet object at 0x7f19d757b970>}, (3, 4): {'units': [], 'planet': None}, (4, 4): {'units': [], 'planet': None}}
+Combat2
+Movement3
+{(0, 0): {'units': [], 'planet': None}, (1, 0): {'units': [], 'planet': None}, (2, 0): {'units': [<units.colony.Colony object at 0x7f19d7566520>], 'planet': <planet.Planet object at 0x7f19d757b820>}, (3, 0): {'units': [], 'planet': None}, (4, 0): {'units': [], 'planet': None}, (0, 1): {'units': [], 'planet': None}, (1, 1): {'units': [], 'planet': None}, (2, 1): {'units': [], 'planet': None}, (3, 1): {'units': [], 'planet': None}, (4, 1): {'units': [], 'planet': None}, (0, 2): {'units': [], 'planet': None}, (1, 2): {'units': [], 'planet': None}, (2, 2): {'units': [], 'planet': None}, (3, 2): {'units': [], 'planet': None}, (4, 2): {'units': [], 'planet': None}, (0, 3): {'units': [], 'planet': None}, (1, 3): {'units': [], 'planet': None}, (2, 3): {'units': [], 'planet': None}, (3, 3): {'units': [<units.scout.Scout object at 0x7f19d75664f0>], 'planet': None}, (4, 3): {'units': [], 'planet': None}, (0, 4): {'units': [], 'planet': None}, (1, 4): {'units': [], 'planet': None}, (2, 4): {'units': [<units.colony.Colony object at 0x7f19d7566310>, <units.scout.Scout object at 0x7f19d7566370>, <units.scout.Scout object at 0x7f19d75662e0>], 'planet': <planet.Planet object at 0x7f19d757b970>}, (3, 4): {'units': [], 'planet': None}, (4, 4): {'units': [], 'planet': None}}
+Combat3
+Scout2,0 VS Colony0,1 Roll:3
+Scout3,0 VS Colony0,1 Roll:10
+Scout2,0 VS Colony0,1 Roll:8
+Scout3,0 VS Colony0,1 Roll:6
+Scout2,0 VS Colony0,1 Roll:6
+Scout3,0 VS Colony0,1 Roll:1
+Colony hit
+Scout2,0 VS Colony0,1 Roll:5
+Scout3,0 VS Colony0,1 Roll:8
+Scout2,0 VS Colony0,1 Roll:4
+Scout3,0 VS Colony0,1 Roll:7
+Scout2,0 VS Colony0,1 Roll:9
+Scout3,0 VS Colony0,1 Roll:9
+Scout2,0 VS Colony0,1 Roll:2
+Colony hit
+Scout3,0 VS Colony0,1 Roll:4
+Scout2,0 VS Colony0,1 Roll:10
+Scout3,0 VS Colony0,1 Roll:9
+Scout2,0 VS Colony0,1 Roll:5
+Scout3,0 VS Colony0,1 Roll:10
+Scout2,0 VS Colony0,1 Roll:2
+Colony hit
+Colony destroyed
+Winner: 0
+Movement0
+{(0, 0): {'units': [], 'planet': None}, (1, 0): {'units': [], 'planet': None}, (2, 0): {'units': [<units.colony.Colony object at 0x7f19d757bca0>], 'planet': <planet.Planet object at 0x7f19d757be50>}, (3, 0): {'units': [<units.scout.Scout object at 0x7f19d757bcd0>], 'planet': None}, (4, 0): {'units': [], 'planet': None}, (0, 1): {'units': [], 'planet': None}, (1, 1): {'units': [], 'planet': None}, (2, 1): {'units': [<units.scout.Scout object at 0x7f19d757bd60>, <units.scout.Scout object at 0x7f19d757bd90>], 'planet': None}, (3, 1): {'units': [], 'planet': None}, (4, 1): {'units': [], 'planet': None}, (0, 2): {'units': [], 'planet': None}, (1, 2): {'units': [], 'planet': None}, (2, 2): {'units': [], 'planet': None}, (3, 2): {'units': [], 'planet': None}, (4, 2): {'units': [], 'planet': None}, (0, 3): {'units': [], 'planet': None}, (1, 3): {'units': [], 'planet': None}, (2, 3): {'units': [<units.scout.Scout object at 0x7f19d757be20>, <units.scout.Scout object at 0x7f19d757beb0>, <units.scout.Scout object at 0x7f19d757bee0>], 'planet': None}, (3, 3): {'units': [], 'planet': None}, (4, 3): {'units': [], 'planet': None}, (0, 4): {'units': [], 'planet': None}, (1, 4): {'units': [], 'planet': None}, (2, 4): {'units': [<units.colony.Colony object at 0x7f19d757bdf0>], 'planet': <planet.Planet object at 0x7f19d757bf40>}, (3, 4): {'units': [], 'planet': None}, (4, 4): {'units': [], 'planet': None}}
+Combat0
+Movement1
+{(0, 0): {'units': [], 'planet': None}, (1, 0): {'units': [], 'planet': None}, (2, 0): {'units': [<units.colony.Colony object at 0x7f19d757bca0>], 'planet': <planet.Planet object at 0x7f19d757be50>}, (3, 0): {'units': [], 'planet': None}, (4, 0): {'units': [], 'planet': None}, (0, 1): {'units': [], 'planet': None}, (1, 1): {'units': [], 'planet': None}, (2, 1): {'units': [], 'planet': None}, (3, 1): {'units': [<units.scout.Scout object at 0x7f19d757bcd0>], 'planet': None}, (4, 1): {'units': [], 'planet': None}, (0, 2): {'units': [], 'planet': None}, (1, 2): {'units': [], 'planet': None}, (2, 2): {'units': [<units.scout.Scout object at 0x7f19d757bd60>, <units.scout.Scout object at 0x7f19d757bd90>, <units.scout.Scout object at 0x7f19d757be20>, <units.scout.Scout object at 0x7f19d757beb0>, <units.scout.Scout object at 0x7f19d757bee0>], 'planet': None}, (3, 2): {'units': [], 'planet': None}, (4, 2): {'units': [], 'planet': None}, (0, 3): {'units': [], 'planet': None}, (1, 3): {'units': [], 'planet': None}, (2, 3): {'units': [], 'planet': None}, (3, 3): {'units': [], 'planet': None}, (4, 3): {'units': [], 'planet': None}, (0, 4): {'units': [], 'planet': None}, (1, 4): {'units': [], 'planet': None}, (2, 4): {'units': [<units.colony.Colony object at 0x7f19d757bdf0>], 'planet': <planet.Planet object at 0x7f19d757bf40>}, (3, 4): {'units': [], 'planet': None}, (4, 4): {'units': [], 'planet': None}}
+Combat1
+Scout2,0 VS Scout1,1 Roll:6
+Scout3,0 VS Scout1,1 Roll:3
+Scout hit
+Scout destroyed
+Scout2,1 VS Scout2,0 Roll:7
+Scout3,1 VS Scout2,0 Roll:1
+Scout hit
+Scout destroyed
+Scout3,0 VS Scout2,1 Roll:2
+Scout hit
+Scout destroyed
+Scout3,1 VS Scout3,0 Roll:9
+Scout3,0 VS Scout3,1 Roll:2
+Scout hit
+Scout destroyed
+Movement2
+{(0, 0): {'units': [], 'planet': None}, (1, 0): {'units': [], 'planet': None}, (2, 0): {'units': [<units.colony.Colony object at 0x7f19d757bca0>], 'planet': <planet.Planet object at 0x7f19d757be50>}, (3, 0): {'units': [], 'planet': None}, (4, 0): {'units': [], 'planet': None}, (0, 1): {'units': [], 'planet': None}, (1, 1): {'units': [], 'planet': None}, (2, 1): {'units': [], 'planet': None}, (3, 1): {'units': [], 'planet': None}, (4, 1): {'units': [], 'planet': None}, (0, 2): {'units': [], 'planet': None}, (1, 2): {'units': [], 'planet': None}, (2, 2): {'units': [], 'planet': None}, (3, 2): {'units': [<units.scout.Scout object at 0x7f19d757bcd0>], 'planet': None}, (4, 2): {'units': [], 'planet': None}, (0, 3): {'units': [], 'planet': None}, (1, 3): {'units': [], 'planet': None}, (2, 3): {'units': [<units.scout.Scout object at 0x7f19d757bd90>], 'planet': None}, (3, 3): {'units': [], 'planet': None}, (4, 3): {'units': [], 'planet': None}, (0, 4): {'units': [], 'planet': None}, (1, 4): {'units': [], 'planet': None}, (2, 4): {'units': [<units.colony.Colony object at 0x7f19d757bdf0>], 'planet': <planet.Planet object at 0x7f19d757bf40>}, (3, 4): {'units': [], 'planet': None}, (4, 4): {'units': [], 'planet': None}}
+Combat2
+Movement3
+{(0, 0): {'units': [], 'planet': None}, (1, 0): {'units': [], 'planet': None}, (2, 0): {'units': [<units.colony.Colony object at 0x7f19d757bca0>], 'planet': <planet.Planet object at 0x7f19d757be50>}, (3, 0): {'units': [], 'planet': None}, (4, 0): {'units': [], 'planet': None}, (0, 1): {'units': [], 'planet': None}, (1, 1): {'units': [], 'planet': None}, (2, 1): {'units': [], 'planet': None}, (3, 1): {'units': [], 'planet': None}, (4, 1): {'units': [], 'planet': None}, (0, 2): {'units': [], 'planet': None}, (1, 2): {'units': [], 'planet': None}, (2, 2): {'units': [], 'planet': None}, (3, 2): {'units': [], 'planet': None}, (4, 2): {'units': [], 'planet': None}, (0, 3): {'units': [], 'planet': None}, (1, 3): {'units': [], 'planet': None}, (2, 3): {'units': [], 'planet': None}, (3, 3): {'units': [<units.scout.Scout object at 0x7f19d757bcd0>], 'planet': None}, (4, 3): {'units': [], 'planet': None}, (0, 4): {'units': [], 'planet': None}, (1, 4): {'units': [], 'planet': None}, (2, 4): {'units': [<units.colony.Colony object at 0x7f19d757bdf0>, <units.scout.Scout object at 0x7f19d757bd90>], 'planet': <planet.Planet object at 0x7f19d757bf40>}, (3, 4): {'units': [], 'planet': None}, (4, 4): {'units': [], 'planet': None}}
+Combat3
+Scout3,0 VS Colony0,1 Roll:6
+Scout3,0 VS Colony0,1 Roll:10
+Scout3,0 VS Colony0,1 Roll:1
+Colony hit
+Scout3,0 VS Colony0,1 Roll:9
+Scout3,0 VS Colony0,1 Roll:4
+Scout3,0 VS Colony0,1 Roll:1
+Colony hit
+Scout3,0 VS Colony0,1 Roll:2
+Colony hit
+Colony destroyed
+Winner: 0
+Movement0
+{(0, 0): {'units': [], 'planet': None}, (1, 0): {'units': [], 'planet': None}, (2, 0): {'units': [<units.colony.Colony object at 0x7f19d75012b0>], 'planet': <planet.Planet object at 0x7f19d7501460>}, (3, 0): {'units': [<units.scout.Scout object at 0x7f19d75012e0>], 'planet': None}, (4, 0): {'units': [], 'planet': None}, (0, 1): {'units': [], 'planet': None}, (1, 1): {'units': [], 'planet': None}, (2, 1): {'units': [<units.scout.Scout object at 0x7f19d7501370>, <units.scout.Scout object at 0x7f19d75013a0>], 'planet': None}, (3, 1): {'units': [], 'planet': None}, (4, 1): {'units': [], 'planet': None}, (0, 2): {'units': [], 'planet': None}, (1, 2): {'units': [], 'planet': None}, (2, 2): {'units': [], 'planet': None}, (3, 2): {'units': [], 'planet': None}, (4, 2): {'units': [], 'planet': None}, (0, 3): {'units': [], 'planet': None}, (1, 3): {'units': [], 'planet': None}, (2, 3): {'units': [<units.scout.Scout object at 0x7f19d7501430>, <units.scout.Scout object at 0x7f19d75014c0>, <units.scout.Scout object at 0x7f19d75014f0>], 'planet': None}, (3, 3): {'units': [], 'planet': None}, (4, 3): {'units': [], 'planet': None}, (0, 4): {'units': [], 'planet': None}, (1, 4): {'units': [], 'planet': None}, (2, 4): {'units': [<units.colony.Colony object at 0x7f19d7501400>], 'planet': <planet.Planet object at 0x7f19d7501550>}, (3, 4): {'units': [], 'planet': None}, (4, 4): {'units': [], 'planet': None}}
+Combat0
+Movement1
+{(0, 0): {'units': [], 'planet': None}, (1, 0): {'units': [], 'planet': None}, (2, 0): {'units': [<units.colony.Colony object at 0x7f19d75012b0>], 'planet': <planet.Planet object at 0x7f19d7501460>}, (3, 0): {'units': [], 'planet': None}, (4, 0): {'units': [], 'planet': None}, (0, 1): {'units': [], 'planet': None}, (1, 1): {'units': [], 'planet': None}, (2, 1): {'units': [], 'planet': None}, (3, 1): {'units': [<units.scout.Scout object at 0x7f19d75012e0>], 'planet': None}, (4, 1): {'units': [], 'planet': None}, (0, 2): {'units': [], 'planet': None}, (1, 2): {'units': [], 'planet': None}, (2, 2): {'units': [<units.scout.Scout object at 0x7f19d7501370>, <units.scout.Scout object at 0x7f19d75013a0>, <units.scout.Scout object at 0x7f19d7501430>, <units.scout.Scout object at 0x7f19d75014c0>, <units.scout.Scout object at 0x7f19d75014f0>], 'planet': None}, (3, 2): {'units': [], 'planet': None}, (4, 2): {'units': [], 'planet': None}, (0, 3): {'units': [], 'planet': None}, (1, 3): {'units': [], 'planet': None}, (2, 3): {'units': [], 'planet': None}, (3, 3): {'units': [], 'planet': None}, (4, 3): {'units': [], 'planet': None}, (0, 4): {'units': [], 'planet': None}, (1, 4): {'units': [], 'planet': None}, (2, 4): {'units': [<units.colony.Colony object at 0x7f19d7501400>], 'planet': <planet.Planet object at 0x7f19d7501550>}, (3, 4): {'units': [], 'planet': None}, (4, 4): {'units': [], 'planet': None}}
+Combat1
+Scout2,0 VS Scout1,1 Roll:4
+Scout3,0 VS Scout1,1 Roll:6
+Scout1,1 VS Scout2,0 Roll:7
+Scout2,1 VS Scout2,0 Roll:3
+Scout hit
+Scout destroyed
+Scout3,1 VS Scout3,0 Roll:4
+Scout3,0 VS Scout1,1 Roll:1
+Scout hit
+Scout destroyed
+Scout2,1 VS Scout3,0 Roll:2
+Scout hit
+Scout destroyed
+Movement2
+{(0, 0): {'units': [], 'planet': None}, (1, 0): {'units': [], 'planet': None}, (2, 0): {'units': [<units.colony.Colony object at 0x7f19d75012b0>], 'planet': <planet.Planet object at 0x7f19d7501460>}, (3, 0): {'units': [], 'planet': None}, (4, 0): {'units': [], 'planet': None}, (0, 1): {'units': [], 'planet': None}, (1, 1): {'units': [], 'planet': None}, (2, 1): {'units': [<units.scout.Scout object at 0x7f19d75014c0>, <units.scout.Scout object at 0x7f19d75014f0>], 'planet': None}, (3, 1): {'units': [], 'planet': None}, (4, 1): {'units': [], 'planet': None}, (0, 2): {'units': [], 'planet': None}, (1, 2): {'units': [], 'planet': None}, (2, 2): {'units': [], 'planet': None}, (3, 2): {'units': [<units.scout.Scout object at 0x7f19d75012e0>], 'planet': None}, (4, 2): {'units': [], 'planet': None}, (0, 3): {'units': [], 'planet': None}, (1, 3): {'units': [], 'planet': None}, (2, 3): {'units': [], 'planet': None}, (3, 3): {'units': [], 'planet': None}, (4, 3): {'units': [], 'planet': None}, (0, 4): {'units': [], 'planet': None}, (1, 4): {'units': [], 'planet': None}, (2, 4): {'units': [<units.colony.Colony object at 0x7f19d7501400>], 'planet': <planet.Planet object at 0x7f19d7501550>}, (3, 4): {'units': [], 'planet': None}, (4, 4): {'units': [], 'planet': None}}
+Combat2
+Movement3
+{(0, 0): {'units': [], 'planet': None}, (1, 0): {'units': [], 'planet': None}, (2, 0): {'units': [<units.colony.Colony object at 0x7f19d75012b0>, <units.scout.Scout object at 0x7f19d75014c0>, <units.scout.Scout object at 0x7f19d75014f0>], 'planet': <planet.Planet object at 0x7f19d7501460>}, (3, 0): {'units': [], 'planet': None}, (4, 0): {'units': [], 'planet': None}, (0, 1): {'units': [], 'planet': None}, (1, 1): {'units': [], 'planet': None}, (2, 1): {'units': [], 'planet': None}, (3, 1): {'units': [], 'planet': None}, (4, 1): {'units': [], 'planet': None}, (0, 2): {'units': [], 'planet': None}, (1, 2): {'units': [], 'planet': None}, (2, 2): {'units': [], 'planet': None}, (3, 2): {'units': [], 'planet': None}, (4, 2): {'units': [], 'planet': None}, (0, 3): {'units': [], 'planet': None}, (1, 3): {'units': [], 'planet': None}, (2, 3): {'units': [], 'planet': None}, (3, 3): {'units': [<units.scout.Scout object at 0x7f19d75012e0>], 'planet': None}, (4, 3): {'units': [], 'planet': None}, (0, 4): {'units': [], 'planet': None}, (1, 4): {'units': [], 'planet': None}, (2, 4): {'units': [<units.colony.Colony object at 0x7f19d7501400>], 'planet': <planet.Planet object at 0x7f19d7501550>}, (3, 4): {'units': [], 'planet': None}, (4, 4): {'units': [], 'planet': None}}
+Combat3
+Scout2,1 VS Colony0,0 Roll:3
+Scout3,1 VS Colony0,0 Roll:4
+Scout2,1 VS Colony0,0 Roll:9
+Scout3,1 VS Colony0,0 Roll:4
+Scout2,1 VS Colony0,0 Roll:7
+Scout3,1 VS Colony0,0 Roll:1
+Colony hit
+Scout2,1 VS Colony0,0 Roll:8
+Scout3,1 VS Colony0,0 Roll:8
+Scout2,1 VS Colony0,0 Roll:8
+Scout3,1 VS Colony0,0 Roll:7
+Scout2,1 VS Colony0,0 Roll:8
+Scout3,1 VS Colony0,0 Roll:10
+Scout2,1 VS Colony0,0 Roll:4
+Scout3,1 VS Colony0,0 Roll:7
+Scout2,1 VS Colony0,0 Roll:2
+Colony hit
+Scout3,1 VS Colony0,0 Roll:8
+Scout2,1 VS Colony0,0 Roll:4
+Scout3,1 VS Colony0,0 Roll:1
+Colony hit
+Colony destroyed
+Winner: 1
+Movement0
+{(0, 0): {'units': [], 'planet': None}, (1, 0): {'units': [], 'planet': None}, (2, 0): {'units': [<units.colony.Colony object at 0x7f19d7501880>], 'planet': <planet.Planet object at 0x7f19d7501a30>}, (3, 0): {'units': [<units.scout.Scout object at 0x7f19d75018b0>], 'planet': None}, (4, 0): {'units': [], 'planet': None}, (0, 1): {'units': [], 'planet': None}, (1, 1): {'units': [], 'planet': None}, (2, 1): {'units': [<units.scout.Scout object at 0x7f19d7501940>, <units.scout.Scout object at 0x7f19d7501970>], 'planet': None}, (3, 1): {'units': [], 'planet': None}, (4, 1): {'units': [], 'planet': None}, (0, 2): {'units': [], 'planet': None}, (1, 2): {'units': [], 'planet': None}, (2, 2): {'units': [], 'planet': None}, (3, 2): {'units': [], 'planet': None}, (4, 2): {'units': [], 'planet': None}, (0, 3): {'units': [], 'planet': None}, (1, 3): {'units': [], 'planet': None}, (2, 3): {'units': [<units.scout.Scout object at 0x7f19d7501a00>, <units.scout.Scout object at 0x7f19d7501a90>, <units.scout.Scout object at 0x7f19d7501ac0>], 'planet': None}, (3, 3): {'units': [], 'planet': None}, (4, 3): {'units': [], 'planet': None}, (0, 4): {'units': [], 'planet': None}, (1, 4): {'units': [], 'planet': None}, (2, 4): {'units': [<units.colony.Colony object at 0x7f19d75019d0>], 'planet': <planet.Planet object at 0x7f19d7501b20>}, (3, 4): {'units': [], 'planet': None}, (4, 4): {'units': [], 'planet': None}}
+Combat0
+Movement1
+{(0, 0): {'units': [], 'planet': None}, (1, 0): {'units': [], 'planet': None}, (2, 0): {'units': [<units.colony.Colony object at 0x7f19d7501880>], 'planet': <planet.Planet object at 0x7f19d7501a30>}, (3, 0): {'units': [], 'planet': None}, (4, 0): {'units': [], 'planet': None}, (0, 1): {'units': [], 'planet': None}, (1, 1): {'units': [], 'planet': None}, (2, 1): {'units': [], 'planet': None}, (3, 1): {'units': [<units.scout.Scout object at 0x7f19d75018b0>], 'planet': None}, (4, 1): {'units': [], 'planet': None}, (0, 2): {'units': [], 'planet': None}, (1, 2): {'units': [], 'planet': None}, (2, 2): {'units': [<units.scout.Scout object at 0x7f19d7501940>, <units.scout.Scout object at 0x7f19d7501970>, <units.scout.Scout object at 0x7f19d7501a00>, <units.scout.Scout object at 0x7f19d7501a90>, <units.scout.Scout object at 0x7f19d7501ac0>], 'planet': None}, (3, 2): {'units': [], 'planet': None}, (4, 2): {'units': [], 'planet': None}, (0, 3): {'units': [], 'planet': None}, (1, 3): {'units': [], 'planet': None}, (2, 3): {'units': [], 'planet': None}, (3, 3): {'units': [], 'planet': None}, (4, 3): {'units': [], 'planet': None}, (0, 4): {'units': [], 'planet': None}, (1, 4): {'units': [], 'planet': None}, (2, 4): {'units': [<units.colony.Colony object at 0x7f19d75019d0>], 'planet': <planet.Planet object at 0x7f19d7501b20>}, (3, 4): {'units': [], 'planet': None}, (4, 4): {'units': [], 'planet': None}}
+Combat1
+Scout2,0 VS Scout1,1 Roll:8
+Scout3,0 VS Scout1,1 Roll:10
+Scout1,1 VS Scout2,0 Roll:6
+Scout2,1 VS Scout2,0 Roll:5
+Scout3,1 VS Scout2,0 Roll:3
+Scout hit
+Scout destroyed
+Scout3,0 VS Scout1,1 Roll:3
+Scout hit
+Scout destroyed
+Scout2,1 VS Scout3,0 Roll:1
+Scout hit
+Scout destroyed
+Movement2
+{(0, 0): {'units': [], 'planet': None}, (1, 0): {'units': [], 'planet': None}, (2, 0): {'units': [<units.colony.Colony object at 0x7f19d7501880>], 'planet': <planet.Planet object at 0x7f19d7501a30>}, (3, 0): {'units': [], 'planet': None}, (4, 0): {'units': [], 'planet': None}, (0, 1): {'units': [], 'planet': None}, (1, 1): {'units': [], 'planet': None}, (2, 1): {'units': [<units.scout.Scout object at 0x7f19d7501a90>, <units.scout.Scout object at 0x7f19d7501ac0>], 'planet': None}, (3, 1): {'units': [], 'planet': None}, (4, 1): {'units': [], 'planet': None}, (0, 2): {'units': [], 'planet': None}, (1, 2): {'units': [], 'planet': None}, (2, 2): {'units': [], 'planet': None}, (3, 2): {'units': [<units.scout.Scout object at 0x7f19d75018b0>], 'planet': None}, (4, 2): {'units': [], 'planet': None}, (0, 3): {'units': [], 'planet': None}, (1, 3): {'units': [], 'planet': None}, (2, 3): {'units': [], 'planet': None}, (3, 3): {'units': [], 'planet': None}, (4, 3): {'units': [], 'planet': None}, (0, 4): {'units': [], 'planet': None}, (1, 4): {'units': [], 'planet': None}, (2, 4): {'units': [<units.colony.Colony object at 0x7f19d75019d0>], 'planet': <planet.Planet object at 0x7f19d7501b20>}, (3, 4): {'units': [], 'planet': None}, (4, 4): {'units': [], 'planet': None}}
+Combat2
+Movement3
+{(0, 0): {'units': [], 'planet': None}, (1, 0): {'units': [], 'planet': None}, (2, 0): {'units': [<units.colony.Colony object at 0x7f19d7501880>, <units.scout.Scout object at 0x7f19d7501a90>, <units.scout.Scout object at 0x7f19d7501ac0>], 'planet': <planet.Planet object at 0x7f19d7501a30>}, (3, 0): {'units': [], 'planet': None}, (4, 0): {'units': [], 'planet': None}, (0, 1): {'units': [], 'planet': None}, (1, 1): {'units': [], 'planet': None}, (2, 1): {'units': [], 'planet': None}, (3, 1): {'units': [], 'planet': None}, (4, 1): {'units': [], 'planet': None}, (0, 2): {'units': [], 'planet': None}, (1, 2): {'units': [], 'planet': None}, (2, 2): {'units': [], 'planet': None}, (3, 2): {'units': [], 'planet': None}, (4, 2): {'units': [], 'planet': None}, (0, 3): {'units': [], 'planet': None}, (1, 3): {'units': [], 'planet': None}, (2, 3): {'units': [], 'planet': None}, (3, 3): {'units': [<units.scout.Scout object at 0x7f19d75018b0>], 'planet': None}, (4, 3): {'units': [], 'planet': None}, (0, 4): {'units': [], 'planet': None}, (1, 4): {'units': [], 'planet': None}, (2, 4): {'units': [<units.colony.Colony object at 0x7f19d75019d0>], 'planet': <planet.Planet object at 0x7f19d7501b20>}, (3, 4): {'units': [], 'planet': None}, (4, 4): {'units': [], 'planet': None}}
+Combat3
+Scout2,1 VS Colony0,0 Roll:6
+Scout3,1 VS Colony0,0 Roll:9
+Scout2,1 VS Colony0,0 Roll:8
+Scout3,1 VS Colony0,0 Roll:10
+Scout2,1 VS Colony0,0 Roll:2
+Colony hit
+Scout3,1 VS Colony0,0 Roll:6
+Scout2,1 VS Colony0,0 Roll:9
+Scout3,1 VS Colony0,0 Roll:10
+Scout2,1 VS Colony0,0 Roll:1
+Colony hit
+Scout3,1 VS Colony0,0 Roll:7
+Scout2,1 VS Colony0,0 Roll:3
+Scout3,1 VS Colony0,0 Roll:8
+Scout2,1 VS Colony0,0 Roll:7
+Scout3,1 VS Colony0,0 Roll:3
+Scout2,1 VS Colony0,0 Roll:3
+Scout3,1 VS Colony0,0 Roll:4
+Scout2,1 VS Colony0,0 Roll:1
+Colony hit
+Colony destroyed
+Winner: 1
+Movement0
+{(0, 0): {'units': [], 'planet': None}, (1, 0): {'units': [], 'planet': None}, (2, 0): {'units': [<units.colony.Colony object at 0x7f19d7501e50>], 'planet': <planet.Planet object at 0x7f19d750a040>}, (3, 0): {'units': [<units.scout.Scout object at 0x7f19d7501e80>], 'planet': None}, (4, 0): {'units': [], 'planet': None}, (0, 1): {'units': [], 'planet': None}, (1, 1): {'units': [], 'planet': None}, (2, 1): {'units': [<units.scout.Scout object at 0x7f19d7501f10>, <units.scout.Scout object at 0x7f19d7501f40>], 'planet': None}, (3, 1): {'units': [], 'planet': None}, (4, 1): {'units': [], 'planet': None}, (0, 2): {'units': [], 'planet': None}, (1, 2): {'units': [], 'planet': None}, (2, 2): {'units': [], 'planet': None}, (3, 2): {'units': [], 'planet': None}, (4, 2): {'units': [], 'planet': None}, (0, 3): {'units': [], 'planet': None}, (1, 3): {'units': [], 'planet': None}, (2, 3): {'units': [<units.scout.Scout object at 0x7f19d7501fd0>, <units.scout.Scout object at 0x7f19d750a0a0>, <units.scout.Scout object at 0x7f19d750a0d0>], 'planet': None}, (3, 3): {'units': [], 'planet': None}, (4, 3): {'units': [], 'planet': None}, (0, 4): {'units': [], 'planet': None}, (1, 4): {'units': [], 'planet': None}, (2, 4): {'units': [<units.colony.Colony object at 0x7f19d7501fa0>], 'planet': <planet.Planet object at 0x7f19d750a130>}, (3, 4): {'units': [], 'planet': None}, (4, 4): {'units': [], 'planet': None}}
+Combat0
+Movement1
+{(0, 0): {'units': [], 'planet': None}, (1, 0): {'units': [], 'planet': None}, (2, 0): {'units': [<units.colony.Colony object at 0x7f19d7501e50>], 'planet': <planet.Planet object at 0x7f19d750a040>}, (3, 0): {'units': [], 'planet': None}, (4, 0): {'units': [], 'planet': None}, (0, 1): {'units': [], 'planet': None}, (1, 1): {'units': [], 'planet': None}, (2, 1): {'units': [], 'planet': None}, (3, 1): {'units': [<units.scout.Scout object at 0x7f19d7501e80>], 'planet': None}, (4, 1): {'units': [], 'planet': None}, (0, 2): {'units': [], 'planet': None}, (1, 2): {'units': [], 'planet': None}, (2, 2): {'units': [<units.scout.Scout object at 0x7f19d7501f10>, <units.scout.Scout object at 0x7f19d7501f40>, <units.scout.Scout object at 0x7f19d7501fd0>, <units.scout.Scout object at 0x7f19d750a0a0>, <units.scout.Scout object at 0x7f19d750a0d0>], 'planet': None}, (3, 2): {'units': [], 'planet': None}, (4, 2): {'units': [], 'planet': None}, (0, 3): {'units': [], 'planet': None}, (1, 3): {'units': [], 'planet': None}, (2, 3): {'units': [], 'planet': None}, (3, 3): {'units': [], 'planet': None}, (4, 3): {'units': [], 'planet': None}, (0, 4): {'units': [], 'planet': None}, (1, 4): {'units': [], 'planet': None}, (2, 4): {'units': [<units.colony.Colony object at 0x7f19d7501fa0>], 'planet': <planet.Planet object at 0x7f19d750a130>}, (3, 4): {'units': [], 'planet': None}, (4, 4): {'units': [], 'planet': None}}
+Combat1
+Scout2,0 VS Scout1,1 Roll:10
+Scout3,0 VS Scout1,1 Roll:1
+Scout hit
+Scout destroyed
+Scout2,1 VS Scout2,0 Roll:7
+Scout3,1 VS Scout2,0 Roll:8
+Scout2,0 VS Scout2,1 Roll:10
+Scout3,0 VS Scout2,1 Roll:1
+Scout hit
+Scout destroyed
+Scout3,1 VS Scout2,0 Roll:4
+Scout2,0 VS Scout3,1 Roll:8
+Scout3,0 VS Scout3,1 Roll:8
+Scout3,1 VS Scout2,0 Roll:5
+Scout2,0 VS Scout3,1 Roll:3
+Scout hit
+Scout destroyed
+Movement2
+{(0, 0): {'units': [], 'planet': None}, (1, 0): {'units': [], 'planet': None}, (2, 0): {'units': [<units.colony.Colony object at 0x7f19d7501e50>], 'planet': <planet.Planet object at 0x7f19d750a040>}, (3, 0): {'units': [], 'planet': None}, (4, 0): {'units': [], 'planet': None}, (0, 1): {'units': [], 'planet': None}, (1, 1): {'units': [], 'planet': None}, (2, 1): {'units': [], 'planet': None}, (3, 1): {'units': [], 'planet': None}, (4, 1): {'units': [], 'planet': None}, (0, 2): {'units': [], 'planet': None}, (1, 2): {'units': [], 'planet': None}, (2, 2): {'units': [], 'planet': None}, (3, 2): {'units': [<units.scout.Scout object at 0x7f19d7501e80>], 'planet': None}, (4, 2): {'units': [], 'planet': None}, (0, 3): {'units': [], 'planet': None}, (1, 3): {'units': [], 'planet': None}, (2, 3): {'units': [<units.scout.Scout object at 0x7f19d7501f10>, <units.scout.Scout object at 0x7f19d7501f40>], 'planet': None}, (3, 3): {'units': [], 'planet': None}, (4, 3): {'units': [], 'planet': None}, (0, 4): {'units': [], 'planet': None}, (1, 4): {'units': [], 'planet': None}, (2, 4): {'units': [<units.colony.Colony object at 0x7f19d7501fa0>], 'planet': <planet.Planet object at 0x7f19d750a130>}, (3, 4): {'units': [], 'planet': None}, (4, 4): {'units': [], 'planet': None}}
+Combat2
+Movement3
+{(0, 0): {'units': [], 'planet': None}, (1, 0): {'units': [], 'planet': None}, (2, 0): {'units': [<units.colony.Colony object at 0x7f19d7501e50>], 'planet': <planet.Planet object at 0x7f19d750a040>}, (3, 0): {'units': [], 'planet': None}, (4, 0): {'units': [], 'planet': None}, (0, 1): {'units': [], 'planet': None}, (1, 1): {'units': [], 'planet': None}, (2, 1): {'units': [], 'planet': None}, (3, 1): {'units': [], 'planet': None}, (4, 1): {'units': [], 'planet': None}, (0, 2): {'units': [], 'planet': None}, (1, 2): {'units': [], 'planet': None}, (2, 2): {'units': [], 'planet': None}, (3, 2): {'units': [], 'planet': None}, (4, 2): {'units': [], 'planet': None}, (0, 3): {'units': [], 'planet': None}, (1, 3): {'units': [], 'planet': None}, (2, 3): {'units': [], 'planet': None}, (3, 3): {'units': [<units.scout.Scout object at 0x7f19d7501e80>], 'planet': None}, (4, 3): {'units': [], 'planet': None}, (0, 4): {'units': [], 'planet': None}, (1, 4): {'units': [], 'planet': None}, (2, 4): {'units': [<units.colony.Colony object at 0x7f19d7501fa0>, <units.scout.Scout object at 0x7f19d7501f10>, <units.scout.Scout object at 0x7f19d7501f40>], 'planet': <planet.Planet object at 0x7f19d750a130>}, (3, 4): {'units': [], 'planet': None}, (4, 4): {'units': [], 'planet': None}}
+Combat3
+Scout2,0 VS Colony0,1 Roll:1
+Colony hit
+Scout3,0 VS Colony0,1 Roll:9
+Scout2,0 VS Colony0,1 Roll:8
+Scout3,0 VS Colony0,1 Roll:6
+Scout2,0 VS Colony0,1 Roll:2
+Colony hit
+Scout3,0 VS Colony0,1 Roll:4
+Scout2,0 VS Colony0,1 Roll:6
+Scout3,0 VS Colony0,1 Roll:1
+Colony hit
+Colony destroyed
+Winner: 0
+Movement0
+{(0, 0): {'units': [], 'planet': None}, (1, 0): {'units': [], 'planet': None}, (2, 0): {'units': [<units.colony.Colony object at 0x7f19d750a460>], 'planet': <planet.Planet object at 0x7f19d750a610>}, (3, 0): {'units': [], 'planet': None}, (4, 0): {'units': [], 'planet': None}, (0, 1): {'units': [], 'planet': None}, (1, 1): {'units': [], 'planet': None}, (2, 1): {'units': [<units.scout.Scout object at 0x7f19d750a490>, <units.scout.Scout object at 0x7f19d750a520>, <units.scout.Scout object at 0x7f19d750a550>], 'planet': None}, (3, 1): {'units': [], 'planet': None}, (4, 1): {'units': [], 'planet': None}, (0, 2): {'units': [], 'planet': None}, (1, 2): {'units': [], 'planet': None}, (2, 2): {'units': [], 'planet': None}, (3, 2): {'units': [], 'planet': None}, (4, 2): {'units': [], 'planet': None}, (0, 3): {'units': [], 'planet': None}, (1, 3): {'units': [], 'planet': None}, (2, 3): {'units': [<units.scout.Scout object at 0x7f19d750a670>, <units.scout.Scout object at 0x7f19d750a6a0>], 'planet': None}, (3, 3): {'units': [], 'planet': None}, (4, 3): {'units': [], 'planet': None}, (0, 4): {'units': [], 'planet': None}, (1, 4): {'units': [], 'planet': None}, (2, 4): {'units': [<units.colony.Colony object at 0x7f19d750a5b0>], 'planet': <planet.Planet object at 0x7f19d750a700>}, (3, 4): {'units': [<units.scout.Scout object at 0x7f19d750a5e0>], 'planet': None}, (4, 4): {'units': [], 'planet': None}}
+Combat0
+Movement1
+{(0, 0): {'units': [], 'planet': None}, (1, 0): {'units': [], 'planet': None}, (2, 0): {'units': [<units.colony.Colony object at 0x7f19d750a460>], 'planet': <planet.Planet object at 0x7f19d750a610>}, (3, 0): {'units': [], 'planet': None}, (4, 0): {'units': [], 'planet': None}, (0, 1): {'units': [], 'planet': None}, (1, 1): {'units': [], 'planet': None}, (2, 1): {'units': [], 'planet': None}, (3, 1): {'units': [], 'planet': None}, (4, 1): {'units': [], 'planet': None}, (0, 2): {'units': [], 'planet': None}, (1, 2): {'units': [], 'planet': None}, (2, 2): {'units': [<units.scout.Scout object at 0x7f19d750a490>, <units.scout.Scout object at 0x7f19d750a520>, <units.scout.Scout object at 0x7f19d750a550>, <units.scout.Scout object at 0x7f19d750a670>, <units.scout.Scout object at 0x7f19d750a6a0>], 'planet': None}, (3, 2): {'units': [], 'planet': None}, (4, 2): {'units': [], 'planet': None}, (0, 3): {'units': [], 'planet': None}, (1, 3): {'units': [], 'planet': None}, (2, 3): {'units': [], 'planet': None}, (3, 3): {'units': [<units.scout.Scout object at 0x7f19d750a5e0>], 'planet': None}, (4, 3): {'units': [], 'planet': None}, (0, 4): {'units': [], 'planet': None}, (1, 4): {'units': [], 'planet': None}, (2, 4): {'units': [<units.colony.Colony object at 0x7f19d750a5b0>], 'planet': <planet.Planet object at 0x7f19d750a700>}, (3, 4): {'units': [], 'planet': None}, (4, 4): {'units': [], 'planet': None}}
+Combat1
+Scout1,0 VS Scout2,1 Roll:8
+Scout2,0 VS Scout2,1 Roll:9
+Scout3,0 VS Scout2,1 Roll:8
+Scout2,1 VS Scout1,0 Roll:8
+Scout3,1 VS Scout1,0 Roll:9
+Scout1,0 VS Scout2,1 Roll:10
+Scout2,0 VS Scout2,1 Roll:4
+Scout3,0 VS Scout2,1 Roll:3
+Scout hit
+Scout destroyed
+Scout3,1 VS Scout1,0 Roll:9
+Scout1,0 VS Scout3,1 Roll:8
+Scout2,0 VS Scout3,1 Roll:10
+Scout3,0 VS Scout3,1 Roll:3
+Scout hit
+Scout destroyed
+Movement2
+{(0, 0): {'units': [], 'planet': None}, (1, 0): {'units': [], 'planet': None}, (2, 0): {'units': [<units.colony.Colony object at 0x7f19d750a460>], 'planet': <planet.Planet object at 0x7f19d750a610>}, (3, 0): {'units': [], 'planet': None}, (4, 0): {'units': [], 'planet': None}, (0, 1): {'units': [], 'planet': None}, (1, 1): {'units': [], 'planet': None}, (2, 1): {'units': [], 'planet': None}, (3, 1): {'units': [], 'planet': None}, (4, 1): {'units': [], 'planet': None}, (0, 2): {'units': [], 'planet': None}, (1, 2): {'units': [], 'planet': None}, (2, 2): {'units': [], 'planet': None}, (3, 2): {'units': [<units.scout.Scout object at 0x7f19d750a5e0>], 'planet': None}, (4, 2): {'units': [], 'planet': None}, (0, 3): {'units': [], 'planet': None}, (1, 3): {'units': [], 'planet': None}, (2, 3): {'units': [<units.scout.Scout object at 0x7f19d750a490>, <units.scout.Scout object at 0x7f19d750a520>, <units.scout.Scout object at 0x7f19d750a550>], 'planet': None}, (3, 3): {'units': [], 'planet': None}, (4, 3): {'units': [], 'planet': None}, (0, 4): {'units': [], 'planet': None}, (1, 4): {'units': [], 'planet': None}, (2, 4): {'units': [<units.colony.Colony object at 0x7f19d750a5b0>], 'planet': <planet.Planet object at 0x7f19d750a700>}, (3, 4): {'units': [], 'planet': None}, (4, 4): {'units': [], 'planet': None}}
+Combat2
+Movement3
+{(0, 0): {'units': [], 'planet': None}, (1, 0): {'units': [], 'planet': None}, (2, 0): {'units': [<units.colony.Colony object at 0x7f19d750a460>], 'planet': <planet.Planet object at 0x7f19d750a610>}, (3, 0): {'units': [], 'planet': None}, (4, 0): {'units': [], 'planet': None}, (0, 1): {'units': [], 'planet': None}, (1, 1): {'units': [], 'planet': None}, (2, 1): {'units': [], 'planet': None}, (3, 1): {'units': [<units.scout.Scout object at 0x7f19d750a5e0>], 'planet': None}, (4, 1): {'units': [], 'planet': None}, (0, 2): {'units': [], 'planet': None}, (1, 2): {'units': [], 'planet': None}, (2, 2): {'units': [], 'planet': None}, (3, 2): {'units': [], 'planet': None}, (4, 2): {'units': [], 'planet': None}, (0, 3): {'units': [], 'planet': None}, (1, 3): {'units': [], 'planet': None}, (2, 3): {'units': [], 'planet': None}, (3, 3): {'units': [], 'planet': None}, (4, 3): {'units': [], 'planet': None}, (0, 4): {'units': [], 'planet': None}, (1, 4): {'units': [], 'planet': None}, (2, 4): {'units': [<units.colony.Colony object at 0x7f19d750a5b0>, <units.scout.Scout object at 0x7f19d750a490>, <units.scout.Scout object at 0x7f19d750a520>, <units.scout.Scout object at 0x7f19d750a550>], 'planet': <planet.Planet object at 0x7f19d750a700>}, (3, 4): {'units': [], 'planet': None}, (4, 4): {'units': [], 'planet': None}}
+Combat3
+Scout1,0 VS Colony0,1 Roll:2
+Colony hit
+Scout2,0 VS Colony0,1 Roll:8
+Scout3,0 VS Colony0,1 Roll:5
+Scout1,0 VS Colony0,1 Roll:3
+Scout2,0 VS Colony0,1 Roll:2
+Colony hit
+Scout3,0 VS Colony0,1 Roll:9
+Scout1,0 VS Colony0,1 Roll:1
+Colony hit
+Colony destroyed
+Winner: 0
+Movement0
+{(0, 0): {'units': [], 'planet': None}, (1, 0): {'units': [], 'planet': None}, (2, 0): {'units': [<units.colony.Colony object at 0x7f19d7501d30>], 'planet': <planet.Planet object at 0x7f19d7501610>}, (3, 0): {'units': [], 'planet': None}, (4, 0): {'units': [], 'planet': None}, (0, 1): {'units': [], 'planet': None}, (1, 1): {'units': [], 'planet': None}, (2, 1): {'units': [<units.scout.Scout object at 0x7f19d7501b80>, <units.scout.Scout object at 0x7f19d7501c70>, <units.scout.Scout object at 0x7f19d7501c40>], 'planet': None}, (3, 1): {'units': [], 'planet': None}, (4, 1): {'units': [], 'planet': None}, (0, 2): {'units': [], 'planet': None}, (1, 2): {'units': [], 'planet': None}, (2, 2): {'units': [], 'planet': None}, (3, 2): {'units': [], 'planet': None}, (4, 2): {'units': [], 'planet': None}, (0, 3): {'units': [], 'planet': None}, (1, 3): {'units': [], 'planet': None}, (2, 3): {'units': [<units.scout.Scout object at 0x7f19d75019d0>, <units.scout.Scout object at 0x7f19d7501a00>], 'planet': None}, (3, 3): {'units': [], 'planet': None}, (4, 3): {'units': [], 'planet': None}, (0, 4): {'units': [], 'planet': None}, (1, 4): {'units': [], 'planet': None}, (2, 4): {'units': [<units.colony.Colony object at 0x7f19d7501ca0>], 'planet': <planet.Planet object at 0x7f19d7501ac0>}, (3, 4): {'units': [<units.scout.Scout object at 0x7f19d7501820>], 'planet': None}, (4, 4): {'units': [], 'planet': None}}
+Combat0
+Movement1
+{(0, 0): {'units': [], 'planet': None}, (1, 0): {'units': [], 'planet': None}, (2, 0): {'units': [<units.colony.Colony object at 0x7f19d7501d30>], 'planet': <planet.Planet object at 0x7f19d7501610>}, (3, 0): {'units': [], 'planet': None}, (4, 0): {'units': [], 'planet': None}, (0, 1): {'units': [], 'planet': None}, (1, 1): {'units': [], 'planet': None}, (2, 1): {'units': [], 'planet': None}, (3, 1): {'units': [], 'planet': None}, (4, 1): {'units': [], 'planet': None}, (0, 2): {'units': [], 'planet': None}, (1, 2): {'units': [], 'planet': None}, (2, 2): {'units': [<units.scout.Scout object at 0x7f19d7501b80>, <units.scout.Scout object at 0x7f19d7501c70>, <units.scout.Scout object at 0x7f19d7501c40>, <units.scout.Scout object at 0x7f19d75019d0>, <units.scout.Scout object at 0x7f19d7501a00>], 'planet': None}, (3, 2): {'units': [], 'planet': None}, (4, 2): {'units': [], 'planet': None}, (0, 3): {'units': [], 'planet': None}, (1, 3): {'units': [], 'planet': None}, (2, 3): {'units': [], 'planet': None}, (3, 3): {'units': [<units.scout.Scout object at 0x7f19d7501820>], 'planet': None}, (4, 3): {'units': [], 'planet': None}, (0, 4): {'units': [], 'planet': None}, (1, 4): {'units': [], 'planet': None}, (2, 4): {'units': [<units.colony.Colony object at 0x7f19d7501ca0>], 'planet': <planet.Planet object at 0x7f19d7501ac0>}, (3, 4): {'units': [], 'planet': None}, (4, 4): {'units': [], 'planet': None}}
+Combat1
+Scout1,0 VS Scout2,1 Roll:8
+Scout2,0 VS Scout2,1 Roll:5
+Scout3,0 VS Scout2,1 Roll:9
+Scout2,1 VS Scout1,0 Roll:6
+Scout3,1 VS Scout1,0 Roll:3
+Scout hit
+Scout destroyed
+Scout2,0 VS Scout2,1 Roll:7
+Scout3,0 VS Scout2,1 Roll:1
+Scout hit
+Scout destroyed
+Scout3,1 VS Scout2,0 Roll:6
+Scout2,0 VS Scout3,1 Roll:8
+Scout3,0 VS Scout3,1 Roll:5
+Scout3,1 VS Scout2,0 Roll:8
+Scout2,0 VS Scout3,1 Roll:10
+Scout3,0 VS Scout3,1 Roll:4
+Scout3,1 VS Scout2,0 Roll:9
+Scout2,0 VS Scout3,1 Roll:1
+Scout hit
+Scout destroyed
+Movement2
+{(0, 0): {'units': [], 'planet': None}, (1, 0): {'units': [], 'planet': None}, (2, 0): {'units': [<units.colony.Colony object at 0x7f19d7501d30>], 'planet': <planet.Planet object at 0x7f19d7501610>}, (3, 0): {'units': [], 'planet': None}, (4, 0): {'units': [], 'planet': None}, (0, 1): {'units': [], 'planet': None}, (1, 1): {'units': [], 'planet': None}, (2, 1): {'units': [], 'planet': None}, (3, 1): {'units': [], 'planet': None}, (4, 1): {'units': [], 'planet': None}, (0, 2): {'units': [], 'planet': None}, (1, 2): {'units': [], 'planet': None}, (2, 2): {'units': [], 'planet': None}, (3, 2): {'units': [<units.scout.Scout object at 0x7f19d7501820>], 'planet': None}, (4, 2): {'units': [], 'planet': None}, (0, 3): {'units': [], 'planet': None}, (1, 3): {'units': [], 'planet': None}, (2, 3): {'units': [<units.scout.Scout object at 0x7f19d7501c70>, <units.scout.Scout object at 0x7f19d7501c40>], 'planet': None}, (3, 3): {'units': [], 'planet': None}, (4, 3): {'units': [], 'planet': None}, (0, 4): {'units': [], 'planet': None}, (1, 4): {'units': [], 'planet': None}, (2, 4): {'units': [<units.colony.Colony object at 0x7f19d7501ca0>], 'planet': <planet.Planet object at 0x7f19d7501ac0>}, (3, 4): {'units': [], 'planet': None}, (4, 4): {'units': [], 'planet': None}}
+Combat2
+Movement3
+{(0, 0): {'units': [], 'planet': None}, (1, 0): {'units': [], 'planet': None}, (2, 0): {'units': [<units.colony.Colony object at 0x7f19d7501d30>], 'planet': <planet.Planet object at 0x7f19d7501610>}, (3, 0): {'units': [], 'planet': None}, (4, 0): {'units': [], 'planet': None}, (0, 1): {'units': [], 'planet': None}, (1, 1): {'units': [], 'planet': None}, (2, 1): {'units': [], 'planet': None}, (3, 1): {'units': [<units.scout.Scout object at 0x7f19d7501820>], 'planet': None}, (4, 1): {'units': [], 'planet': None}, (0, 2): {'units': [], 'planet': None}, (1, 2): {'units': [], 'planet': None}, (2, 2): {'units': [], 'planet': None}, (3, 2): {'units': [], 'planet': None}, (4, 2): {'units': [], 'planet': None}, (0, 3): {'units': [], 'planet': None}, (1, 3): {'units': [], 'planet': None}, (2, 3): {'units': [], 'planet': None}, (3, 3): {'units': [], 'planet': None}, (4, 3): {'units': [], 'planet': None}, (0, 4): {'units': [], 'planet': None}, (1, 4): {'units': [], 'planet': None}, (2, 4): {'units': [<units.colony.Colony object at 0x7f19d7501ca0>, <units.scout.Scout object at 0x7f19d7501c70>, <units.scout.Scout object at 0x7f19d7501c40>], 'planet': <planet.Planet object at 0x7f19d7501ac0>}, (3, 4): {'units': [], 'planet': None}, (4, 4): {'units': [], 'planet': None}}
+Combat3
+Scout2,0 VS Colony0,1 Roll:10
+Scout3,0 VS Colony0,1 Roll:3
+Scout2,0 VS Colony0,1 Roll:8
+Scout3,0 VS Colony0,1 Roll:6
+Scout2,0 VS Colony0,1 Roll:3
+Scout3,0 VS Colony0,1 Roll:6
+Scout2,0 VS Colony0,1 Roll:4
+Scout3,0 VS Colony0,1 Roll:1
+Colony hit
+Scout2,0 VS Colony0,1 Roll:10
+Scout3,0 VS Colony0,1 Roll:4
+Scout2,0 VS Colony0,1 Roll:2
+Colony hit
+Scout3,0 VS Colony0,1 Roll:9
+Scout2,0 VS Colony0,1 Roll:6
+Scout3,0 VS Colony0,1 Roll:7
+Scout2,0 VS Colony0,1 Roll:2
+Colony hit
+Colony destroyed
+Winner: 0
+Movement0
+{(0, 0): {'units': [], 'planet': None}, (1, 0): {'units': [], 'planet': None}, (2, 0): {'units': [<units.colony.Colony object at 0x7f19d7501a30>], 'planet': <planet.Planet object at 0x7f19d7501490>}, (3, 0): {'units': [], 'planet': None}, (4, 0): {'units': [], 'planet': None}, (0, 1): {'units': [], 'planet': None}, (1, 1): {'units': [], 'planet': None}, (2, 1): {'units': [<units.scout.Scout object at 0x7f19d7501af0>, <units.scout.Scout object at 0x7f19d75016a0>, <units.scout.Scout object at 0x7f19d7501670>], 'planet': None}, (3, 1): {'units': [], 'planet': None}, (4, 1): {'units': [], 'planet': None}, (0, 2): {'units': [], 'planet': None}, (1, 2): {'units': [], 'planet': None}, (2, 2): {'units': [], 'planet': None}, (3, 2): {'units': [], 'planet': None}, (4, 2): {'units': [], 'planet': None}, (0, 3): {'units': [], 'planet': None}, (1, 3): {'units': [], 'planet': None}, (2, 3): {'units': [<units.scout.Scout object at 0x7f19d7501430>, <units.scout.Scout object at 0x7f19d75014c0>], 'planet': None}, (3, 3): {'units': [], 'planet': None}, (4, 3): {'units': [], 'planet': None}, (0, 4): {'units': [], 'planet': None}, (1, 4): {'units': [], 'planet': None}, (2, 4): {'units': [<units.colony.Colony object at 0x7f19d75016d0>], 'planet': <planet.Planet object at 0x7f19d75013d0>}, (3, 4): {'units': [<units.scout.Scout object at 0x7f19d7501250>], 'planet': None}, (4, 4): {'units': [], 'planet': None}}
+Combat0
+Movement1
+{(0, 0): {'units': [], 'planet': None}, (1, 0): {'units': [], 'planet': None}, (2, 0): {'units': [<units.colony.Colony object at 0x7f19d7501a30>], 'planet': <planet.Planet object at 0x7f19d7501490>}, (3, 0): {'units': [], 'planet': None}, (4, 0): {'units': [], 'planet': None}, (0, 1): {'units': [], 'planet': None}, (1, 1): {'units': [], 'planet': None}, (2, 1): {'units': [], 'planet': None}, (3, 1): {'units': [], 'planet': None}, (4, 1): {'units': [], 'planet': None}, (0, 2): {'units': [], 'planet': None}, (1, 2): {'units': [], 'planet': None}, (2, 2): {'units': [<units.scout.Scout object at 0x7f19d7501af0>, <units.scout.Scout object at 0x7f19d75016a0>, <units.scout.Scout object at 0x7f19d7501670>, <units.scout.Scout object at 0x7f19d7501430>, <units.scout.Scout object at 0x7f19d75014c0>], 'planet': None}, (3, 2): {'units': [], 'planet': None}, (4, 2): {'units': [], 'planet': None}, (0, 3): {'units': [], 'planet': None}, (1, 3): {'units': [], 'planet': None}, (2, 3): {'units': [], 'planet': None}, (3, 3): {'units': [<units.scout.Scout object at 0x7f19d7501250>], 'planet': None}, (4, 3): {'units': [], 'planet': None}, (0, 4): {'units': [], 'planet': None}, (1, 4): {'units': [], 'planet': None}, (2, 4): {'units': [<units.colony.Colony object at 0x7f19d75016d0>], 'planet': <planet.Planet object at 0x7f19d75013d0>}, (3, 4): {'units': [], 'planet': None}, (4, 4): {'units': [], 'planet': None}}
+Combat1
+Scout1,0 VS Scout2,1 Roll:5
+Scout2,0 VS Scout2,1 Roll:5
+Scout3,0 VS Scout2,1 Roll:3
+Scout hit
+Scout destroyed
+Scout3,1 VS Scout1,0 Roll:4
+Scout1,0 VS Scout3,1 Roll:3
+Scout hit
+Scout destroyed
+Movement2
+{(0, 0): {'units': [], 'planet': None}, (1, 0): {'units': [], 'planet': None}, (2, 0): {'units': [<units.colony.Colony object at 0x7f19d7501a30>], 'planet': <planet.Planet object at 0x7f19d7501490>}, (3, 0): {'units': [], 'planet': None}, (4, 0): {'units': [], 'planet': None}, (0, 1): {'units': [], 'planet': None}, (1, 1): {'units': [], 'planet': None}, (2, 1): {'units': [], 'planet': None}, (3, 1): {'units': [], 'planet': None}, (4, 1): {'units': [], 'planet': None}, (0, 2): {'units': [], 'planet': None}, (1, 2): {'units': [], 'planet': None}, (2, 2): {'units': [], 'planet': None}, (3, 2): {'units': [<units.scout.Scout object at 0x7f19d7501250>], 'planet': None}, (4, 2): {'units': [], 'planet': None}, (0, 3): {'units': [], 'planet': None}, (1, 3): {'units': [], 'planet': None}, (2, 3): {'units': [<units.scout.Scout object at 0x7f19d7501af0>, <units.scout.Scout object at 0x7f19d75016a0>, <units.scout.Scout object at 0x7f19d7501670>], 'planet': None}, (3, 3): {'units': [], 'planet': None}, (4, 3): {'units': [], 'planet': None}, (0, 4): {'units': [], 'planet': None}, (1, 4): {'units': [], 'planet': None}, (2, 4): {'units': [<units.colony.Colony object at 0x7f19d75016d0>], 'planet': <planet.Planet object at 0x7f19d75013d0>}, (3, 4): {'units': [], 'planet': None}, (4, 4): {'units': [], 'planet': None}}
+Combat2
+Movement3
+{(0, 0): {'units': [], 'planet': None}, (1, 0): {'units': [], 'planet': None}, (2, 0): {'units': [<units.colony.Colony object at 0x7f19d7501a30>], 'planet': <planet.Planet object at 0x7f19d7501490>}, (3, 0): {'units': [], 'planet': None}, (4, 0): {'units': [], 'planet': None}, (0, 1): {'units': [], 'planet': None}, (1, 1): {'units': [], 'planet': None}, (2, 1): {'units': [], 'planet': None}, (3, 1): {'units': [<units.scout.Scout object at 0x7f19d7501250>], 'planet': None}, (4, 1): {'units': [], 'planet': None}, (0, 2): {'units': [], 'planet': None}, (1, 2): {'units': [], 'planet': None}, (2, 2): {'units': [], 'planet': None}, (3, 2): {'units': [], 'planet': None}, (4, 2): {'units': [], 'planet': None}, (0, 3): {'units': [], 'planet': None}, (1, 3): {'units': [], 'planet': None}, (2, 3): {'units': [], 'planet': None}, (3, 3): {'units': [], 'planet': None}, (4, 3): {'units': [], 'planet': None}, (0, 4): {'units': [], 'planet': None}, (1, 4): {'units': [], 'planet': None}, (2, 4): {'units': [<units.colony.Colony object at 0x7f19d75016d0>, <units.scout.Scout object at 0x7f19d7501af0>, <units.scout.Scout object at 0x7f19d75016a0>, <units.scout.Scout object at 0x7f19d7501670>], 'planet': <planet.Planet object at 0x7f19d75013d0>}, (3, 4): {'units': [], 'planet': None}, (4, 4): {'units': [], 'planet': None}}
+Combat3
+Scout1,0 VS Colony0,1 Roll:4
+Scout2,0 VS Colony0,1 Roll:3
+Scout3,0 VS Colony0,1 Roll:3
+Scout1,0 VS Colony0,1 Roll:2
+Colony hit
+Scout2,0 VS Colony0,1 Roll:9
+Scout3,0 VS Colony0,1 Roll:4
+Scout1,0 VS Colony0,1 Roll:5
+Scout2,0 VS Colony0,1 Roll:1
+Colony hit
+Scout3,0 VS Colony0,1 Roll:7
+Scout1,0 VS Colony0,1 Roll:3
+Scout2,0 VS Colony0,1 Roll:10
+Scout3,0 VS Colony0,1 Roll:1
+Colony hit
+Colony destroyed
+Winner: 0
+Movement0
+{(0, 0): {'units': [], 'planet': None}, (1, 0): {'units': [], 'planet': None}, (2, 0): {'units': [<units.colony.Colony object at 0x7f19d7501160>], 'planet': <planet.Planet object at 0x7f19d757ba60>}, (3, 0): {'units': [], 'planet': None}, (4, 0): {'units': [], 'planet': None}, (0, 1): {'units': [], 'planet': None}, (1, 1): {'units': [], 'planet': None}, (2, 1): {'units': [<units.scout.Scout object at 0x7f19d7501100>, <units.scout.Scout object at 0x7f19d75010d0>, <units.scout.Scout object at 0x7f19d757bfa0>], 'planet': None}, (3, 1): {'units': [], 'planet': None}, (4, 1): {'units': [], 'planet': None}, (0, 2): {'units': [], 'planet': None}, (1, 2): {'units': [], 'planet': None}, (2, 2): {'units': [], 'planet': None}, (3, 2): {'units': [], 'planet': None}, (4, 2): {'units': [], 'planet': None}, (0, 3): {'units': [], 'planet': None}, (1, 3): {'units': [], 'planet': None}, (2, 3): {'units': [<units.scout.Scout object at 0x7f19d757bdf0>, <units.scout.Scout object at 0x7f19d757be20>], 'planet': None}, (3, 3): {'units': [], 'planet': None}, (4, 3): {'units': [], 'planet': None}, (0, 4): {'units': [], 'planet': None}, (1, 4): {'units': [], 'planet': None}, (2, 4): {'units': [<units.colony.Colony object at 0x7f19d757bd00>], 'planet': <planet.Planet object at 0x7f19d757bee0>}, (3, 4): {'units': [<units.scout.Scout object at 0x7f19d757bc40>], 'planet': None}, (4, 4): {'units': [], 'planet': None}}
+Combat0
+Movement1
+{(0, 0): {'units': [], 'planet': None}, (1, 0): {'units': [], 'planet': None}, (2, 0): {'units': [<units.colony.Colony object at 0x7f19d7501160>], 'planet': <planet.Planet object at 0x7f19d757ba60>}, (3, 0): {'units': [], 'planet': None}, (4, 0): {'units': [], 'planet': None}, (0, 1): {'units': [], 'planet': None}, (1, 1): {'units': [], 'planet': None}, (2, 1): {'units': [], 'planet': None}, (3, 1): {'units': [], 'planet': None}, (4, 1): {'units': [], 'planet': None}, (0, 2): {'units': [], 'planet': None}, (1, 2): {'units': [], 'planet': None}, (2, 2): {'units': [<units.scout.Scout object at 0x7f19d7501100>, <units.scout.Scout object at 0x7f19d75010d0>, <units.scout.Scout object at 0x7f19d757bfa0>, <units.scout.Scout object at 0x7f19d757bdf0>, <units.scout.Scout object at 0x7f19d757be20>], 'planet': None}, (3, 2): {'units': [], 'planet': None}, (4, 2): {'units': [], 'planet': None}, (0, 3): {'units': [], 'planet': None}, (1, 3): {'units': [], 'planet': None}, (2, 3): {'units': [], 'planet': None}, (3, 3): {'units': [<units.scout.Scout object at 0x7f19d757bc40>], 'planet': None}, (4, 3): {'units': [], 'planet': None}, (0, 4): {'units': [], 'planet': None}, (1, 4): {'units': [], 'planet': None}, (2, 4): {'units': [<units.colony.Colony object at 0x7f19d757bd00>], 'planet': <planet.Planet object at 0x7f19d757bee0>}, (3, 4): {'units': [], 'planet': None}, (4, 4): {'units': [], 'planet': None}}
+Combat1
+Scout1,0 VS Scout2,1 Roll:2
+Scout hit
+Scout destroyed
+Scout2,0 VS Scout3,1 Roll:10
+Scout3,0 VS Scout3,1 Roll:9
+Scout3,1 VS Scout1,0 Roll:4
+Scout1,0 VS Scout3,1 Roll:5
+Scout2,0 VS Scout3,1 Roll:5
+Scout3,0 VS Scout3,1 Roll:5
+Scout3,1 VS Scout1,0 Roll:2
+Scout hit
+Scout destroyed
+Scout2,0 VS Scout3,1 Roll:8
+Scout3,0 VS Scout3,1 Roll:5
+Scout3,1 VS Scout2,0 Roll:8
+Scout2,0 VS Scout3,1 Roll:7
+Scout3,0 VS Scout3,1 Roll:7
+Scout3,1 VS Scout2,0 Roll:2
+Scout hit
+Scout destroyed
+Scout3,0 VS Scout3,1 Roll:5
+Scout3,1 VS Scout3,0 Roll:4
+Scout3,0 VS Scout3,1 Roll:6
+Scout3,1 VS Scout3,0 Roll:6
+Scout3,0 VS Scout3,1 Roll:5
+Scout3,1 VS Scout3,0 Roll:6
+Scout3,0 VS Scout3,1 Roll:9
+Scout3,1 VS Scout3,0 Roll:3
+Scout hit
+Scout destroyed
+Movement2
+{(0, 0): {'units': [], 'planet': None}, (1, 0): {'units': [], 'planet': None}, (2, 0): {'units': [<units.colony.Colony object at 0x7f19d7501160>], 'planet': <planet.Planet object at 0x7f19d757ba60>}, (3, 0): {'units': [], 'planet': None}, (4, 0): {'units': [], 'planet': None}, (0, 1): {'units': [], 'planet': None}, (1, 1): {'units': [], 'planet': None}, (2, 1): {'units': [<units.scout.Scout object at 0x7f19d757be20>], 'planet': None}, (3, 1): {'units': [], 'planet': None}, (4, 1): {'units': [], 'planet': None}, (0, 2): {'units': [], 'planet': None}, (1, 2): {'units': [], 'planet': None}, (2, 2): {'units': [], 'planet': None}, (3, 2): {'units': [<units.scout.Scout object at 0x7f19d757bc40>], 'planet': None}, (4, 2): {'units': [], 'planet': None}, (0, 3): {'units': [], 'planet': None}, (1, 3): {'units': [], 'planet': None}, (2, 3): {'units': [], 'planet': None}, (3, 3): {'units': [], 'planet': None}, (4, 3): {'units': [], 'planet': None}, (0, 4): {'units': [], 'planet': None}, (1, 4): {'units': [], 'planet': None}, (2, 4): {'units': [<units.colony.Colony object at 0x7f19d757bd00>], 'planet': <planet.Planet object at 0x7f19d757bee0>}, (3, 4): {'units': [], 'planet': None}, (4, 4): {'units': [], 'planet': None}}
+Combat2
+Movement3
+{(0, 0): {'units': [], 'planet': None}, (1, 0): {'units': [], 'planet': None}, (2, 0): {'units': [<units.colony.Colony object at 0x7f19d7501160>, <units.scout.Scout object at 0x7f19d757be20>], 'planet': <planet.Planet object at 0x7f19d757ba60>}, (3, 0): {'units': [], 'planet': None}, (4, 0): {'units': [], 'planet': None}, (0, 1): {'units': [], 'planet': None}, (1, 1): {'units': [], 'planet': None}, (2, 1): {'units': [], 'planet': None}, (3, 1): {'units': [<units.scout.Scout object at 0x7f19d757bc40>], 'planet': None}, (4, 1): {'units': [], 'planet': None}, (0, 2): {'units': [], 'planet': None}, (1, 2): {'units': [], 'planet': None}, (2, 2): {'units': [], 'planet': None}, (3, 2): {'units': [], 'planet': None}, (4, 2): {'units': [], 'planet': None}, (0, 3): {'units': [], 'planet': None}, (1, 3): {'units': [], 'planet': None}, (2, 3): {'units': [], 'planet': None}, (3, 3): {'units': [], 'planet': None}, (4, 3): {'units': [], 'planet': None}, (0, 4): {'units': [], 'planet': None}, (1, 4): {'units': [], 'planet': None}, (2, 4): {'units': [<units.colony.Colony object at 0x7f19d757bd00>], 'planet': <planet.Planet object at 0x7f19d757bee0>}, (3, 4): {'units': [], 'planet': None}, (4, 4): {'units': [], 'planet': None}}
+Combat3
+Scout3,1 VS Colony0,0 Roll:3
+Scout3,1 VS Colony0,0 Roll:9
+Scout3,1 VS Colony0,0 Roll:5
+Scout3,1 VS Colony0,0 Roll:3
+Scout3,1 VS Colony0,0 Roll:1
+Colony hit
+Scout3,1 VS Colony0,0 Roll:2
+Colony hit
+Scout3,1 VS Colony0,0 Roll:2
+Colony hit
+Colony destroyed
+Winner: 1
+Movement0
+{(0, 0): {'units': [], 'planet': None}, (1, 0): {'units': [], 'planet': None}, (2, 0): {'units': [<units.colony.Colony object at 0x7f19d757bf10>], 'planet': <planet.Planet object at 0x7f19d757b910>}, (3, 0): {'units': [], 'planet': None}, (4, 0): {'units': [], 'planet': None}, (0, 1): {'units': [], 'planet': None}, (1, 1): {'units': [], 'planet': None}, (2, 1): {'units': [<units.scout.Scout object at 0x7f19d757bb20>, <units.scout.Scout object at 0x7f19d757ba90>, <units.scout.Scout object at 0x7f19d757ba30>], 'planet': None}, (3, 1): {'units': [], 'planet': None}, (4, 1): {'units': [], 'planet': None}, (0, 2): {'units': [], 'planet': None}, (1, 2): {'units': [], 'planet': None}, (2, 2): {'units': [], 'planet': None}, (3, 2): {'units': [], 'planet': None}, (4, 2): {'units': [], 'planet': None}, (0, 3): {'units': [], 'planet': None}, (1, 3): {'units': [], 'planet': None}, (2, 3): {'units': [<units.scout.Scout object at 0x7f19d757b9a0>, <units.scout.Scout object at 0x7f19d757b820>], 'planet': None}, (3, 3): {'units': [], 'planet': None}, (4, 3): {'units': [], 'planet': None}, (0, 4): {'units': [], 'planet': None}, (1, 4): {'units': [], 'planet': None}, (2, 4): {'units': [<units.colony.Colony object at 0x7f19d757b8b0>], 'planet': <planet.Planet object at 0x7f19d7566580>}, (3, 4): {'units': [<units.scout.Scout object at 0x7f19d757b8e0>], 'planet': None}, (4, 4): {'units': [], 'planet': None}}
+Combat0
+Movement1
+{(0, 0): {'units': [], 'planet': None}, (1, 0): {'units': [], 'planet': None}, (2, 0): {'units': [<units.colony.Colony object at 0x7f19d757bf10>], 'planet': <planet.Planet object at 0x7f19d757b910>}, (3, 0): {'units': [], 'planet': None}, (4, 0): {'units': [], 'planet': None}, (0, 1): {'units': [], 'planet': None}, (1, 1): {'units': [], 'planet': None}, (2, 1): {'units': [], 'planet': None}, (3, 1): {'units': [], 'planet': None}, (4, 1): {'units': [], 'planet': None}, (0, 2): {'units': [], 'planet': None}, (1, 2): {'units': [], 'planet': None}, (2, 2): {'units': [<units.scout.Scout object at 0x7f19d757bb20>, <units.scout.Scout object at 0x7f19d757ba90>, <units.scout.Scout object at 0x7f19d757ba30>, <units.scout.Scout object at 0x7f19d757b9a0>, <units.scout.Scout object at 0x7f19d757b820>], 'planet': None}, (3, 2): {'units': [], 'planet': None}, (4, 2): {'units': [], 'planet': None}, (0, 3): {'units': [], 'planet': None}, (1, 3): {'units': [], 'planet': None}, (2, 3): {'units': [], 'planet': None}, (3, 3): {'units': [<units.scout.Scout object at 0x7f19d757b8e0>], 'planet': None}, (4, 3): {'units': [], 'planet': None}, (0, 4): {'units': [], 'planet': None}, (1, 4): {'units': [], 'planet': None}, (2, 4): {'units': [<units.colony.Colony object at 0x7f19d757b8b0>], 'planet': <planet.Planet object at 0x7f19d7566580>}, (3, 4): {'units': [], 'planet': None}, (4, 4): {'units': [], 'planet': None}}
+Combat1
+Scout1,0 VS Scout2,1 Roll:4
+Scout2,0 VS Scout2,1 Roll:1
+Scout hit
+Scout destroyed
+Scout3,0 VS Scout3,1 Roll:9
+Scout3,1 VS Scout1,0 Roll:1
+Scout hit
+Scout destroyed
+Scout2,0 VS Scout3,1 Roll:3
+Scout hit
+Scout destroyed
+Movement2
+{(0, 0): {'units': [], 'planet': None}, (1, 0): {'units': [], 'planet': None}, (2, 0): {'units': [<units.colony.Colony object at 0x7f19d757bf10>], 'planet': <planet.Planet object at 0x7f19d757b910>}, (3, 0): {'units': [], 'planet': None}, (4, 0): {'units': [], 'planet': None}, (0, 1): {'units': [], 'planet': None}, (1, 1): {'units': [], 'planet': None}, (2, 1): {'units': [], 'planet': None}, (3, 1): {'units': [], 'planet': None}, (4, 1): {'units': [], 'planet': None}, (0, 2): {'units': [], 'planet': None}, (1, 2): {'units': [], 'planet': None}, (2, 2): {'units': [], 'planet': None}, (3, 2): {'units': [<units.scout.Scout object at 0x7f19d757b8e0>], 'planet': None}, (4, 2): {'units': [], 'planet': None}, (0, 3): {'units': [], 'planet': None}, (1, 3): {'units': [], 'planet': None}, (2, 3): {'units': [<units.scout.Scout object at 0x7f19d757ba90>, <units.scout.Scout object at 0x7f19d757ba30>], 'planet': None}, (3, 3): {'units': [], 'planet': None}, (4, 3): {'units': [], 'planet': None}, (0, 4): {'units': [], 'planet': None}, (1, 4): {'units': [], 'planet': None}, (2, 4): {'units': [<units.colony.Colony object at 0x7f19d757b8b0>], 'planet': <planet.Planet object at 0x7f19d7566580>}, (3, 4): {'units': [], 'planet': None}, (4, 4): {'units': [], 'planet': None}}
+Combat2
+Movement3
+{(0, 0): {'units': [], 'planet': None}, (1, 0): {'units': [], 'planet': None}, (2, 0): {'units': [<units.colony.Colony object at 0x7f19d757bf10>], 'planet': <planet.Planet object at 0x7f19d757b910>}, (3, 0): {'units': [], 'planet': None}, (4, 0): {'units': [], 'planet': None}, (0, 1): {'units': [], 'planet': None}, (1, 1): {'units': [], 'planet': None}, (2, 1): {'units': [], 'planet': None}, (3, 1): {'units': [<units.scout.Scout object at 0x7f19d757b8e0>], 'planet': None}, (4, 1): {'units': [], 'planet': None}, (0, 2): {'units': [], 'planet': None}, (1, 2): {'units': [], 'planet': None}, (2, 2): {'units': [], 'planet': None}, (3, 2): {'units': [], 'planet': None}, (4, 2): {'units': [], 'planet': None}, (0, 3): {'units': [], 'planet': None}, (1, 3): {'units': [], 'planet': None}, (2, 3): {'units': [], 'planet': None}, (3, 3): {'units': [], 'planet': None}, (4, 3): {'units': [], 'planet': None}, (0, 4): {'units': [], 'planet': None}, (1, 4): {'units': [], 'planet': None}, (2, 4): {'units': [<units.colony.Colony object at 0x7f19d757b8b0>, <units.scout.Scout object at 0x7f19d757ba90>, <units.scout.Scout object at 0x7f19d757ba30>], 'planet': <planet.Planet object at 0x7f19d7566580>}, (3, 4): {'units': [], 'planet': None}, (4, 4): {'units': [], 'planet': None}}
+Combat3
+Scout2,0 VS Colony0,1 Roll:4
+Scout3,0 VS Colony0,1 Roll:1
+Colony hit
+Scout2,0 VS Colony0,1 Roll:1
+Colony hit
+Scout3,0 VS Colony0,1 Roll:3
+Scout2,0 VS Colony0,1 Roll:6
+Scout3,0 VS Colony0,1 Roll:4
+Scout2,0 VS Colony0,1 Roll:2
+Colony hit
+Colony destroyed
+Winner: 0
+Movement0
+{(0, 0): {'units': [], 'planet': None}, (1, 0): {'units': [], 'planet': None}, (2, 0): {'units': [<units.colony.Colony object at 0x7f19d7566970>], 'planet': <planet.Planet object at 0x7f19d7566c70>}, (3, 0): {'units': [], 'planet': None}, (4, 0): {'units': [], 'planet': None}, (0, 1): {'units': [], 'planet': None}, (1, 1): {'units': [], 'planet': None}, (2, 1): {'units': [<units.scout.Scout object at 0x7f19d75666d0>, <units.scout.Scout object at 0x7f19d7566550>, <units.scout.Scout object at 0x7f19d75666a0>], 'planet': None}, (3, 1): {'units': [], 'planet': None}, (4, 1): {'units': [], 'planet': None}, (0, 2): {'units': [], 'planet': None}, (1, 2): {'units': [], 'planet': None}, (2, 2): {'units': [], 'planet': None}, (3, 2): {'units': [], 'planet': None}, (4, 2): {'units': [], 'planet': None}, (0, 3): {'units': [], 'planet': None}, (1, 3): {'units': [], 'planet': None}, (2, 3): {'units': [<units.scout.Scout object at 0x7f19d75667f0>, <units.scout.Scout object at 0x7f19d7566820>], 'planet': None}, (3, 3): {'units': [], 'planet': None}, (4, 3): {'units': [], 'planet': None}, (0, 4): {'units': [], 'planet': None}, (1, 4): {'units': [], 'planet': None}, (2, 4): {'units': [<units.colony.Colony object at 0x7f19d75663a0>], 'planet': <planet.Planet object at 0x7f19d75664c0>}, (3, 4): {'units': [<units.scout.Scout object at 0x7f19d7566af0>], 'planet': None}, (4, 4): {'units': [], 'planet': None}}
+Combat0
+Movement1
+{(0, 0): {'units': [], 'planet': None}, (1, 0): {'units': [], 'planet': None}, (2, 0): {'units': [<units.colony.Colony object at 0x7f19d7566970>], 'planet': <planet.Planet object at 0x7f19d7566c70>}, (3, 0): {'units': [], 'planet': None}, (4, 0): {'units': [], 'planet': None}, (0, 1): {'units': [], 'planet': None}, (1, 1): {'units': [], 'planet': None}, (2, 1): {'units': [], 'planet': None}, (3, 1): {'units': [], 'planet': None}, (4, 1): {'units': [], 'planet': None}, (0, 2): {'units': [], 'planet': None}, (1, 2): {'units': [], 'planet': None}, (2, 2): {'units': [<units.scout.Scout object at 0x7f19d75666d0>, <units.scout.Scout object at 0x7f19d7566550>, <units.scout.Scout object at 0x7f19d75666a0>, <units.scout.Scout object at 0x7f19d75667f0>, <units.scout.Scout object at 0x7f19d7566820>], 'planet': None}, (3, 2): {'units': [], 'planet': None}, (4, 2): {'units': [], 'planet': None}, (0, 3): {'units': [], 'planet': None}, (1, 3): {'units': [], 'planet': None}, (2, 3): {'units': [], 'planet': None}, (3, 3): {'units': [<units.scout.Scout object at 0x7f19d7566af0>], 'planet': None}, (4, 3): {'units': [], 'planet': None}, (0, 4): {'units': [], 'planet': None}, (1, 4): {'units': [], 'planet': None}, (2, 4): {'units': [<units.colony.Colony object at 0x7f19d75663a0>], 'planet': <planet.Planet object at 0x7f19d75664c0>}, (3, 4): {'units': [], 'planet': None}, (4, 4): {'units': [], 'planet': None}}
+Combat1
+Scout1,0 VS Scout2,1 Roll:6
+Scout2,0 VS Scout2,1 Roll:8
+Scout3,0 VS Scout2,1 Roll:8
+Scout2,1 VS Scout1,0 Roll:5
+Scout3,1 VS Scout1,0 Roll:7
+Scout1,0 VS Scout2,1 Roll:4
+Scout2,0 VS Scout2,1 Roll:8
+Scout3,0 VS Scout2,1 Roll:1
+Scout hit
+Scout destroyed
+Scout3,1 VS Scout1,0 Roll:7
+Scout1,0 VS Scout3,1 Roll:5
+Scout2,0 VS Scout3,1 Roll:4
+Scout3,0 VS Scout3,1 Roll:4
+Scout3,1 VS Scout1,0 Roll:1
+Scout hit
+Scout destroyed
+Scout2,0 VS Scout3,1 Roll:5
+Scout3,0 VS Scout3,1 Roll:5
+Scout3,1 VS Scout2,0 Roll:6
+Scout2,0 VS Scout3,1 Roll:3
+Scout hit
+Scout destroyed
+Movement2
+{(0, 0): {'units': [], 'planet': None}, (1, 0): {'units': [], 'planet': None}, (2, 0): {'units': [<units.colony.Colony object at 0x7f19d7566970>], 'planet': <planet.Planet object at 0x7f19d7566c70>}, (3, 0): {'units': [], 'planet': None}, (4, 0): {'units': [], 'planet': None}, (0, 1): {'units': [], 'planet': None}, (1, 1): {'units': [], 'planet': None}, (2, 1): {'units': [], 'planet': None}, (3, 1): {'units': [], 'planet': None}, (4, 1): {'units': [], 'planet': None}, (0, 2): {'units': [], 'planet': None}, (1, 2): {'units': [], 'planet': None}, (2, 2): {'units': [], 'planet': None}, (3, 2): {'units': [<units.scout.Scout object at 0x7f19d7566af0>], 'planet': None}, (4, 2): {'units': [], 'planet': None}, (0, 3): {'units': [], 'planet': None}, (1, 3): {'units': [], 'planet': None}, (2, 3): {'units': [<units.scout.Scout object at 0x7f19d7566550>, <units.scout.Scout object at 0x7f19d75666a0>], 'planet': None}, (3, 3): {'units': [], 'planet': None}, (4, 3): {'units': [], 'planet': None}, (0, 4): {'units': [], 'planet': None}, (1, 4): {'units': [], 'planet': None}, (2, 4): {'units': [<units.colony.Colony object at 0x7f19d75663a0>], 'planet': <planet.Planet object at 0x7f19d75664c0>}, (3, 4): {'units': [], 'planet': None}, (4, 4): {'units': [], 'planet': None}}
+Combat2
+Movement3
+{(0, 0): {'units': [], 'planet': None}, (1, 0): {'units': [], 'planet': None}, (2, 0): {'units': [<units.colony.Colony object at 0x7f19d7566970>], 'planet': <planet.Planet object at 0x7f19d7566c70>}, (3, 0): {'units': [], 'planet': None}, (4, 0): {'units': [], 'planet': None}, (0, 1): {'units': [], 'planet': None}, (1, 1): {'units': [], 'planet': None}, (2, 1): {'units': [], 'planet': None}, (3, 1): {'units': [<units.scout.Scout object at 0x7f19d7566af0>], 'planet': None}, (4, 1): {'units': [], 'planet': None}, (0, 2): {'units': [], 'planet': None}, (1, 2): {'units': [], 'planet': None}, (2, 2): {'units': [], 'planet': None}, (3, 2): {'units': [], 'planet': None}, (4, 2): {'units': [], 'planet': None}, (0, 3): {'units': [], 'planet': None}, (1, 3): {'units': [], 'planet': None}, (2, 3): {'units': [], 'planet': None}, (3, 3): {'units': [], 'planet': None}, (4, 3): {'units': [], 'planet': None}, (0, 4): {'units': [], 'planet': None}, (1, 4): {'units': [], 'planet': None}, (2, 4): {'units': [<units.colony.Colony object at 0x7f19d75663a0>, <units.scout.Scout object at 0x7f19d7566550>, <units.scout.Scout object at 0x7f19d75666a0>], 'planet': <planet.Planet object at 0x7f19d75664c0>}, (3, 4): {'units': [], 'planet': None}, (4, 4): {'units': [], 'planet': None}}
+Combat3
+Scout2,0 VS Colony0,1 Roll:10
+Scout3,0 VS Colony0,1 Roll:5
+Scout2,0 VS Colony0,1 Roll:1
+Colony hit
+Scout3,0 VS Colony0,1 Roll:4
+Scout2,0 VS Colony0,1 Roll:10
+Scout3,0 VS Colony0,1 Roll:5
+Scout2,0 VS Colony0,1 Roll:1
+Colony hit
+Scout3,0 VS Colony0,1 Roll:3
+Scout2,0 VS Colony0,1 Roll:10
+Scout3,0 VS Colony0,1 Roll:1
+Colony hit
+Colony destroyed
+Winner: 0
+Movement0
+{(0, 0): {'units': [], 'planet': None}, (1, 0): {'units': [], 'planet': None}, (2, 0): {'units': [<units.colony.Colony object at 0x7f19d75668b0>], 'planet': <planet.Planet object at 0x7f19d750a760>}, (3, 0): {'units': [], 'planet': None}, (4, 0): {'units': [], 'planet': None}, (0, 1): {'units': [], 'planet': None}, (1, 1): {'units': [], 'planet': None}, (2, 1): {'units': [<units.scout.Scout object at 0x7f19d7566430>, <units.scout.Scout object at 0x7f19d7566c40>, <units.scout.Scout object at 0x7f19d7566d60>], 'planet': None}, (3, 1): {'units': [], 'planet': None}, (4, 1): {'units': [], 'planet': None}, (0, 2): {'units': [], 'planet': None}, (1, 2): {'units': [], 'planet': None}, (2, 2): {'units': [], 'planet': None}, (3, 2): {'units': [], 'planet': None}, (4, 2): {'units': [], 'planet': None}, (0, 3): {'units': [], 'planet': None}, (1, 3): {'units': [], 'planet': None}, (2, 3): {'units': [<units.scout.Scout object at 0x7f19d750a7c0>, <units.scout.Scout object at 0x7f19d750a070>], 'planet': None}, (3, 3): {'units': [], 'planet': None}, (4, 3): {'units': [], 'planet': None}, (0, 4): {'units': [], 'planet': None}, (1, 4): {'units': [], 'planet': None}, (2, 4): {'units': [<units.colony.Colony object at 0x7f19d7566bb0>], 'planet': <planet.Planet object at 0x7f19d750a0d0>}, (3, 4): {'units': [<units.scout.Scout object at 0x7f19d750a4c0>], 'planet': None}, (4, 4): {'units': [], 'planet': None}}
+Combat0
+Movement1
+{(0, 0): {'units': [], 'planet': None}, (1, 0): {'units': [], 'planet': None}, (2, 0): {'units': [<units.colony.Colony object at 0x7f19d75668b0>], 'planet': <planet.Planet object at 0x7f19d750a760>}, (3, 0): {'units': [], 'planet': None}, (4, 0): {'units': [], 'planet': None}, (0, 1): {'units': [], 'planet': None}, (1, 1): {'units': [], 'planet': None}, (2, 1): {'units': [], 'planet': None}, (3, 1): {'units': [], 'planet': None}, (4, 1): {'units': [], 'planet': None}, (0, 2): {'units': [], 'planet': None}, (1, 2): {'units': [], 'planet': None}, (2, 2): {'units': [<units.scout.Scout object at 0x7f19d7566430>, <units.scout.Scout object at 0x7f19d7566c40>, <units.scout.Scout object at 0x7f19d7566d60>, <units.scout.Scout object at 0x7f19d750a7c0>, <units.scout.Scout object at 0x7f19d750a070>], 'planet': None}, (3, 2): {'units': [], 'planet': None}, (4, 2): {'units': [], 'planet': None}, (0, 3): {'units': [], 'planet': None}, (1, 3): {'units': [], 'planet': None}, (2, 3): {'units': [], 'planet': None}, (3, 3): {'units': [<units.scout.Scout object at 0x7f19d750a4c0>], 'planet': None}, (4, 3): {'units': [], 'planet': None}, (0, 4): {'units': [], 'planet': None}, (1, 4): {'units': [], 'planet': None}, (2, 4): {'units': [<units.colony.Colony object at 0x7f19d7566bb0>], 'planet': <planet.Planet object at 0x7f19d750a0d0>}, (3, 4): {'units': [], 'planet': None}, (4, 4): {'units': [], 'planet': None}}
+Combat1
+Scout1,0 VS Scout2,1 Roll:9
+Scout2,0 VS Scout2,1 Roll:7
+Scout3,0 VS Scout2,1 Roll:5
+Scout2,1 VS Scout1,0 Roll:6
+Scout3,1 VS Scout1,0 Roll:5
+Scout1,0 VS Scout2,1 Roll:3
+Scout hit
+Scout destroyed
+Scout2,0 VS Scout3,1 Roll:9
+Scout3,0 VS Scout3,1 Roll:5
+Scout3,1 VS Scout1,0 Roll:2
+Scout hit
+Scout destroyed
+Scout2,0 VS Scout3,1 Roll:1
+Scout hit
+Scout destroyed
+Movement2
+{(0, 0): {'units': [], 'planet': None}, (1, 0): {'units': [], 'planet': None}, (2, 0): {'units': [<units.colony.Colony object at 0x7f19d75668b0>], 'planet': <planet.Planet object at 0x7f19d750a760>}, (3, 0): {'units': [], 'planet': None}, (4, 0): {'units': [], 'planet': None}, (0, 1): {'units': [], 'planet': None}, (1, 1): {'units': [], 'planet': None}, (2, 1): {'units': [], 'planet': None}, (3, 1): {'units': [], 'planet': None}, (4, 1): {'units': [], 'planet': None}, (0, 2): {'units': [], 'planet': None}, (1, 2): {'units': [], 'planet': None}, (2, 2): {'units': [], 'planet': None}, (3, 2): {'units': [<units.scout.Scout object at 0x7f19d750a4c0>], 'planet': None}, (4, 2): {'units': [], 'planet': None}, (0, 3): {'units': [], 'planet': None}, (1, 3): {'units': [], 'planet': None}, (2, 3): {'units': [<units.scout.Scout object at 0x7f19d7566c40>, <units.scout.Scout object at 0x7f19d7566d60>], 'planet': None}, (3, 3): {'units': [], 'planet': None}, (4, 3): {'units': [], 'planet': None}, (0, 4): {'units': [], 'planet': None}, (1, 4): {'units': [], 'planet': None}, (2, 4): {'units': [<units.colony.Colony object at 0x7f19d7566bb0>], 'planet': <planet.Planet object at 0x7f19d750a0d0>}, (3, 4): {'units': [], 'planet': None}, (4, 4): {'units': [], 'planet': None}}
+Combat2
+Movement3
+{(0, 0): {'units': [], 'planet': None}, (1, 0): {'units': [], 'planet': None}, (2, 0): {'units': [<units.colony.Colony object at 0x7f19d75668b0>], 'planet': <planet.Planet object at 0x7f19d750a760>}, (3, 0): {'units': [], 'planet': None}, (4, 0): {'units': [], 'planet': None}, (0, 1): {'units': [], 'planet': None}, (1, 1): {'units': [], 'planet': None}, (2, 1): {'units': [], 'planet': None}, (3, 1): {'units': [<units.scout.Scout object at 0x7f19d750a4c0>], 'planet': None}, (4, 1): {'units': [], 'planet': None}, (0, 2): {'units': [], 'planet': None}, (1, 2): {'units': [], 'planet': None}, (2, 2): {'units': [], 'planet': None}, (3, 2): {'units': [], 'planet': None}, (4, 2): {'units': [], 'planet': None}, (0, 3): {'units': [], 'planet': None}, (1, 3): {'units': [], 'planet': None}, (2, 3): {'units': [], 'planet': None}, (3, 3): {'units': [], 'planet': None}, (4, 3): {'units': [], 'planet': None}, (0, 4): {'units': [], 'planet': None}, (1, 4): {'units': [], 'planet': None}, (2, 4): {'units': [<units.colony.Colony object at 0x7f19d7566bb0>, <units.scout.Scout object at 0x7f19d7566c40>, <units.scout.Scout object at 0x7f19d7566d60>], 'planet': <planet.Planet object at 0x7f19d750a0d0>}, (3, 4): {'units': [], 'planet': None}, (4, 4): {'units': [], 'planet': None}}
+Combat3
+Scout2,0 VS Colony0,1 Roll:4
+Scout3,0 VS Colony0,1 Roll:7
+Scout2,0 VS Colony0,1 Roll:7
+Scout3,0 VS Colony0,1 Roll:5
+Scout2,0 VS Colony0,1 Roll:9
+Scout3,0 VS Colony0,1 Roll:6
+Scout2,0 VS Colony0,1 Roll:7
+Scout3,0 VS Colony0,1 Roll:3
+Scout2,0 VS Colony0,1 Roll:9
+Scout3,0 VS Colony0,1 Roll:1
+Colony hit
+Scout2,0 VS Colony0,1 Roll:3
+Scout3,0 VS Colony0,1 Roll:4
+Scout2,0 VS Colony0,1 Roll:3
+Scout3,0 VS Colony0,1 Roll:9
+Scout2,0 VS Colony0,1 Roll:9
+Scout3,0 VS Colony0,1 Roll:4
+Scout2,0 VS Colony0,1 Roll:6
+Scout3,0 VS Colony0,1 Roll:9
+Scout2,0 VS Colony0,1 Roll:2
+Colony hit
+Scout3,0 VS Colony0,1 Roll:2
+Colony hit
+Colony destroyed
+Winner: 0
+Movement0
+{(0, 0): {'units': [], 'planet': None}, (1, 0): {'units': [], 'planet': None}, (2, 0): {'units': [<units.colony.Colony object at 0x7f19d750aa30>], 'planet': <planet.Planet object at 0x7f19d750abe0>}, (3, 0): {'units': [], 'planet': None}, (4, 0): {'units': [], 'planet': None}, (0, 1): {'units': [], 'planet': None}, (1, 1): {'units': [], 'planet': None}, (2, 1): {'units': [<units.scout.Scout object at 0x7f19d750aa60>, <units.scout.Scout object at 0x7f19d750aaf0>, <units.scout.Scout object at 0x7f19d750ab20>], 'planet': None}, (3, 1): {'units': [], 'planet': None}, (4, 1): {'units': [], 'planet': None}, (0, 2): {'units': [], 'planet': None}, (1, 2): {'units': [], 'planet': None}, (2, 2): {'units': [], 'planet': None}, (3, 2): {'units': [], 'planet': None}, (4, 2): {'units': [], 'planet': None}, (0, 3): {'units': [], 'planet': None}, (1, 3): {'units': [], 'planet': None}, (2, 3): {'units': [<units.scout.Scout object at 0x7f19d750ac40>, <units.scout.Scout object at 0x7f19d750ac70>], 'planet': None}, (3, 3): {'units': [], 'planet': None}, (4, 3): {'units': [], 'planet': None}, (0, 4): {'units': [], 'planet': None}, (1, 4): {'units': [], 'planet': None}, (2, 4): {'units': [<units.colony.Colony object at 0x7f19d750ab80>], 'planet': <planet.Planet object at 0x7f19d750acd0>}, (3, 4): {'units': [<units.scout.Scout object at 0x7f19d750abb0>], 'planet': None}, (4, 4): {'units': [], 'planet': None}}
+Combat0
+Movement1
+{(0, 0): {'units': [], 'planet': None}, (1, 0): {'units': [], 'planet': None}, (2, 0): {'units': [<units.colony.Colony object at 0x7f19d750aa30>], 'planet': <planet.Planet object at 0x7f19d750abe0>}, (3, 0): {'units': [], 'planet': None}, (4, 0): {'units': [], 'planet': None}, (0, 1): {'units': [], 'planet': None}, (1, 1): {'units': [], 'planet': None}, (2, 1): {'units': [], 'planet': None}, (3, 1): {'units': [], 'planet': None}, (4, 1): {'units': [], 'planet': None}, (0, 2): {'units': [], 'planet': None}, (1, 2): {'units': [], 'planet': None}, (2, 2): {'units': [<units.scout.Scout object at 0x7f19d750aa60>, <units.scout.Scout object at 0x7f19d750aaf0>, <units.scout.Scout object at 0x7f19d750ab20>, <units.scout.Scout object at 0x7f19d750ac40>, <units.scout.Scout object at 0x7f19d750ac70>], 'planet': None}, (3, 2): {'units': [], 'planet': None}, (4, 2): {'units': [], 'planet': None}, (0, 3): {'units': [], 'planet': None}, (1, 3): {'units': [], 'planet': None}, (2, 3): {'units': [], 'planet': None}, (3, 3): {'units': [<units.scout.Scout object at 0x7f19d750abb0>], 'planet': None}, (4, 3): {'units': [], 'planet': None}, (0, 4): {'units': [], 'planet': None}, (1, 4): {'units': [], 'planet': None}, (2, 4): {'units': [<units.colony.Colony object at 0x7f19d750ab80>], 'planet': <planet.Planet object at 0x7f19d750acd0>}, (3, 4): {'units': [], 'planet': None}, (4, 4): {'units': [], 'planet': None}}
+Combat1
+Scout1,0 VS Scout2,1 Roll:3
+Scout hit
+Scout destroyed
+Scout2,0 VS Scout3,1 Roll:2
+Scout hit
+Scout destroyed
+Movement2
+{(0, 0): {'units': [], 'planet': None}, (1, 0): {'units': [], 'planet': None}, (2, 0): {'units': [<units.colony.Colony object at 0x7f19d750aa30>], 'planet': <planet.Planet object at 0x7f19d750abe0>}, (3, 0): {'units': [], 'planet': None}, (4, 0): {'units': [], 'planet': None}, (0, 1): {'units': [], 'planet': None}, (1, 1): {'units': [], 'planet': None}, (2, 1): {'units': [], 'planet': None}, (3, 1): {'units': [], 'planet': None}, (4, 1): {'units': [], 'planet': None}, (0, 2): {'units': [], 'planet': None}, (1, 2): {'units': [], 'planet': None}, (2, 2): {'units': [], 'planet': None}, (3, 2): {'units': [<units.scout.Scout object at 0x7f19d750abb0>], 'planet': None}, (4, 2): {'units': [], 'planet': None}, (0, 3): {'units': [], 'planet': None}, (1, 3): {'units': [], 'planet': None}, (2, 3): {'units': [<units.scout.Scout object at 0x7f19d750aa60>, <units.scout.Scout object at 0x7f19d750aaf0>, <units.scout.Scout object at 0x7f19d750ab20>], 'planet': None}, (3, 3): {'units': [], 'planet': None}, (4, 3): {'units': [], 'planet': None}, (0, 4): {'units': [], 'planet': None}, (1, 4): {'units': [], 'planet': None}, (2, 4): {'units': [<units.colony.Colony object at 0x7f19d750ab80>], 'planet': <planet.Planet object at 0x7f19d750acd0>}, (3, 4): {'units': [], 'planet': None}, (4, 4): {'units': [], 'planet': None}}
+Combat2
+Movement3
+{(0, 0): {'units': [], 'planet': None}, (1, 0): {'units': [], 'planet': None}, (2, 0): {'units': [<units.colony.Colony object at 0x7f19d750aa30>], 'planet': <planet.Planet object at 0x7f19d750abe0>}, (3, 0): {'units': [], 'planet': None}, (4, 0): {'units': [], 'planet': None}, (0, 1): {'units': [], 'planet': None}, (1, 1): {'units': [], 'planet': None}, (2, 1): {'units': [], 'planet': None}, (3, 1): {'units': [<units.scout.Scout object at 0x7f19d750abb0>], 'planet': None}, (4, 1): {'units': [], 'planet': None}, (0, 2): {'units': [], 'planet': None}, (1, 2): {'units': [], 'planet': None}, (2, 2): {'units': [], 'planet': None}, (3, 2): {'units': [], 'planet': None}, (4, 2): {'units': [], 'planet': None}, (0, 3): {'units': [], 'planet': None}, (1, 3): {'units': [], 'planet': None}, (2, 3): {'units': [], 'planet': None}, (3, 3): {'units': [], 'planet': None}, (4, 3): {'units': [], 'planet': None}, (0, 4): {'units': [], 'planet': None}, (1, 4): {'units': [], 'planet': None}, (2, 4): {'units': [<units.colony.Colony object at 0x7f19d750ab80>, <units.scout.Scout object at 0x7f19d750aa60>, <units.scout.Scout object at 0x7f19d750aaf0>, <units.scout.Scout object at 0x7f19d750ab20>], 'planet': <planet.Planet object at 0x7f19d750acd0>}, (3, 4): {'units': [], 'planet': None}, (4, 4): {'units': [], 'planet': None}}
+Combat3
+Scout1,0 VS Colony0,1 Roll:8
+Scout2,0 VS Colony0,1 Roll:6
+Scout3,0 VS Colony0,1 Roll:4
+Scout1,0 VS Colony0,1 Roll:4
+Scout2,0 VS Colony0,1 Roll:8
+Scout3,0 VS Colony0,1 Roll:8
+Scout1,0 VS Colony0,1 Roll:3
+Scout2,0 VS Colony0,1 Roll:8
+Scout3,0 VS Colony0,1 Roll:5
+Scout1,0 VS Colony0,1 Roll:8
+Scout2,0 VS Colony0,1 Roll:5
+Scout3,0 VS Colony0,1 Roll:4
+Scout1,0 VS Colony0,1 Roll:5
+Scout2,0 VS Colony0,1 Roll:2
+Colony hit
+Scout3,0 VS Colony0,1 Roll:6
+Scout1,0 VS Colony0,1 Roll:9
+Scout2,0 VS Colony0,1 Roll:3
+Scout3,0 VS Colony0,1 Roll:4
+Scout1,0 VS Colony0,1 Roll:3
+Scout2,0 VS Colony0,1 Roll:4
+Scout3,0 VS Colony0,1 Roll:4
+Scout1,0 VS Colony0,1 Roll:6
+Scout2,0 VS Colony0,1 Roll:10
+Scout3,0 VS Colony0,1 Roll:9
+Scout1,0 VS Colony0,1 Roll:4
+Scout2,0 VS Colony0,1 Roll:8
+Scout3,0 VS Colony0,1 Roll:4
+Scout1,0 VS Colony0,1 Roll:5
+Scout2,0 VS Colony0,1 Roll:5
+Scout3,0 VS Colony0,1 Roll:1
+Colony hit
+Scout1,0 VS Colony0,1 Roll:6
+Scout2,0 VS Colony0,1 Roll:7
+Scout3,0 VS Colony0,1 Roll:4
+Scout1,0 VS Colony0,1 Roll:7
+Scout2,0 VS Colony0,1 Roll:9
+Scout3,0 VS Colony0,1 Roll:6
+Scout1,0 VS Colony0,1 Roll:10
+Scout2,0 VS Colony0,1 Roll:10
+Scout3,0 VS Colony0,1 Roll:9
+Scout1,0 VS Colony0,1 Roll:5
+Scout2,0 VS Colony0,1 Roll:5
+Scout3,0 VS Colony0,1 Roll:10
+Scout1,0 VS Colony0,1 Roll:5
+Scout2,0 VS Colony0,1 Roll:9
+Scout3,0 VS Colony0,1 Roll:2
+Colony hit
+Colony destroyed
+Winner: 0
+Movement0
+{(0, 0): {'units': [], 'planet': None}, (1, 0): {'units': [], 'planet': None}, (2, 0): {'units': [<units.colony.Colony object at 0x7f19d7517040>], 'planet': <planet.Planet object at 0x7f19d75171f0>}, (3, 0): {'units': [], 'planet': None}, (4, 0): {'units': [], 'planet': None}, (0, 1): {'units': [], 'planet': None}, (1, 1): {'units': [], 'planet': None}, (2, 1): {'units': [<units.scout.Scout object at 0x7f19d7517070>, <units.scout.Scout object at 0x7f19d7517100>, <units.scout.Scout object at 0x7f19d7517130>], 'planet': None}, (3, 1): {'units': [], 'planet': None}, (4, 1): {'units': [], 'planet': None}, (0, 2): {'units': [], 'planet': None}, (1, 2): {'units': [], 'planet': None}, (2, 2): {'units': [], 'planet': None}, (3, 2): {'units': [], 'planet': None}, (4, 2): {'units': [], 'planet': None}, (0, 3): {'units': [], 'planet': None}, (1, 3): {'units': [], 'planet': None}, (2, 3): {'units': [<units.scout.Scout object at 0x7f19d7517250>, <units.scout.Scout object at 0x7f19d7517280>], 'planet': None}, (3, 3): {'units': [], 'planet': None}, (4, 3): {'units': [], 'planet': None}, (0, 4): {'units': [], 'planet': None}, (1, 4): {'units': [], 'planet': None}, (2, 4): {'units': [<units.colony.Colony object at 0x7f19d7517190>], 'planet': <planet.Planet object at 0x7f19d75172e0>}, (3, 4): {'units': [<units.scout.Scout object at 0x7f19d75171c0>], 'planet': None}, (4, 4): {'units': [], 'planet': None}}
+Combat0
+Movement1
+{(0, 0): {'units': [], 'planet': None}, (1, 0): {'units': [], 'planet': None}, (2, 0): {'units': [<units.colony.Colony object at 0x7f19d7517040>], 'planet': <planet.Planet object at 0x7f19d75171f0>}, (3, 0): {'units': [], 'planet': None}, (4, 0): {'units': [], 'planet': None}, (0, 1): {'units': [], 'planet': None}, (1, 1): {'units': [], 'planet': None}, (2, 1): {'units': [], 'planet': None}, (3, 1): {'units': [], 'planet': None}, (4, 1): {'units': [], 'planet': None}, (0, 2): {'units': [], 'planet': None}, (1, 2): {'units': [], 'planet': None}, (2, 2): {'units': [<units.scout.Scout object at 0x7f19d7517070>, <units.scout.Scout object at 0x7f19d7517100>, <units.scout.Scout object at 0x7f19d7517130>, <units.scout.Scout object at 0x7f19d7517250>, <units.scout.Scout object at 0x7f19d7517280>], 'planet': None}, (3, 2): {'units': [], 'planet': None}, (4, 2): {'units': [], 'planet': None}, (0, 3): {'units': [], 'planet': None}, (1, 3): {'units': [], 'planet': None}, (2, 3): {'units': [], 'planet': None}, (3, 3): {'units': [<units.scout.Scout object at 0x7f19d75171c0>], 'planet': None}, (4, 3): {'units': [], 'planet': None}, (0, 4): {'units': [], 'planet': None}, (1, 4): {'units': [], 'planet': None}, (2, 4): {'units': [<units.colony.Colony object at 0x7f19d7517190>], 'planet': <planet.Planet object at 0x7f19d75172e0>}, (3, 4): {'units': [], 'planet': None}, (4, 4): {'units': [], 'planet': None}}
+Combat1
+Scout1,0 VS Scout2,1 Roll:1
+Scout hit
+Scout destroyed
+Scout2,0 VS Scout3,1 Roll:9
+Scout3,0 VS Scout3,1 Roll:2
+Scout hit
+Scout destroyed
+Movement2
+{(0, 0): {'units': [], 'planet': None}, (1, 0): {'units': [], 'planet': None}, (2, 0): {'units': [<units.colony.Colony object at 0x7f19d7517040>], 'planet': <planet.Planet object at 0x7f19d75171f0>}, (3, 0): {'units': [], 'planet': None}, (4, 0): {'units': [], 'planet': None}, (0, 1): {'units': [], 'planet': None}, (1, 1): {'units': [], 'planet': None}, (2, 1): {'units': [], 'planet': None}, (3, 1): {'units': [], 'planet': None}, (4, 1): {'units': [], 'planet': None}, (0, 2): {'units': [], 'planet': None}, (1, 2): {'units': [], 'planet': None}, (2, 2): {'units': [], 'planet': None}, (3, 2): {'units': [<units.scout.Scout object at 0x7f19d75171c0>], 'planet': None}, (4, 2): {'units': [], 'planet': None}, (0, 3): {'units': [], 'planet': None}, (1, 3): {'units': [], 'planet': None}, (2, 3): {'units': [<units.scout.Scout object at 0x7f19d7517070>, <units.scout.Scout object at 0x7f19d7517100>, <units.scout.Scout object at 0x7f19d7517130>], 'planet': None}, (3, 3): {'units': [], 'planet': None}, (4, 3): {'units': [], 'planet': None}, (0, 4): {'units': [], 'planet': None}, (1, 4): {'units': [], 'planet': None}, (2, 4): {'units': [<units.colony.Colony object at 0x7f19d7517190>], 'planet': <planet.Planet object at 0x7f19d75172e0>}, (3, 4): {'units': [], 'planet': None}, (4, 4): {'units': [], 'planet': None}}
+Combat2
+Movement3
+{(0, 0): {'units': [], 'planet': None}, (1, 0): {'units': [], 'planet': None}, (2, 0): {'units': [<units.colony.Colony object at 0x7f19d7517040>], 'planet': <planet.Planet object at 0x7f19d75171f0>}, (3, 0): {'units': [], 'planet': None}, (4, 0): {'units': [], 'planet': None}, (0, 1): {'units': [], 'planet': None}, (1, 1): {'units': [], 'planet': None}, (2, 1): {'units': [], 'planet': None}, (3, 1): {'units': [<units.scout.Scout object at 0x7f19d75171c0>], 'planet': None}, (4, 1): {'units': [], 'planet': None}, (0, 2): {'units': [], 'planet': None}, (1, 2): {'units': [], 'planet': None}, (2, 2): {'units': [], 'planet': None}, (3, 2): {'units': [], 'planet': None}, (4, 2): {'units': [], 'planet': None}, (0, 3): {'units': [], 'planet': None}, (1, 3): {'units': [], 'planet': None}, (2, 3): {'units': [], 'planet': None}, (3, 3): {'units': [], 'planet': None}, (4, 3): {'units': [], 'planet': None}, (0, 4): {'units': [], 'planet': None}, (1, 4): {'units': [], 'planet': None}, (2, 4): {'units': [<units.colony.Colony object at 0x7f19d7517190>, <units.scout.Scout object at 0x7f19d7517070>, <units.scout.Scout object at 0x7f19d7517100>, <units.scout.Scout object at 0x7f19d7517130>], 'planet': <planet.Planet object at 0x7f19d75172e0>}, (3, 4): {'units': [], 'planet': None}, (4, 4): {'units': [], 'planet': None}}
+Combat3
+Scout1,0 VS Colony0,1 Roll:9
+Scout2,0 VS Colony0,1 Roll:4
+Scout3,0 VS Colony0,1 Roll:7
+Scout1,0 VS Colony0,1 Roll:6
+Scout2,0 VS Colony0,1 Roll:9
+Scout3,0 VS Colony0,1 Roll:5
+Scout1,0 VS Colony0,1 Roll:10
+Scout2,0 VS Colony0,1 Roll:3
+Scout3,0 VS Colony0,1 Roll:10
+Scout1,0 VS Colony0,1 Roll:5
+Scout2,0 VS Colony0,1 Roll:2
+Colony hit
+Scout3,0 VS Colony0,1 Roll:5
+Scout1,0 VS Colony0,1 Roll:7
+Scout2,0 VS Colony0,1 Roll:6
+Scout3,0 VS Colony0,1 Roll:5
+Scout1,0 VS Colony0,1 Roll:2
+Colony hit
+Scout2,0 VS Colony0,1 Roll:6
+Scout3,0 VS Colony0,1 Roll:5
+Scout1,0 VS Colony0,1 Roll:1
+Colony hit
+Colony destroyed
+Winner: 0
+Movement0
+{(0, 0): {'units': [], 'planet': None}, (1, 0): {'units': [], 'planet': None}, (2, 0): {'units': [<units.colony.Colony object at 0x7f19d750aa00>], 'planet': <planet.Planet object at 0x7f19d750a8e0>}, (3, 0): {'units': [], 'planet': None}, (4, 0): {'units': [], 'planet': None}, (0, 1): {'units': [], 'planet': None}, (1, 1): {'units': [], 'planet': None}, (2, 1): {'units': [<units.scout.Scout object at 0x7f19d750a970>, <units.scout.Scout object at 0x7f19d750acd0>, <units.scout.Scout object at 0x7f19d750ad00>], 'planet': None}, (3, 1): {'units': [], 'planet': None}, (4, 1): {'units': [], 'planet': None}, (0, 2): {'units': [], 'planet': None}, (1, 2): {'units': [], 'planet': None}, (2, 2): {'units': [], 'planet': None}, (3, 2): {'units': [], 'planet': None}, (4, 2): {'units': [], 'planet': None}, (0, 3): {'units': [], 'planet': None}, (1, 3): {'units': [], 'planet': None}, (2, 3): {'units': [<units.scout.Scout object at 0x7f19d750a160>, <units.scout.Scout object at 0x7f19d750a040>], 'planet': None}, (3, 3): {'units': [], 'planet': None}, (4, 3): {'units': [], 'planet': None}, (0, 4): {'units': [], 'planet': None}, (1, 4): {'units': [], 'planet': None}, (2, 4): {'units': [<units.colony.Colony object at 0x7f19d750aca0>], 'planet': <planet.Planet object at 0x7f19d750a790>}, (3, 4): {'units': [<units.scout.Scout object at 0x7f19d750a8b0>], 'planet': None}, (4, 4): {'units': [], 'planet': None}}
+Combat0
+Movement1
+{(0, 0): {'units': [], 'planet': None}, (1, 0): {'units': [], 'planet': None}, (2, 0): {'units': [<units.colony.Colony object at 0x7f19d750aa00>], 'planet': <planet.Planet object at 0x7f19d750a8e0>}, (3, 0): {'units': [], 'planet': None}, (4, 0): {'units': [], 'planet': None}, (0, 1): {'units': [], 'planet': None}, (1, 1): {'units': [], 'planet': None}, (2, 1): {'units': [], 'planet': None}, (3, 1): {'units': [], 'planet': None}, (4, 1): {'units': [], 'planet': None}, (0, 2): {'units': [], 'planet': None}, (1, 2): {'units': [], 'planet': None}, (2, 2): {'units': [<units.scout.Scout object at 0x7f19d750a970>, <units.scout.Scout object at 0x7f19d750acd0>, <units.scout.Scout object at 0x7f19d750ad00>, <units.scout.Scout object at 0x7f19d750a160>, <units.scout.Scout object at 0x7f19d750a040>], 'planet': None}, (3, 2): {'units': [], 'planet': None}, (4, 2): {'units': [], 'planet': None}, (0, 3): {'units': [], 'planet': None}, (1, 3): {'units': [], 'planet': None}, (2, 3): {'units': [], 'planet': None}, (3, 3): {'units': [<units.scout.Scout object at 0x7f19d750a8b0>], 'planet': None}, (4, 3): {'units': [], 'planet': None}, (0, 4): {'units': [], 'planet': None}, (1, 4): {'units': [], 'planet': None}, (2, 4): {'units': [<units.colony.Colony object at 0x7f19d750aca0>], 'planet': <planet.Planet object at 0x7f19d750a790>}, (3, 4): {'units': [], 'planet': None}, (4, 4): {'units': [], 'planet': None}}
+Combat1
+Scout1,0 VS Scout2,1 Roll:3
+Scout hit
+Scout destroyed
+Scout2,0 VS Scout3,1 Roll:5
+Scout3,0 VS Scout3,1 Roll:2
+Scout hit
+Scout destroyed
+Movement2
+{(0, 0): {'units': [], 'planet': None}, (1, 0): {'units': [], 'planet': None}, (2, 0): {'units': [<units.colony.Colony object at 0x7f19d750aa00>], 'planet': <planet.Planet object at 0x7f19d750a8e0>}, (3, 0): {'units': [], 'planet': None}, (4, 0): {'units': [], 'planet': None}, (0, 1): {'units': [], 'planet': None}, (1, 1): {'units': [], 'planet': None}, (2, 1): {'units': [], 'planet': None}, (3, 1): {'units': [], 'planet': None}, (4, 1): {'units': [], 'planet': None}, (0, 2): {'units': [], 'planet': None}, (1, 2): {'units': [], 'planet': None}, (2, 2): {'units': [], 'planet': None}, (3, 2): {'units': [<units.scout.Scout object at 0x7f19d750a8b0>], 'planet': None}, (4, 2): {'units': [], 'planet': None}, (0, 3): {'units': [], 'planet': None}, (1, 3): {'units': [], 'planet': None}, (2, 3): {'units': [<units.scout.Scout object at 0x7f19d750a970>, <units.scout.Scout object at 0x7f19d750acd0>, <units.scout.Scout object at 0x7f19d750ad00>], 'planet': None}, (3, 3): {'units': [], 'planet': None}, (4, 3): {'units': [], 'planet': None}, (0, 4): {'units': [], 'planet': None}, (1, 4): {'units': [], 'planet': None}, (2, 4): {'units': [<units.colony.Colony object at 0x7f19d750aca0>], 'planet': <planet.Planet object at 0x7f19d750a790>}, (3, 4): {'units': [], 'planet': None}, (4, 4): {'units': [], 'planet': None}}
+Combat2
+Movement3
+{(0, 0): {'units': [], 'planet': None}, (1, 0): {'units': [], 'planet': None}, (2, 0): {'units': [<units.colony.Colony object at 0x7f19d750aa00>], 'planet': <planet.Planet object at 0x7f19d750a8e0>}, (3, 0): {'units': [], 'planet': None}, (4, 0): {'units': [], 'planet': None}, (0, 1): {'units': [], 'planet': None}, (1, 1): {'units': [], 'planet': None}, (2, 1): {'units': [], 'planet': None}, (3, 1): {'units': [<units.scout.Scout object at 0x7f19d750a8b0>], 'planet': None}, (4, 1): {'units': [], 'planet': None}, (0, 2): {'units': [], 'planet': None}, (1, 2): {'units': [], 'planet': None}, (2, 2): {'units': [], 'planet': None}, (3, 2): {'units': [], 'planet': None}, (4, 2): {'units': [], 'planet': None}, (0, 3): {'units': [], 'planet': None}, (1, 3): {'units': [], 'planet': None}, (2, 3): {'units': [], 'planet': None}, (3, 3): {'units': [], 'planet': None}, (4, 3): {'units': [], 'planet': None}, (0, 4): {'units': [], 'planet': None}, (1, 4): {'units': [], 'planet': None}, (2, 4): {'units': [<units.colony.Colony object at 0x7f19d750aca0>, <units.scout.Scout object at 0x7f19d750a970>, <units.scout.Scout object at 0x7f19d750acd0>, <units.scout.Scout object at 0x7f19d750ad00>], 'planet': <planet.Planet object at 0x7f19d750a790>}, (3, 4): {'units': [], 'planet': None}, (4, 4): {'units': [], 'planet': None}}
+Combat3
+Scout1,0 VS Colony0,1 Roll:6
+Scout2,0 VS Colony0,1 Roll:10
+Scout3,0 VS Colony0,1 Roll:3
+Scout1,0 VS Colony0,1 Roll:1
+Colony hit
+Scout2,0 VS Colony0,1 Roll:7
+Scout3,0 VS Colony0,1 Roll:7
+Scout1,0 VS Colony0,1 Roll:2
+Colony hit
+Scout2,0 VS Colony0,1 Roll:2
+Colony hit
+Colony destroyed
+Winner: 0

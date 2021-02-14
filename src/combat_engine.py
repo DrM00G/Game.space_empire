@@ -79,9 +79,6 @@ class CombatEngine:
           order = self.combat_order(combat_coord)
           for unit in order:
             if unit.exists and combat_coord in [key for key in self.locate_combat()] and self.game.winner==None and unit.name!="Colony":
-              # print(self.locate_combat()[combat_coord])
-              # print(str(self.locate_combat()[combat_coord][unit.player.strat.decide_which_unit_to_attack(self.locate_combat(), combat_coord,unit.unit_index)]["type"])+","+str(self.locate_combat()[combat_coord][unit.player.strat.decide_which_unit_to_attack(self.locate_combat(), combat_coord,unit.unit_index)]["type"]))hidden_game_state_for_combat, combat_state, coords, attacker_index
-              
               target=self.locate_combat()[combat_coord][unit.player.strat.decide_which_unit_to_attack(self.locate_combat(),self.locate_combat(), combat_coord,unit.unit_index)]
               for vs_unit in order:
                 if vs_unit.unit_index==target["unit_num"] and vs_unit.player_index!=unit.player_index:
@@ -96,10 +93,13 @@ class CombatEngine:
         self.rolls.remove(roll)
         attack=attacker.attack-target.defense
         # print(str(roll)+"VS"+str(attack))
+        self.game.logger.info(str(attacker.name)+str(attacker.unit_index)+","+str(attacker.player_index)+" VS "+str(target.name)+str(target.unit_index)+","+str(target.player_index)+" Roll:"+str(roll))
         if attack>=roll or roll==1:
           target.armor-=1
+          self.game.logger.info(str(target.name)+" hit")
           if target.armor<=0:
             target.destroy()
+            self.game.logger.info(str(target.name)+" destroyed")
 
 
 
