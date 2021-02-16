@@ -49,7 +49,6 @@ class NumbersBerserkerLevel2:
         return route
 
     def decide_purchases(self,game_state):
-        print("BIG MONEY")
         return_dict={
            'units': [],
            'technology': []}
@@ -57,5 +56,4 @@ class NumbersBerserkerLevel2:
         while current_cp>=game_state['unit_data']['Scout']['cp_cost']:
           current_cp-=game_state['unit_data']['Scout']['cp_cost']
           return_dict['units'].append({'type': 'Scout', 'coords': game_state['players'][self.player_num]['home_coords']})
-        print(return_dict)
         return return_dict

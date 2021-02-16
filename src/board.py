@@ -12,3 +12,4 @@ class Board:
 
     def remove_from_board(self,unit):
       self.board_dict[unit.coords]["units"].remove(unit)
+      

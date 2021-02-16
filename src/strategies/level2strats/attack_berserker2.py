@@ -44,7 +44,6 @@ class AttackBerserkerLevel2:
         }
       current_cp = game_state['players'][self.player_num]['cp']
       new_attack= game_state['players'][self.player_num]['technology']['attack']
-      print(current_cp)
       if current_cp>=game_state['technology_data']['attack'][new_attack]:
           current_cp-=game_state['technology_data']['attack'][new_attack]
           new_attack= new_attack+1
@@ -52,5 +51,4 @@ class AttackBerserkerLevel2:
       if current_cp>=game_state['unit_data']['Scout']['cp_cost']:
         current_cp-=game_state['unit_data']['Scout']['cp_cost']
         return_dic['units'].append({'type': 'Scout', 'coords': game_state['players'][self.player_num]['home_coords']})
-        print(return_dic)
       return return_dic
