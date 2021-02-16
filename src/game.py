@@ -67,7 +67,10 @@ class Game:
       while self.winner == None:
         # print("Move")
         self.movement_phase()
-        self.logger.info(self.board.board_dict)
+        for coord in self.board.board_dict:
+          if len(self.board.board_dict[coord]["units"])>0:
+            self.logger.info(str(coord)+":"+str([str(unit.name)+str(unit.unit_index)+"["+str(unit.player_index)+"]" for unit in self.board.board_dict[coord]["units"]]))
+        # self.logger.info(self.board.board_dict)
         # print("Fight")
         self.combat_phase()          
         # if self.turn_numb>50:

@@ -48,5 +48,5 @@ for n in range(20):
     new_game.setup([player0,player1])
     winner = new_game.run_until_winner()
     if winner != 3:
-      win_dict[abs(winner)].append(n)
+      win_dict[abs(winner-1)].append(n)
 print(win_dict)
