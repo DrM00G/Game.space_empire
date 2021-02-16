@@ -1,4 +1,5 @@
 import random
+import math
 
 class CombatEngine:
     def __init__(self,die_mode,sided_die,board,game):
@@ -12,7 +13,7 @@ class CombatEngine:
     def roll_die(self):
       if self.die_mode=="random":
         for n in range(self.sided_die):
-          self.rolls.append(random.random()*10)
+          self.rolls.append(math.ceil(10*random.random()))
       else:
         self.rolls=[n+1 for n in range(self.sided_die)]
         if self.die_mode=="decending":
@@ -69,17 +70,20 @@ class CombatEngine:
           for unit in seperations[i]:
             order.append(unit)
         # print([unit.name for unit in order])
-        return order
+        return sorted(order,key = lambda unit:(unit.tactics,-unit.player.player_index,-unit.unit_index),reverse=True)
+        # return order
 
     def complete_combat_phase(self):
         self.kill_bystanders(self.locate_combat())
+        for key in self.locate_combat():
+          self.game.logger.info([(unit.unit_index,unit.player_index) for unit in self.combat_order(key)])
         while len(self.locate_combat())>0 and self.game.winner==None:
           combat_coord=[key for key in self.locate_combat()][0]
           #SCREAN
           order = self.combat_order(combat_coord)
           for unit in order:
             if unit.exists and combat_coord in [key for key in self.locate_combat()] and self.game.winner==None and unit.name!="Colony":
-              target=self.locate_combat()[combat_coord][unit.player.strat.decide_which_unit_to_attack(self.locate_combat(),self.locate_combat(), combat_coord,unit.unit_index)]
+              target=self.combat_order(combat_coord)[unit.player.strat.decide_which_unit_to_attack(self.locate_combat(),self.locate_combat(), combat_coord,unit.unit_index)]
               for vs_unit in order:
                 if vs_unit.unit_index==target["unit_num"] and vs_unit.player_index!=unit.player_index:
                   enemy=vs_unit
@@ -93,7 +97,7 @@ class CombatEngine:
         self.rolls.remove(roll)
         attack=attacker.attack-target.defense
         # print(str(roll)+"VS"+str(attack))
-        self.game.logger.info(str(attacker.name)+str(attacker.unit_index)+","+str(attacker.player_index)+" VS "+str(target.name)+str(target.unit_index)+","+str(target.player_index)+" Roll:"+str(roll))
+        self.game.logger.info(str(attacker.name)+str(attacker.unit_index)+","+str(attacker.player_index)+" VS "+str(target.name)+str(target.unit_index)+","+str(target.player_index)+" Roll:"+str(roll)+" Threshold:"+str(attack))
         if attack>=roll or roll==1:
           target.armor-=1
           self.game.logger.info(str(target.name)+" hit")

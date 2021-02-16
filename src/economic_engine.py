@@ -65,7 +65,7 @@ class EconomicEngine:
       tech_order=["attack",'defense','movement','shipyard technology',"shipsize"]
       if tech=="attack" or tech=="defense":
         if player.tech[tech_order.index(tech)]<len(self.game.generate_state()['technology_data'][tech]):
-          if player.cp>=self.game.generate_state['technology_data'][tech][player.tech[tech_order.index(tech)]]:
+          if player.CP>=self.game.generate_state()['technology_data'][tech][player.tech[tech_order.index(tech)]]:
             return True
       else:
         if player.tech[tech_order.index(tech)]-1<len(self.game.generate_state()['technology_data'][tech]):
@@ -75,6 +75,7 @@ class EconomicEngine:
 
 
     def buy_units(self,player,shopping_list):
+      self.game.logger.info("Buy unit"+str(player.player_index))
       for unit in shopping_list["units"]:
         if self.check_for_colony(unit["coords"],player.player_index)!=False:
           builder_colony=self.check_for_colony(unit["coords"],player.player_index)
@@ -82,6 +83,7 @@ class EconomicEngine:
             player.CP-=self.game.generate_state()["unit_data"][unit["type"]]['cp_cost']
             builder_colony.ship_yard_capacity-=self.game.generate_state()["unit_data"][unit["type"]]['hullsize']
             if unit['type']=="Scout":
+              self.game.logger.info(str(player.player_index)+" Buys a scout")
               player.units.append(Scout(player,len(player.units),player.player_index,unit["coords"],self.game.turn_numb,player.tech))
             elif unit['type']=="Shipyard":
               player.units.append(Shipyard(player,len(player.units),player.player_index,unit["coords"],self.game.turn_numb,player.tech))

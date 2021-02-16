@@ -15,11 +15,14 @@ class NumbersBerserkerLevel2:
     def decide_removals(self, player_state):
         return -1
         
-    def decide_which_unit_to_attack(self, hidden_game_state, combat_state, location, attacker_index):
-        # print(combat_state)
-      for ship in combat_state[location]:
-        if ship['player_num']!=self.player_num:
-          return combat_state[location].index(ship)
+    def decide_which_unit_to_attack(self, hidden_game_state_for_combat, combat_state, coords, attacker_index):
+        combat_order = combat_state[coords]
+        player_indices = [unit['player_num'] for unit in combat_order]
+
+        opponent_index = 1 - self.player_num
+        for combat_index, unit in enumerate(combat_order):
+            if unit['player_num'] == opponent_index:
+                return combat_index
 
     def directional_input(self, current, goal):
         directions = [[1, 0],[-1, 0],[0, 1],[0, -1],[0,0]]
@@ -46,6 +49,7 @@ class NumbersBerserkerLevel2:
         return route
 
     def decide_purchases(self,game_state):
+        print("BIG MONEY")
         return_dict={
            'units': [],
            'technology': []}
@@ -53,4 +57,5 @@ class NumbersBerserkerLevel2:
         while current_cp>=game_state['unit_data']['Scout']['cp_cost']:
           current_cp-=game_state['unit_data']['Scout']['cp_cost']
           return_dict['units'].append({'type': 'Scout', 'coords': game_state['players'][self.player_num]['home_coords']})
+        print(return_dict)
         return return_dict

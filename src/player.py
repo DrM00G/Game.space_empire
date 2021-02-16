@@ -22,6 +22,10 @@ class Player:
         for n in range(3):
           self.units.append(Scout(self,n+1,self.player_index,self.home_colony_pos,0,self.tech))
           self.board.add_to_board(self.units[n+1])
+        if self.game.level==2:
+          for n in range(4):
+            self.units.append(Shipyard(self,n+4,self.player_index,self.home_colony_pos,0,self.tech))
+            self.board.add_to_board(self.units[n+4])
       else:
         for n in range(3):
           self.units.append(Scout(self,n+1,self.player_index,self.home_colony_pos,0,self.tech))

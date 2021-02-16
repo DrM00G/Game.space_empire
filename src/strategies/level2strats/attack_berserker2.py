@@ -28,8 +28,6 @@ class AttackBerserkerLevel2:
         return best_translation
 
     def decide_which_unit_to_attack(self, hidden_game_state_for_combat, combat_state, coords, attacker_index):
-        # attack opponent's first ship in combat order
-
         combat_order = combat_state[coords]
         player_indices = [unit['player_num'] for unit in combat_order]
 
@@ -46,11 +44,13 @@ class AttackBerserkerLevel2:
         }
       current_cp = game_state['players'][self.player_num]['cp']
       new_attack= game_state['players'][self.player_num]['technology']['attack']
-      if current_cp>=game_state['technology_data']['attack'][new_attack-1]:
-          current_cp-=game_state['technology_data']['attack'][new_attack-1]
+      print(current_cp)
+      if current_cp>=game_state['technology_data']['attack'][new_attack]:
+          current_cp-=game_state['technology_data']['attack'][new_attack]
           new_attack= new_attack+1
           return_dic['technology'].append('attack')
-      if current_cp>=game_state['unit_data']['Destroyer']['cp_cost']:
-        current_cp-=game_state['unit_data']['Destroyer']['cp_cost']
-        return_dic['units'].append({'type': 'Destroyer', 'coords': game_state['players'][self.player_num]['home_coords']})
+      if current_cp>=game_state['unit_data']['Scout']['cp_cost']:
+        current_cp-=game_state['unit_data']['Scout']['cp_cost']
+        return_dic['units'].append({'type': 'Scout', 'coords': game_state['players'][self.player_num]['home_coords']})
+        print(return_dic)
       return return_dic

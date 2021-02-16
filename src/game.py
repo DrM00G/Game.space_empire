@@ -63,17 +63,18 @@ class Game:
         # self.run_until_winner().exit()
 
     def run_until_winner(self):
+      self.economic_phase()
       while self.winner == None:
         # print("Move")
         self.movement_phase()
         self.logger.info(self.board.board_dict)
         # print("Fight")
-        self.combat_phase()
-        if self.level==2 and self.turn_numb==0:
-          self.economic_phase()
+        self.combat_phase()          
         # if self.turn_numb>50:
         #   print(self.board.board_dict)
         self.turn_numb+=1
+        if self.turn_numb>100:
+          self.winner=3
       self.logger.info("Winner: "+str(self.winner))
       return self.winner
 
