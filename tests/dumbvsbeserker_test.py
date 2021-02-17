@@ -26,4 +26,4 @@ for n in range(20):
   new_game.setup([player0,player1])
   win_dict[new_game.run_until_winner()]+=1
   # print("BIG WINNER:"+str(new_game.run_until_winner()))
-print(win_dict)
+print(win_dict) 

@@ -30,32 +30,12 @@ class CombatEngine:
             combat_dict[coord]={}
             combat_dict[coord]= [
             {"type": unit.name,"player_num":unit.player_index,
-            "unit_num":unit.unit_index,
+            "unit_num":unit.unit_index,'tactics':unit.tactics,
             "coords":unit.coords,
             "technology":{"defense": unit.defense,"attack": unit.attack,"movement": unit.movement},
             "hits_left":unit.armor,
             'turn_created':unit.turn_made
             }for unit in self.combat_order(coord) if unit.exists==True]
-
-
-      # combat_dict={}
-      # for coord in self.board.board_dict:
-      #   if len(self.board.board_dict[coord]["units"])>1:
-      #     player_count=[0,0]
-      #     for unit in self.board.board_dict[coord]["units"]:
-      #       player_count[unit.player_index]+=1
-      #     if player_count[0]!=0 and player_count[1]!=0:
-      #       combat_dict[coord]={}
-      #       combat_dict[coord]= [
-      #       {"type": unit.name,"player_num":unit.player_index,
-      #       "unit_num":unit.unit_index,
-      #       "coords":unit.coords,
-      #       "technology":{"defense": unit.defense,"attack": unit.attack,"movement": unit.movement},
-      #       "hits_left":unit.armor,
-      #       'turn_created':unit.turn_made
-      #       }for unit in self.board.board_dict[coord]["units"] if unit.screaned==False]
-            
-
       return combat_dict
 
 
@@ -67,17 +47,19 @@ class CombatEngine:
               unit.destroy()
 
     def combat_order(self,coord):
-        seperations=[[]for n in range(6)]
-        for player in range(2):
-          for unit in self.board.board_dict[coord]["units"]:
-            if unit.player_index == player:
-              if unit.screaned == False and unit.exists==True:
-                seperations[unit.tactics].append(unit)
         order=[]
-        seperations=seperations[::-1]
-        for i in range(6):
-          for unit in seperations[i]:
+        for unit in self.board.board_dict[coord]["units"]:
             order.append(unit)
+        # seperations=[[]for n in range(6)]
+        # for player in range(2):
+        #   for unit in self.board.board_dict[coord]["units"]:
+        #     if unit.player_index == player:
+        #       if unit.screaned == False and unit.exists==True:
+        #         seperations[unit.tactics].append(unit)
+        # seperations=seperations[::-1]
+        # for i in range(6):
+        #   for unit in seperations[i]:
+        #     order.append(unit)
         return sorted(order,key = lambda unit:(unit.tactics,-unit.player.player_index,-unit.unit_index),reverse=True)
 
     def complete_combat_phase(self):
