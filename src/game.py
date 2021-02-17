@@ -76,8 +76,8 @@ class Game:
         # if self.turn_numb>50:
         #   print(self.board.board_dict)
         self.turn_numb+=1
-        if self.turn_numb>100:
-          self.winner=3
+        if self.turn_numb>50:
+          self.winner=2
       self.logger.info("Winner: "+str(self.winner))
       return self.winner
 
@@ -126,4 +126,4 @@ class Game:
           'shipyard': [20, 30]
           }
           }   
-        return state
+        return state  

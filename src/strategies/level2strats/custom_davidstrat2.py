@@ -7,18 +7,17 @@ class HoldbackBeserkerLevel2:
 
     def decide_ship_movement(self, ship_index, game_state):
         ship_coords = game_state['players'][self.player_num]['units'][ship_index]['coords']
-        if self.first_location:
-          target= game_state['players'][self.player_num-1]['home_coords']
+        if game_state['turn']<2:
+          target=(game_state['players'][self.player_num]['home_coords'][0]+2,game_state['players'][self.player_num]['home_coords'][1])
         else:
-          target=(game_state['players'][self.player_num-1]['home_coords'][0]+2, game_state['players'][self.player_num-1]['home_coords'][1]//2)
+          target=game_state['players'][self.player_num-1]['home_coords']
         route = self.fastest_route(ship_coords, target)
         if ship_index<5:
           if len(route) > 0:
             return tuple(route[0])
           else:
             return (0,0)
-            self.first_location=True
-        elif game_state['turn']>5:
+        elif game_state['turn']>6:
           if len(route) > 0:
             return tuple(route[0])
           else:
