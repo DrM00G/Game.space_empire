@@ -29,7 +29,7 @@ class CombatEngine:
           if player_count[0]!=0 and player_count[1]!=0:
             combat_dict[coord]={}
             combat_dict[coord]= [
-            {"type": unit.name,"player_num":unit.player_index,
+            {"type": unit.name,"player_index":unit.player_index,
             "unit_num":unit.unit_index,'tactics':unit.tactics,
             "coords":unit.coords,
             "technology":{"defense": unit.defense,"attack": unit.attack,"movement": unit.movement},
