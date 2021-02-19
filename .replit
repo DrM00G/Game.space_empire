@@ -1,2 +1,2 @@
-run = "python tests/Customstrat_tests2.py"
+run = "python tests/tournement_custom_strats.py"
 language = "python3"
