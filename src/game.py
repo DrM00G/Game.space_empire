@@ -102,7 +102,7 @@ class Game:
             "hits_left":unit.armor,
             'turn_created':unit.turn_made,
             'exists':unit.exists
-            }for unit in player.units ],#ADD COLONIE FIXES#attk,defn,mov,shpyd,shpsz
+            }for unit in player.units],#ADD COLONIE FIXES#attk,defn,mov,shpyd,shpsz
             'technology': {'attack': player.tech[0], 'defense': player.tech[1], 'movement': player.tech[2],'shipyard technology':player.tech[3], 'shipsize': player.tech[4]}
             } for player in self.players
             ],

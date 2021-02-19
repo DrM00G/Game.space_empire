@@ -1,4 +1,5 @@
 
+import random
 import sys
 sys.path.append('src')
 from game import Game
@@ -11,6 +12,7 @@ from strategies.level2strats.custom_justinstrat2 import JustinStrategyLevel2
 
 def run_half_matchup(strat0,strat1,win_dict,sample_size,phase):
   for n in range(int(sample_size/2)):
+    random.seed(n+phase*(sample_size/2)+1)
     if n%50==0:    
       print(n+phase*(sample_size/2))
     new_game=Game(board_size=[5,5],die_mode="random",sided_die=10,simple=True, level=2)
@@ -23,8 +25,10 @@ def run_half_matchup(strat0,strat1,win_dict,sample_size,phase):
     winner = new_game.run_until_winner()
     if phase==0 or winner==2:
       win_dict[winner].append(n)
+      print(winner)
     else:
       win_dict[abs(winner-1)].append(n)
+      print(abs(winner-1))
   return win_dict
 
 def run_matchup(stratA,stratB,sample_size):
@@ -35,16 +39,16 @@ def run_matchup(stratA,stratB,sample_size):
   stratA.player_index=1
   stratB.player_index=0
   win_dict=run_half_matchup(stratB,stratA,win_dict,50,1)
-  print("A: %"+str(len(win_dict[0])/sample_size)+"B: %"+str(len(win_dict[1])/sample_size)+"Draw:%"+str(len(win_dict[2])/sample_size))
+  print("A: %"+str(1000*len(win_dict[0])/sample_size)+"B: %"+str(1000*len(win_dict[1])/sample_size)+"Draw:%"+str(1000*len(win_dict[2])/sample_size))
 
 David=HoldbackBeserkerLevel2("David")
 NumBeserker=NumbersBerserkerLevel2("Robot")
 Riley=RileyStrategyLevel2("Riley")
 Eli=ElijahStrategyLevel2("Eli")
 Justin=JustinStrategyLevel2("Justin")
-print("RileyvsDavid")
-run_matchup(Riley,David,500)
+# print("RileyvsDavid")
+# run_matchup(Riley,David,500)
 print("RileyvsEli")
 run_matchup(Riley,Eli,500)
-print("RileyvsJustin")
-run_matchup(Riley,Justin,500)
+# print("RileyvsJustin")
+# run_matchup(Riley,Justin,500)

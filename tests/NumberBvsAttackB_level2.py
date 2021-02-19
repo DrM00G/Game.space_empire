@@ -36,7 +36,7 @@ for n in range(20):
     player1=Player(1,player1_strats,(2,4),game=new_game)
     new_game.setup([player0,player1])
     winner = new_game.run_until_winner()
-    if winner != 3:
+    if winner != 2:
       win_dict[winner].append(n)
   else:
     new_game=Game(board_size=[5,5],die_mode="random",sided_die=10,simple=True, level=2)
@@ -47,6 +47,6 @@ for n in range(20):
     player1=Player(1,player1_strats,(2,4),game=new_game)
     new_game.setup([player0,player1])
     winner = new_game.run_until_winner()
-    if winner != 3:
+    if winner != 2:
       win_dict[abs(winner-1)].append(n)
 print(win_dict)

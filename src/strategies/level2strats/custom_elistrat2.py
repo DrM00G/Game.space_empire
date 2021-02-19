@@ -13,7 +13,7 @@ class ElijahStrategyLevel2:
         unit = units[unit_index]
 
         # If enemy has no more scouts
-        if next((i for i in enemy['units'] if i['type'] == 'Scout'), None) is None:
+        if next((i for i in enemy['units'] if i['type'] == 'Scout' and i['exists']==True), None) is None:
             # Go to enemy base
             if not unit['coords'] == enemy_home:
                 direction = 1 if enemy_home[1] > unit['coords'][1] else 0
