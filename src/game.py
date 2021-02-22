@@ -20,7 +20,7 @@ class Game:
       self.planet_nums=0
       self.board=Board(self.board_size)
       self.players=[]
-      self.turn_numb=0
+      self.turn_numb=1
       self.phase = None
       self.logger=logging.getLogger() 
       self.logger.setLevel(logging.DEBUG) 
@@ -63,7 +63,9 @@ class Game:
         # self.run_until_winner().exit()
 
     def run_until_winner(self):
-      self.economic_phase()
+      if self.level==2:
+        self.economic_phase()
+      
       while self.winner == None:
         # print("Move")
         self.movement_phase()
@@ -72,7 +74,9 @@ class Game:
             self.logger.info(str(coord)+":"+str([str(unit.name)+str(unit.unit_index)+"["+str(unit.player_index)+"]" for unit in self.board.board_dict[coord]["units"]]))
         # self.logger.info(self.board.board_dict)
         # print("Fight")
-        self.combat_phase()          
+        self.combat_phase() 
+        if self.level>=3:
+          self.economic_phase()         
         # if self.turn_numb>50:
         #   print(self.board.board_dict)
         self.turn_numb+=1

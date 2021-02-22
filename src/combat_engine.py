@@ -72,6 +72,7 @@ class CombatEngine:
           order = self.combat_order(combat_coord)
           for unit in order:
             if unit.exists and combat_coord in [key for key in self.locate_combat()] and self.game.winner==None and unit.name!="Colony":
+              # print(unit.player_index)
               target=self.locate_combat()[combat_coord][unit.player.strat.decide_which_unit_to_attack(self.locate_combat(),self.locate_combat(), combat_coord,unit.unit_index)]
 
               enemy="no"

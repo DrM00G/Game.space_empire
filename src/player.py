@@ -14,7 +14,10 @@ class Player:
       self.units=[Colony(self,0,p_index,self.home_colony_pos,0,self.tech,home_colony=True)]
       self.board.add_to_board(self.units[0])
       self.state_strat=player_strat
-      self.CP = 10
+      if self.game.level==2:
+        self.CP = 10
+      if self.game.level==3:
+        self.CP = 0
       self.set_up_army(self.game.simple)
 
     def set_up_army(self,simple_army):
@@ -22,7 +25,7 @@ class Player:
         for n in range(3):
           self.units.append(Scout(self,n+1,self.player_index,self.home_colony_pos,0,self.tech))
           self.board.add_to_board(self.units[n+1])
-        if self.game.level==2:
+        if self.game.level>=2:
           for n in range(4):
             self.units.append(Shipyard(self,n+4,self.player_index,self.home_colony_pos,0,self.tech))
             self.board.add_to_board(self.units[n+4])
@@ -38,7 +41,7 @@ class Player:
           self.board.add_to_board(self.units[n+8])
 
     def movement_phase(self):
-      if self.game.simple:
+      if self.game.level<3:
         self.game.move_round=1
         for unit in self.units:
           self.game.movement.move(1, unit,self.game.generate_state())
