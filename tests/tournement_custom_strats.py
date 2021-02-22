@@ -71,8 +71,8 @@ Justin=JustinStrategyLevel2("Justin")
 
 # print("RileyvsDavid")
 # run_matchup(Riley,David,500)
-# print("RileyvsEli")
-# run_matchup(Riley,Eli,500)
+print("RileyvsEli")
+run_matchup(Riley,Eli,500)
 # print("RileyvsJustin")
 # run_matchup(Riley,Justin,500)
 
@@ -86,8 +86,8 @@ Justin=JustinStrategyLevel2("Justin")
 
 # print("BeserkvsColby")
 # run_matchup(NumBeserker,Colby,500)
-print("BeserkvsGeorge")
-run_matchup(NumBeserker,George,500)
+# print("BeserkvsGeorge")
+# run_matchup(NumBeserker,George,500)
 # print("BeserkvsRiley")
 # run_matchup(NumBeserker,Riley,500)
 # print("BeserkvsEli")
@@ -96,3 +96,16 @@ run_matchup(NumBeserker,George,500)
 # run_matchup(NumBeserker,David,500)
 # print("BeserkvsJustin")
 # run_matchup(NumBeserker,Justin,500)
+
+# random.seed(4)
+
+# print("RILYVS ELI")
+# new_game=Game(board_size=[5,5],die_mode="random",sided_die=10,simple=True, level=2)
+# player1_strats=Eli
+# player0_strats=Riley
+
+    
+# player0=Player(0,player0_strats,(2,0),game=new_game)
+# player1=Player(1,player1_strats,(2,4),game=new_game)
+# new_game.setup([player0,player1])
+# winner = new_game.run_until_winner()
