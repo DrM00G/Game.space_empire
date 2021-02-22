@@ -18,7 +18,7 @@ class GeorgeStrategyLevel2:
         unit = myself['units'][unit_index]
         x_unit, y_unit = unit['coords']
         x_opp, y_opp = opponent['home_coords']
-        if len(opponent['units']) > 5:
+        if len([unit for unit in opponent['units'] if unit["exists"]]) > 5:
             return (0,0)
         translations = [(0,0), (1,0), (-1,0), (0,1), (0,-1)]
         best_translation = (0,0)
