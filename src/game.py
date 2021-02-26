@@ -80,7 +80,7 @@ class Game:
         # if self.turn_numb>50:
         #   print(self.board.board_dict)
         self.turn_numb+=1
-        if self.turn_numb>50:
+        if self.turn_numb>100:
           self.winner=2
       self.logger.info("Winner: "+str(self.winner))
       return self.winner
@@ -106,7 +106,7 @@ class Game:
             "hits_left":unit.armor,
             'turn_created':unit.turn_made,
             'exists':unit.exists
-            }for unit in player.units],#ADD COLONIE FIXES#attk,defn,mov,shpyd,shpsz
+            }for unit in player.units if unit.exists],
             'technology': {'attack': player.tech[0], 'defense': player.tech[1], 'movement': player.tech[2],'shipyard technology':player.tech[3], 'shipsize': player.tech[4]}
             } for player in self.players
             ],

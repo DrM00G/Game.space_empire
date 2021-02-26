@@ -1,6 +1,7 @@
 class RileyStrategyLevel2:
     def __init__(self, player_index):
         self.player_index = player_index
+        self.__name__ = 'RileyStrategyLevel2'
 
     def decide_ship_movement(self, unit_index, hidden_game_state):
         myself = hidden_game_state['players'][self.player_index]
@@ -38,15 +39,15 @@ class RileyStrategyLevel2:
                 smallest_distance_to_opponent = dist
         return best_translation
 
-    def decide_which_unit_to_attack(self,hidden_game_state_for_combat, combat_state, coords, attacker_index):
+    def decide_which_unit_to_attack(self, hidden_game_state,combat_state, coords, attacker_index):
         # attack opponent's first ship in combat order
 
         combat_order = combat_state[coords]
-
+        player_indices = [unit['player'] for unit in combat_order]
 
         opponent_index = 1 - self.player_index
         for combat_index, unit in enumerate(combat_order):
-            if unit['player_index'] == opponent_index:
+            if unit['player'] == opponent_index:
                 return combat_index
 
     def decide_purchases(self,game_state):

@@ -12,3 +12,7 @@ class Unit:
       # print("Boing")
       self.exists=False
       self.player.board.remove_from_board(self)
+      self.player.units.remove(self)
+
+    def update_index(self):
+      self.unit_index=self.player.units.index(self)

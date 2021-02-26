@@ -1,7 +1,7 @@
 class GeorgeStrategyLevel2:
     def __init__(self, player_num):
         self.player_index = player_num
-        self.name = 'delayed_nums'
+        self.name = 'George'
         
     def decide_purchases(self, game_state):
         home_coords= game_state['players'][self.player_index]['home_coords']
@@ -18,7 +18,7 @@ class GeorgeStrategyLevel2:
         unit = myself['units'][unit_index]
         x_unit, y_unit = unit['coords']
         x_opp, y_opp = opponent['home_coords']
-        if len([unit for unit in opponent['units'] if unit["exists"]]) > 5:
+        if len(opponent['units']) > 5:
             return (0,0)
         translations = [(0,0), (1,0), (-1,0), (0,1), (0,-1)]
         best_translation = (0,0)
@@ -37,9 +37,9 @@ class GeorgeStrategyLevel2:
         # attack opponent's first ship in combat order
         
         combat_order = combat_state[coords]
-        player_indices = [unit['player_index'] for unit in combat_order]
+        player_indices = [unit['player'] for unit in combat_order]
         
         opponent_index = 1 - self.player_index
         for combat_index, unit in enumerate(combat_order):
-            if unit['player_index'] == opponent_index:
+            if unit['player'] == opponent_index:
                 return combat_index 

@@ -40,6 +40,10 @@ class Player:
           self.units.append(Colonyship(self,n+8,self.player_index,self.home_colony_pos,0,self.tech))
           self.board.add_to_board(self.units[n+8])
 
+    def update_indexes(self):
+      for unit in self.units:
+        unit.update_index()
+
     def movement_phase(self):
       if self.game.level<3:
         self.game.move_round=1
