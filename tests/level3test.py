@@ -7,7 +7,7 @@ from strategies.level3strats.numbers_berserker3 import NumbersBerserkerLevel3
 from strategies.level3strats.custom_davidstrat3 import DavidStrategyLevel3
 def run_half_matchup(strat0,strat1,win_dict,sample_size,phase):
   for n in range(int(sample_size/2)):
-    # random.seed(n+phase*(sample_size/2)+1)
+    random.seed(n+phase*(sample_size/2)+1)
     if (n+phase*(sample_size/2))%100==0:    
       print("turn: "+str(n+phase*(sample_size/2)))
     new_game=Game(board_size=[7,7],die_mode="random",sided_die=10,simple=True, level=3)
@@ -37,4 +37,4 @@ def run_matchup(stratA,stratB,sample_size):
 David=DavidStrategyLevel3("David")
 Beserk=NumbersBerserkerLevel3("Ooga")
 
-run_matchup(David,Beserk,1000)
+run_matchup(David,Beserk,100)

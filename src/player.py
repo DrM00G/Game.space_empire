@@ -45,12 +45,15 @@ class Player:
         unit.update_index()
 
     def movement_phase(self):
+
+      self.game.logger.info("Player "+str(self.player_index)+" Movement:")
       if self.game.level<3:
         self.game.move_round=1
         for unit in self.units:
           self.game.movement.move(1, unit,self.game.generate_state())
       else:
         for phase in range(3):
+          self.game.logger.info("Phase "+str(phase+1)+":")
           self.game.move_round=phase+1
           for unit in self.units:
             self.game.movement.move(phase+1, unit,self.game.generate_state())

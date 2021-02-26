@@ -11,7 +11,9 @@ class EconomicEngine:
       self.game=game
 
     def complete_economic_phase(self,player):
+      self.game.logger.info(player.CP)
       self.get_cp(player.units)
+      self.game.logger.info("CP: "+str(player.CP))
       self.maintnance(player.units,player)
       self.buy_stuff(player)
 
@@ -34,17 +36,17 @@ class EconomicEngine:
 
         player.CP-=cp_tally
       else:
-        self.remove_unit(player.strat.decide_removal(self.game.generate_state()),units)
+        self.remove_unit(player.strat.decide_removals(self.game.generate_state()),units)
         self.maintnance(units,player)
 
     def remove_unit(self,removal_index,units):
-      self.board.remove_from_board(units[removal_index])
+      units[removal_index].destroy()
 
     def buy_stuff(self,player):
       self.restore_shipyards(player)
       shopping_list=player.strat.decide_purchases(self.game.generate_state())
       self.buy_tech(player,shopping_list)
-      if self.game.level==2:
+      if self.game.level>=2:
         self.buy_units(player,shopping_list)
 
 
@@ -94,7 +96,7 @@ class EconomicEngine:
             self.board.add_to_board(player.units[len(player.units)-1])
 
     def check_purchase(self,player,colony,unit):
-      if self.game.level==2:
+      if self.game.level>=2:
         if self.game.generate_state()["unit_data"][unit['type']]['cp_cost']<=player.CP and self.game.generate_state()["unit_data"][unit['type']]['hullsize']<=colony.ship_yard_capacity and self.game.generate_state()["unit_data"][unit['type']]['shipsize_needed']<=player.tech[4]:
           return True
         else:
