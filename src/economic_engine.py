@@ -45,6 +45,7 @@ class EconomicEngine:
     def buy_stuff(self,player):
       self.restore_shipyards(player)
       shopping_list=player.strat.decide_purchases(self.game.generate_state())
+      self.game.logger.info(shopping_list)
       self.buy_tech(player,shopping_list)
       if self.game.level>=2:
         self.buy_units(player,shopping_list)

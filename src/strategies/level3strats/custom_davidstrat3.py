@@ -65,12 +65,11 @@ class DavidStrategyLevel3:
            'units': [],
            'technology': []}
 
-        
         current_cp = game_state['players'][self.player_index]['cp']
-        # if game_state["turn"]==1:
-        #   return_dict["units"].append({'type': 'Scout', 'coords': game_state['players'][self.player_index]['home_coords']})
+        new_defense= game_state['players'][self.player_index]['technology']['defense']
         if game_state["turn"]<=2:
-          return_dict['technology'].append("defense")
+          if current_cp>=game_state['technology_data']['defense'][new_defense]:
+            return_dict['technology'].append("defense")
         else:
           while current_cp>=game_state['unit_data']['Scout']['cp_cost']:
             current_cp-=game_state['unit_data']['Scout']['cp_cost']
