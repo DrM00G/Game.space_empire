@@ -6,11 +6,8 @@ class NumbersBerserkerLevel3:
 
     def decide_ship_movement(self, ship_index, game_state):
         ship_coords = game_state['players'][self.player_index]['units'][ship_index]['coords']
-        route = self.fastest_route(ship_coords, game_state['players'][self.player_index-1]['home_coords'])
-        if len(route) > 0:
-            return tuple(route[0])
-        else:
-            return (0,0)
+        their_home = game_state['players'][self.player_index-1]['home_coords']
+        return(self.move_to_target(ship_coords,their_home))
 
     def decide_removals(self, player_state):
         return -1
@@ -24,36 +21,29 @@ class NumbersBerserkerLevel3:
             if unit['player'] == opponent_index:
                 return combat_index
 
-    def directional_input(self, current, goal):
-        directions = [[1, 0],[-1, 0],[0, 1],[0, -1],[0,0]]
-        distances = []
-        for i in range(len(directions)):
-            new_loc = [current[0] + directions[i][0], current[1] + directions[i][1]]
-            dist = self.distance(new_loc, goal)
-            distances.append(dist)
-        closest = min(distances)
-        index = distances.index(closest)
-        return directions[index]
-
-    def distance(self, current, goal):
-        return ((current[0] - goal[0])**2 + (current[1] - goal[1])**2)**(0.5)
-
-    def fastest_route(self, current, goal):
-        route = []
-        while(tuple(current) != goal):
-            # print("check 1.02")
-            direc = self.directional_input(current, goal)
-            # print("check 1.03")
-            route.append(direc)
-            current  = [current[0] + direc[0], current[1] + direc[1]]
-        return route
+    def move_to_target(self,current_pos,target):
+      if current_pos[1]-target[1]!=0:
+        if target[1]-current_pos[1]>0:
+          return (0,1)
+        else:
+          return (0,-1)
+      elif current_pos[0]-target[0]!=0:
+        if target[0]-current_pos[0]>0:
+          return (1,0)
+        else:
+          return (-1,0)
+      else:
+        return (0,0)
 
     def decide_purchases(self,game_state):
         return_dict={
            'units': [],
            'technology': []}
+        my_home=game_state['players'][self.player_index]["home_coords"]
+        home_colony_ship_capacity=len([shipyard for shipyard in game_state['players'][self.player_index]["units"] if shipyard["type"]=="Shipyard" and shipyard['coords']==my_home])
         current_cp = game_state['players'][self.player_index]['cp']
-        while current_cp>=game_state['unit_data']['Scout']['cp_cost']:
-          current_cp-=game_state['unit_data']['Scout']['cp_cost']
-          return_dict['units'].append({'type': 'Scout', 'coords': game_state['players'][self.player_index]['home_coords']})
+        while current_cp>=game_state['unit_data']['Scout']['cp_cost'] and home_colony_ship_capacity>=game_state['unit_data']['Scout']['hullsize']:
+            current_cp-=game_state['unit_data']['Scout']['cp_cost']
+            home_colony_ship_capacity -= game_state['unit_data']['Scout']['hullsize']
+            return_dict['units'].append({'type': 'Scout', 'coords': game_state['players'][self.player_index]['home_coords']})
         return return_dict

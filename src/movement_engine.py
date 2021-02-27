@@ -15,7 +15,7 @@ class MovementEngine:
 
             for i in range(moves):
 
-                # if unit.coords not in [em_unit.coords for em_unit in unit.player.game.players[1-unit.player_index].units]:
+                if unit.coords not in [em_unit.coords for em_unit in unit.player.game.players[1-unit.player_index].units]:
                     # print(game_state)
                     # print(unit.unit_index)
                     # print(unit.player_index)
@@ -29,6 +29,10 @@ class MovementEngine:
                     
                     unit.coords = (unit.coords[0]+Move[0],
                                             unit.coords[1]+Move[1])
+                else:
+                  unit.player.game.logger.info("Unit at "+str(unit.coords)+" stopped to fight")
+
+            
                     
                 
 

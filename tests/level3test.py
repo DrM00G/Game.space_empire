@@ -19,9 +19,9 @@ def run_half_matchup(strat0,strat1,win_dict,sample_size,phase):
     new_game.setup([player0,player1])
     winner = new_game.run_until_winner()
     if phase==0 or winner==2:
-      win_dict[winner].append(n)
+      win_dict[winner].append(n+phase*(sample_size/2))
     else:
-      win_dict[abs(winner-1)].append(n)
+      win_dict[abs(winner-1)].append(n+phase*(sample_size/2))
   return win_dict
 
 def run_matchup(stratA,stratB,sample_size):
@@ -33,8 +33,9 @@ def run_matchup(stratA,stratB,sample_size):
   stratB.player_index=0
   win_dict=run_half_matchup(stratB,stratA,win_dict,sample_size,1)
   print("A: %"+str(100*len(win_dict[0])/sample_size)+"B: %"+str(100*len(win_dict[1])/sample_size)+"Draw:%"+str(100*len(win_dict[2])/sample_size))
+  print(win_dict[1])
 
 David=DavidStrategyLevel3("David")
 Beserk=NumbersBerserkerLevel3("Ooga")
 
-run_matchup(David,Beserk,10)
+run_matchup(David,Beserk,50)

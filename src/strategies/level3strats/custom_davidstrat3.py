@@ -9,12 +9,12 @@ class DavidStrategyLevel3:
         their_home = game_state['players'][self.player_index-1]['home_coords']
         
         if ship_coords == my_home:
-          if (game_state["turn"]+2)%12==0 and ship_index%2==1:
+          if (game_state["turn"]-2)%5==0 and (ship_index%2==1 or (ship_index==2 and game_state["turn"]==2)):
             # print(str(game_state["turn"])+","+str(ship_index))
-            target=their_home
-          elif (game_state["turn"]+2)%6==0 and (game_state["turn"]+2)!=6 and ship_index%2==0:
+            target=my_home
+          elif (game_state["turn"]-2)%8==0  and ship_index%2==0:
             # print(str(game_state["turn"])+","+str(ship_index))
-            target=(my_home[0]+3,my_home[1])
+            target=(my_home[0]+2,my_home[1])
           else:
             return (0,0)  
         else:
@@ -26,12 +26,15 @@ class DavidStrategyLevel3:
           else:
             target=their_home
 
-        if ship_index>7:
-          return(self.move_to_target(ship_coords,target))
-        else:
-          return(0,0)
-
-
+        
+        return(self.move_to_target(ship_coords,target))
+        # if game_state["turn"]==2:
+        #   if my_home[1]==0:
+        #     return(self.move_to_target(ship_coords,(my_home[0],my_home[1]+1)))
+        #   else:
+        #     return(self.move_to_target(ship_coords,(my_home[0],my_home[1]-1)))
+        # else:
+        #   return(self.move_to_target(ship_coords,target))
 
     def move_to_target(self,current_pos,target):
       if current_pos[1]-target[1]!=0:
@@ -68,13 +71,19 @@ class DavidStrategyLevel3:
            'technology': []}
 
         current_cp = game_state['players'][self.player_index]['cp']
+
+        my_home=game_state['players'][self.player_index]["home_coords"]
+
         new_defense= game_state['players'][self.player_index]['technology']['defense']
-        home_colony_ship_capacity=game_state['players'][self.player_index]["units"][0]["shipyard_capacity"]
+
+        home_colony_ship_capacity=len([shipyard for shipyard in game_state['players'][self.player_index]["units"] if shipyard["type"]=="Shipyard" and shipyard['coords']==my_home])
+
         if game_state["turn"]<=2:
           if current_cp>=game_state['technology_data']['defense'][new_defense]:
             return_dict['technology'].append("defense")
-        else:
-          while current_cp>=game_state['unit_data']['Scout']['cp_cost'] and home_colony_ship_capacity>=game_state['unit_data']['Scout']['hullsize']:
+        else: 
+          while current_cp>=game_state['unit_data']['Scout']['cp_cost'] and home_colony_ship_capacity>=game_state['unit_data']['Scout']['hullsize'] and (len([unit for unit in game_state["players"][self.player_index]["units"] if unit["type"]=="Scout"]))<17:
+            
             current_cp-=game_state['unit_data']['Scout']['cp_cost']
             home_colony_ship_capacity -= game_state['unit_data']['Scout']['hullsize']
             return_dict['units'].append({'type': 'Scout', 'coords': game_state['players'][self.player_index]['home_coords']})
