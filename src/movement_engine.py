@@ -15,7 +15,7 @@ class MovementEngine:
 
             for i in range(moves):
 
-                    
+                # if unit.coords not in [em_unit.coords for em_unit in unit.player.game.players[1-unit.player_index].units]:
                     # print(game_state)
                     # print(unit.unit_index)
                     # print(unit.player_index)

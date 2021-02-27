@@ -75,7 +75,7 @@ class Game:
         # self.logger.info(self.board.board_dict)
         # print("Fight")
         self.combat_phase() 
-        if self.level>=3:
+        if self.level>=3 and self.winner == None:
           self.economic_phase()         
         # if self.turn_numb>50:
         #   print(self.board.board_dict)
@@ -99,14 +99,7 @@ class Game:
           "cp": player.CP,
           "Stratagy": player.state_strat,
           "units": [
-            {"type": unit.name,
-            "unit_num":unit.unit_index,
-            "coords":unit.coords,
-            "technology":{"defense": unit.defense,"attack": unit.attack,"movement": unit.movement},
-            "hits_left":unit.armor,
-            'turn_created':unit.turn_made,
-            'exists':unit.exists
-            }for unit in player.units if unit.exists],
+            unit.state() for unit in player.units if unit.exists],
             'technology': {'attack': player.tech[0], 'defense': player.tech[1], 'movement': player.tech[2],'shipyard technology':player.tech[3], 'shipsize': player.tech[4]}
             } for player in self.players
             ],

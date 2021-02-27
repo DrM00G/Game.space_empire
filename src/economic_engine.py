@@ -40,6 +40,7 @@ class EconomicEngine:
         self.maintnance(units,player)
 
     def remove_unit(self,removal_index,units):
+      self.game.logger.info("Player "+str(units[removal_index].player_index)+" removed "+str(units[removal_index].name))
       units[removal_index].destroy()
 
     def buy_stuff(self,player):

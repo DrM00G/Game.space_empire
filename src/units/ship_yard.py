@@ -19,7 +19,15 @@ class Shipyard(Unit):
           if unit.name=="Colony":
             unit.assets.append(self)
 
-
+    def state(self):
+      return {"type": self.name,
+            "unit_num":self.unit_index,
+            "coords":self.coords,
+            "technology":{"defense": self.defense,"attack": self.attack,"movement": self.movement},
+            "hits_left":self.armor,
+            'turn_created':self.turn_made,
+            'exists':self.exists
+            }
 
         
 1

@@ -10,8 +10,10 @@ class DavidStrategyLevel3:
         
         if ship_coords == my_home:
           if (game_state["turn"]+2)%12==0 and ship_index%2==1:
+            # print(str(game_state["turn"])+","+str(ship_index))
             target=their_home
-          elif (game_state["turn"]+2)%6==0 and ship_index%2==0:
+          elif (game_state["turn"]+2)%6==0 and (game_state["turn"]+2)!=6 and ship_index%2==0:
+            # print(str(game_state["turn"])+","+str(ship_index))
             target=(my_home[0]+3,my_home[1])
           else:
             return (0,0)  
@@ -67,11 +69,13 @@ class DavidStrategyLevel3:
 
         current_cp = game_state['players'][self.player_index]['cp']
         new_defense= game_state['players'][self.player_index]['technology']['defense']
+        home_colony_ship_capacity=game_state['players'][self.player_index]["units"][0]["shipyard_capacity"]
         if game_state["turn"]<=2:
           if current_cp>=game_state['technology_data']['defense'][new_defense]:
             return_dict['technology'].append("defense")
         else:
-          while current_cp>=game_state['unit_data']['Scout']['cp_cost']:
+          while current_cp>=game_state['unit_data']['Scout']['cp_cost'] and home_colony_ship_capacity>=game_state['unit_data']['Scout']['hullsize']:
             current_cp-=game_state['unit_data']['Scout']['cp_cost']
+            home_colony_ship_capacity -= game_state['unit_data']['Scout']['hullsize']
             return_dict['units'].append({'type': 'Scout', 'coords': game_state['players'][self.player_index]['home_coords']})
         return return_dict

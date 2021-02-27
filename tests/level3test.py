@@ -37,4 +37,4 @@ def run_matchup(stratA,stratB,sample_size):
 David=DavidStrategyLevel3("David")
 Beserk=NumbersBerserkerLevel3("Ooga")
 
-run_matchup(David,Beserk,100)
+run_matchup(David,Beserk,10)
