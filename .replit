@@ -1,2 +1,2 @@
-run = "python tests/level3test.py"
+run = "python tests/level3_tournement.py"
 language = "python3"

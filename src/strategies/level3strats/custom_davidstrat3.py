@@ -50,7 +50,7 @@ class DavidStrategyLevel3:
       else:
         return (0,0)
 
-    def decide_removals(self, player_state):
+    def decide_removal(self, player_state):
         return -1
         
     def decide_which_unit_to_attack(self, hidden_game_state_for_combat, combat_state, coords, attacker_index):

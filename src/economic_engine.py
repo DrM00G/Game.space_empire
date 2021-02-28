@@ -36,7 +36,7 @@ class EconomicEngine:
 
         player.CP-=cp_tally
       else:
-        self.remove_unit(player.strat.decide_removals(self.game.generate_state()),units)
+        self.remove_unit(player.strat.decide_removal(self.game.generate_state()),units)
         self.maintnance(units,player)
 
     def remove_unit(self,removal_index,units):

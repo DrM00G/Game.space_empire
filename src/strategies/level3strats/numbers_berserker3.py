@@ -9,7 +9,7 @@ class NumbersBerserkerLevel3:
         their_home = game_state['players'][self.player_index-1]['home_coords']
         return(self.move_to_target(ship_coords,their_home))
 
-    def decide_removals(self, player_state):
+    def decide_removal(self, player_state):
         return -1
         
     def decide_which_unit_to_attack(self, hidden_game_state_for_combat, combat_state, coords, attacker_index):
