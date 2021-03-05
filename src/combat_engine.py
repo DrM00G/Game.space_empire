@@ -68,6 +68,8 @@ class CombatEngine:
           self.game.logger.info([(unit.unit_index,unit.player_index) for unit in self.combat_order(key)])
         while len(self.locate_combat())>0 and self.game.winner==None:
           combat_coord=[key for key in self.locate_combat()][0]
+          if(len(self.locate_combat())==1):
+            self.game.logger.info("New combat tile")
           #SCREAN
           order = self.combat_order(combat_coord)
           for unit in order:

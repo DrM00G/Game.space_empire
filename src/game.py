@@ -48,8 +48,18 @@ class Game:
     def movement_phase(self):
         self.phase="Movement"
         self.logger.info(str(self.phase)+str(self.turn_numb))
-        for player in self.players:
-          player.movement_phase()
+        
+        self.move_round=0
+        if self.level<3:
+          self.move_round=1
+          for player in self.players:
+            player.movement_phase(1)
+        else:
+          for phase in range(3):
+            self.move_round=phase+1
+            for player in self.players:
+              player.movement_phase(phase+1)
+
 
     def combat_phase(self):
         self.phase="Combat"

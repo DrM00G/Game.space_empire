@@ -5,6 +5,11 @@ from game import Game
 from player import Player
 from strategies.level3strats.numbers_berserker3 import NumbersBerserkerLevel3
 from strategies.level3strats.custom_davidstrat3 import DavidStrategyLevel3
+
+
+
+
+
 def run_half_matchup(strat0,strat1,win_dict,sample_size,phase):
   for n in range(int(sample_size/2)):
     random.seed(n+phase*(sample_size/2)+1)
