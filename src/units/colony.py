@@ -8,7 +8,7 @@ class Colony(Unit):
         self.defense = 1
         self.tactics = 0
         self.movement = 0
-        self.armor = 3
+        self.armor = 4
         self.name = 'Colony'
         self.combat_ready = True
         self.home_colony=home_colony
@@ -41,5 +41,6 @@ class Colony(Unit):
             "hits_left":self.armor,
             'turn_created':self.turn_made,
             "shipyard_capacity":self.calc_shipyards(),
-            'exists':self.exists
+            'exists':self.exists,
+            'tactics':self.tactics
             }

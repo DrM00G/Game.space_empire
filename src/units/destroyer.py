@@ -19,5 +19,6 @@ class Destroyer(Unit):
             "technology":{"defense": self.defense,"attack": self.attack,"movement": self.movement},
             "hits_left":self.armor,
             'turn_created':self.turn_made,
-            'exists':self.exists
+            'exists':self.exists,
+            'tactics':self.tactics
             }

@@ -6,15 +6,15 @@ from player import Player
 from strategies.level3strats.numbers_berserker3 import NumbersBerserkerLevel3
 from strategies.level3strats.custom_davidstrat3 import DavidStrategyLevel3
 from strategies.level3strats.custom_rileystrat3 import RileyStrategyLevel3
-# from strategies.level2strats.custom_elistrat2 import ElijahStrategyLevel2
+from strategies.level3strats.custom_elistrat3 import ElijahLevel3
 # from strategies.level2strats.custom_justinstrat2 import JustinStrategyLevel2
 # from strategies.level2strats.custom_georgestrat2 import GeorgeStrategyLevel2
-# from strategies.level2strats.custom_colbystrat2 import ColbyStrategyLevel2
+from strategies.level3strats.custom_colbystrat3 import ColbySiegeStrategyLevel3
 
 def run_half_matchup(strat0,strat1,win_dict,sample_size,phase):
   for n in range(int(sample_size/2)):
     random.seed(n+phase*(sample_size/2)+1)
-    if (n+phase*(sample_size/2))%100==0:    
+    if (n+phase*(sample_size/2))%(sample_size//5)==0:    
       print("turn: "+str(n+phase*(sample_size/2)))
     new_game=Game(board_size=[7,7],die_mode="random",sided_die=10,simple=True, level=3)
     player1_strats=strat1
@@ -38,60 +38,63 @@ def run_matchup(stratA,stratB,sample_size):
   stratA.player_index=1
   stratB.player_index=0
   win_dict=run_half_matchup(stratB,stratA,win_dict,sample_size,1)
+  print(win_dict[1])
   print("A: %"+str(100*len(win_dict[0])/sample_size)+"B: %"+str(100*len(win_dict[1])/sample_size)+"Draw:%"+str(100*len(win_dict[2])/sample_size))
 
 NumBeserker=NumbersBerserkerLevel3("Robot")
-# Colby=ColbyStrategyLevel2("Colby")
+Colby=ColbySiegeStrategyLevel3("Colby")
 # George=GeorgeStrategyLevel2("George")
 Riley=RileyStrategyLevel3("Riley")
-# Eli=ElijahStrategyLevel2("Eli")
+Eli=ElijahLevel3("Eli")
 David=DavidStrategyLevel3("David")
 # Justin=JustinStrategyLevel2("Justin")
 
+print("Level 3 Tournement")
+
 # print("ColbyvsGeorge")
-# run_matchup(Colby,George,500)
-# print("ColbyvsRiley")
-# run_matchup(Colby,Riley,500)
+# run_matchup(Colby,George,100)
+print("ColbyvsRiley")
+run_matchup(Colby,Riley,100)
 # print("ColbyvsEli")
-# run_matchup(Colby,Eli,500)
-# print("ColbyvsDavid")
-# run_matchup(Colby,David,500)
+# run_matchup(Colby,Eli,100)
+print("ColbyvsDavid")
+run_matchup(Colby,David,100)
 # print("ColbyvsJustin")
-# run_matchup(Colby,Justin,500)
+# run_matchup(Colby,Justin,100)
 
 # print("GeorgevsRiley")
-# run_matchup(George,Riley,500)
+# run_matchup(George,Riley,100)
 # print("GeorgevsEli")
-# run_matchup(George,Eli,500)
+# run_matchup(George,Eli,100)
 # print("GeorgevsDavid")
-# run_matchup(George,David,500)
+# run_matchup(George,David,100)
 # print("GeorgevsJustin")
-# run_matchup(George,Justin,500)
+# run_matchup(George,Justin,100)
 
 print("RileyvsDavid")
-run_matchup(Riley,David,500)
+run_matchup(Riley,David,100)
 # print("RileyvsEli")
-# run_matchup(Riley,Eli,500)
+# run_matchup(Riley,Eli,100)
 # print("RileyvsJustin")
-# run_matchup(Riley,Justin,500)
+# run_matchup(Riley,Justin,100)
 
 # print("ElivsDavid")
-# run_matchup(Eli,David,500)
+# run_matchup(Eli,David,100)
 # print("ElivsJustin")
-# run_matchup(Eli,Justin,500)
+# run_matchup(Eli,Justin,100)
 
 # print("DavidvsJustin")
-# run_matchup(David,Justin,500)
+# run_matchup(David,Justin,100)
 
-# print("BeserkvsColby")
-# run_matchup(NumBeserker,Colby,500)
+print("BeserkvsColby")
+run_matchup(NumBeserker,Colby,100)
 # print("BeserkvsGeorge")
-# run_matchup(NumBeserker,George,500)
+# run_matchup(NumBeserker,George,100)
 print("BeserkvsRiley")
-run_matchup(NumBeserker,Riley,500)
+run_matchup(NumBeserker,Riley,100)
 # print("BeserkvsEli")
-# run_matchup(NumBeserker,Eli,500)
+# run_matchup(NumBeserker,Eli,100)
 print("BeserkvsDavid")
-run_matchup(NumBeserker,David,500)
+run_matchup(NumBeserker,David,100)
 # print("BeserkvsJustin")
-# run_matchup(NumBeserker,Justin,500)
+# run_matchup(NumBeserker,Justin,100)

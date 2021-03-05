@@ -22,7 +22,7 @@ class EconomicEngine:
         if unit.exists:
           if unit.name == "Colony":
             if unit.home_colony:
-              unit.player.CP+=20
+              unit.player.CP+=(20-5*(4-unit.armor))
             else:
               unit.player.CP+=5
 
@@ -38,6 +38,8 @@ class EconomicEngine:
       else:
         self.remove_unit(player.strat.decide_removal(self.game.generate_state()),units)
         self.maintnance(units,player)
+      for player in self.game.players:
+        player.update_indexes()
 
     def remove_unit(self,removal_index,units):
       self.game.logger.info("Player "+str(units[removal_index].player_index)+" removed "+str(units[removal_index].name))
