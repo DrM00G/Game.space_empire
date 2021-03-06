@@ -65,11 +65,11 @@ class CombatEngine:
     def complete_combat_phase(self):
         self.kill_bystanders(self.locate_combat())
         for key in self.locate_combat():
-          self.game.logger.info([(unit.unit_index,unit.player_index) for unit in self.combat_order(key)])
+          self.game.log([(unit.unit_index,unit.player_index) for unit in self.combat_order(key)])
         while len(self.locate_combat())>0 and self.game.winner==None:
           combat_coord=[key for key in self.locate_combat()][0]
           if(len(self.locate_combat())==1):
-            self.game.logger.info("New combat tile")
+            self.game.log("New combat tile")
           #SCREAN
           order = self.combat_order(combat_coord)
           for unit in order:
@@ -92,13 +92,13 @@ class CombatEngine:
         roll=self.rolls[0]
         self.rolls.remove(roll)
         attack=attacker.attack-target.defense
-        self.game.logger.info(str(attacker.name)+str(attacker.unit_index)+","+str(attacker.player_index)+" VS "+str(target.name)+str(target.unit_index)+","+str(target.player_index)+" Roll:"+str(roll)+" Threshold:"+str(attack))
+        self.game.log(str(attacker.name)+str(attacker.unit_index)+","+str(attacker.player_index)+" VS "+str(target.name)+str(target.unit_index)+","+str(target.player_index)+" Roll:"+str(roll)+" Threshold:"+str(attack))
         if attack>=roll or roll==1:
           target.armor-=1
-          self.game.logger.info(str(target.name)+" hit")
+          self.game.log(str(target.name)+" hit")
           if target.armor<=0:
             target.destroy()
-            self.game.logger.info(str(target.name)+" destroyed")
+            self.game.log(str(target.name)+" destroyed")
 
 
 

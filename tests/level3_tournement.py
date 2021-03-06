@@ -16,7 +16,10 @@ def run_half_matchup(strat0,strat1,win_dict,sample_size,phase):
     random.seed(n+phase*(sample_size/2)+1)
     if (n+phase*(sample_size/2))%(sample_size//5)==0:    
       print("turn: "+str(n+phase*(sample_size/2)))
-    new_game=Game(board_size=[7,7],die_mode="random",sided_die=10,simple=True, level=3)
+    if n+phase*(sample_size/2) == 82:
+      new_game=Game(board_size=[7,7],die_mode="random",sided_die=10,simple=True, level=3,log=True)
+    else:
+      new_game=Game(board_size=[7,7],die_mode="random",sided_die=10,simple=True, level=3,log=False)
     player1_strats=strat1
     player0_strats=strat0
 
@@ -44,9 +47,9 @@ def run_matchup(stratA,stratB,sample_size):
 def run_individual_game(stratA,stratB,game_numb):
   stratA.player_index=0
   stratB.player_index=1
-  random.seed(game_numb)
+  random.seed(game_numb+1)
 
-  new_game=Game(board_size=[7,7],die_mode="random",sided_die=10,simple=True, level=3)
+  new_game=Game(board_size=[7,7],die_mode="random",sided_die=10,simple=True, level=3, log=True)
 
   player0=Player(0,stratA,(3,0),game=new_game)
   player1=Player(1,stratB,(3,6),game=new_game)
@@ -64,12 +67,13 @@ David=DavidStrategyLevel3("David")
 
 print("Level 3 Tournement")
 
-# run_individual_game(David,Riley,48)
+# run_individual_game(David,George,82)
+run_individual_game(David,George,88)
 
-print("ColbyvsGeorge")
-run_matchup(Colby,George,100)
-print("ColbyvsRiley")
-run_matchup(Colby,Riley,100)
+# print("ColbyvsGeorge")
+# run_matchup(Colby,George,100)
+# print("ColbyvsRiley")
+# run_matchup(Colby,Riley,100)
 # print("ColbyvsEli")
 # run_matchup(Colby,Eli,100)
 # print("ColbyvsDavid")

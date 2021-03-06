@@ -11,9 +11,9 @@ class EconomicEngine:
       self.game=game
 
     def complete_economic_phase(self,player):
-      self.game.logger.info(player.CP)
+      self.game.log(player.CP)
       self.get_cp(player.units)
-      self.game.logger.info("CP: "+str(player.CP))
+      self.game.log("CP: "+str(player.CP))
       self.maintnance(player.units,player)
       self.buy_stuff(player)
 
@@ -42,13 +42,13 @@ class EconomicEngine:
         player.update_indexes()
 
     def remove_unit(self,removal_index,units):
-      self.game.logger.info("Player "+str(units[removal_index].player_index)+" removed "+str(units[removal_index].name))
+      self.game.log("Player "+str(units[removal_index].player_index)+" removed "+str(units[removal_index].name))
       units[removal_index].destroy()
 
     def buy_stuff(self,player):
       self.restore_shipyards(player)
       shopping_list=player.strat.decide_purchases(self.game.generate_state())
-      self.game.logger.info(shopping_list)
+      self.game.log(shopping_list)
       self.buy_tech(player,shopping_list)
       if self.game.level>=2:
         self.buy_units(player,shopping_list)
@@ -81,7 +81,7 @@ class EconomicEngine:
 
 
     def buy_units(self,player,shopping_list):
-      self.game.logger.info("Buy unit"+str(player.player_index))
+      self.game.log("Buy unit"+str(player.player_index))
       for unit in shopping_list["units"]:
         if self.check_for_colony(unit["coords"],player.player_index)!=False:
           builder_colony=self.check_for_colony(unit["coords"],player.player_index)
@@ -89,7 +89,7 @@ class EconomicEngine:
             player.CP-=self.game.generate_state()["unit_data"][unit["type"]]['cp_cost']
             builder_colony.ship_yard_capacity-=self.game.generate_state()["unit_data"][unit["type"]]['hullsize']
             if unit['type']=="Scout":
-              self.game.logger.info(str(player.player_index)+" Buys a scout")
+              self.game.log(str(player.player_index)+" Buys a scout")
               player.units.append(Scout(player,len(player.units),player.player_index,unit["coords"],self.game.turn_numb,player.tech))
             elif unit['type']=="Shipyard":
               player.units.append(Shipyard(player,len(player.units),player.player_index,unit["coords"],self.game.turn_numb,player.tech))

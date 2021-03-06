@@ -1,5 +1,4 @@
 class DelayedFlankerStrategy:
-
     def __init__(self, player_num):
         self.player_index = player_num
         self.name = 'delayed_flank'
@@ -12,7 +11,7 @@ class DelayedFlankerStrategy:
         self.flank_route_index = 0
         self.behind_direction = {(3,0): (-1,0), (3,6): (1,0)}
         self.flank_route = {(3,0): [(0,1), (0,1), (0,1), (0,1), (0,1), (0,1), (1,0), (0,0)],  (3,6): [(0,-1), (0,-1), (0,-1), (0,-1), (0,-1), (0,-1), (-1,0), (0,0)]}
-
+        
     def decide_purchases(self, game_state):
         myself = game_state['players'][self.player_index]
         home_coords= game_state['players'][self.player_index]['home_coords']
@@ -29,7 +28,7 @@ class DelayedFlankerStrategy:
             purchases['units'].append({'type': 'Scout', 'coords': home_coords})
             myself['cp'] -= 6
         return purchases
-
+      
     def decide_ship_movement(self, unit_index, hidden_game_state):
         myself = hidden_game_state['players'][self.player_index]
         home_coords= tuple(hidden_game_state['players'][self.player_index]['home_coords'])
@@ -48,10 +47,8 @@ class DelayedFlankerStrategy:
             self.flank_route_index = 0
             self.flank_started= False
             self.flank_count = 0
-
         opponent_index = 1 - self.player_index
         opponent = hidden_game_state['players'][opponent_index]
-       
         unit = myself['units'][unit_index]
         turn_created = unit['turn_created']
         x_unit, y_unit = unit['coords']
@@ -74,15 +71,15 @@ class DelayedFlankerStrategy:
                 return (0,0)
         else:
             return (0,0)
-
-
+          
     def decide_which_unit_to_attack(self, hidden_game_state_for_combat, combat_state, coords, attacker_index):
         # attack opponent's first ship in combat order
-
         combat_order = combat_state[coords]
         player_indices = [unit['player'] for unit in combat_order]
-
         opponent_index = 1 - self.player_index
         for combat_index, unit in enumerate(combat_order):
             if unit['player'] == opponent_index:
-                return combat_index 
+                return combat_index
+
+    def decide_removal(self, player_state):
+        return -1

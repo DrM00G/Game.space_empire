@@ -23,14 +23,14 @@ class MovementEngine:
                     # print(str(unit.coords)+","+str(Move))
                     self.board.update_position(unit, Move)
           
-                    unit.player.game.logger.info(str(unit.name)+str(unit.unit_index)+": "+str(unit.coords)+"-->"+str((unit.coords[0]+Move[0],
+                    unit.player.game.log(str(unit.name)+str(unit.unit_index)+": "+str(unit.coords)+"-->"+str((unit.coords[0]+Move[0],
                                             unit.coords[1]+Move[1])))
 
                     
                     unit.coords = (unit.coords[0]+Move[0],
                                             unit.coords[1]+Move[1])
                 else:
-                  unit.player.game.logger.info("Unit at "+str(unit.coords)+" stopped to fight")
+                  unit.player.game.log("Unit at "+str(unit.coords)+" stopped to fight")
 
             
                     
