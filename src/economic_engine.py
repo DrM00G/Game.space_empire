@@ -73,11 +73,15 @@ class EconomicEngine:
         if player.tech[tech_order.index(tech)]<len(self.game.generate_state()['technology_data'][tech]):
           if player.CP>=self.game.generate_state()['technology_data'][tech][player.tech[tech_order.index(tech)]]:
             return True
+          # print("CRIME HAS BEEN COMMITED")
+          return False
       else:
         if player.tech[tech_order.index(tech)]-1<len(self.game.generate_state()['technology_data'][tech]):
           if player.CP>=self.game.generate_state()['technology_data'][tech][player.tech[tech_order.index(tech)]-1]:
             return True
+        # print("CRIME HAS BEEN COMMITED:")
         return False
+      
 
 
     def buy_units(self,player,shopping_list):
@@ -105,6 +109,7 @@ class EconomicEngine:
           return True
         else:
           return False
+          # print("CRIME HAS BEEN COMMITED:")
       else:
         return False
 

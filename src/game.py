@@ -1,4 +1,3 @@
-import random
 from combat_engine import CombatEngine
 from movement_engine import MovementEngine
 from economic_engine import EconomicEngine

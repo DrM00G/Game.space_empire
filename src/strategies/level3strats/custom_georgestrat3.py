@@ -1,7 +1,7 @@
-class DelayedFlankerStrategy:
+class GeorgeStrat3:
     def __init__(self, player_num):
         self.player_index = player_num
-        self.name = 'delayed_flank'
+        self.name = 'George'
         self.delayed_count = 0
         self.flank_count = 0
         self.flank_turn = None
@@ -17,16 +17,21 @@ class DelayedFlankerStrategy:
         home_coords= game_state['players'][self.player_index]['home_coords']
         units = myself['units']
         scouts = [unit for unit in units if unit['type'] == 'Scout']
+        shipyards = [unit for unit in units if unit['type'] == 'Shipyard']
+        scouts_bought = 0
         num_units = len(scouts)
         attack_level = myself['technology']['attack']
         game_turn = game_state['turn']
         purchases = {'units': [], 'technology': []}
-        if myself['cp'] >= game_state['technology_data']['attack'][attack_level]:
+        if attack_level < 3 and myself['cp'] >= game_state['technology_data']['attack'][attack_level]:
             purchases['technology'].append('attack')
             myself['cp'] -= game_state['technology_data']['attack'][attack_level]
         while myself['cp'] >= 6:
+            if scouts_bought == len(shipyards):
+                break;
             purchases['units'].append({'type': 'Scout', 'coords': home_coords})
             myself['cp'] -= 6
+            scouts_bought += 1
         return purchases
       
     def decide_ship_movement(self, unit_index, hidden_game_state):
@@ -81,5 +86,5 @@ class DelayedFlankerStrategy:
             if unit['player'] == opponent_index:
                 return combat_index
 
-    def decide_removal(self, player_state):
+    def decide_removal(self,game_state):
         return -1

@@ -23,19 +23,30 @@ class CombatEngine:
       combat_dict={}
       for coord in self.board.board_dict:
         if len(self.board.board_dict[coord]["units"])>1:
-          player_count=[0,0]
+          player_count=[[],[]]
           for unit in self.board.board_dict[coord]["units"]:
-            player_count[unit.player_index]+=1
-          if player_count[0]!=0 and player_count[1]!=0:
-            combat_dict[coord]={}
-            combat_dict[coord]= [
-            {"type": unit.name,"player":unit.player_index,
-            "unit_num":unit.unit_index,'tactics':unit.tactics,
-            "coords":unit.coords,
-            "technology":{"defense": unit.defense,"attack": unit.attack,"movement": unit.movement},
-            "hits_left":unit.armor,
-            'turn_created':unit.turn_made
-            }for unit in self.combat_order(coord) if unit.exists==True]
+            player_count[unit.player_index].append(unit.name)
+          if len(player_count[0])!=0 and len(player_count[1])!=0:
+            if player_count[0]==["Colony"] or player_count[1]==["Colony"]:
+              combat_dict[coord]={}
+              combat_dict[coord]= [
+              {"type": unit.name,"player":unit.player_index,
+              "unit_num":unit.unit_index,'tactics':unit.tactics,
+              "coords":unit.coords,
+              "technology":{"defense": unit.defense,"attack": unit.attack,"movement": unit.movement},
+              "hits_left":unit.armor,
+              'turn_created':unit.turn_made
+              }for unit in self.combat_order(coord) if unit.exists==True]
+            else:
+              combat_dict[coord]={}
+              combat_dict[coord]= [
+              {"type": unit.name,"player":unit.player_index,
+              "unit_num":unit.unit_index,'tactics':unit.tactics,
+              "coords":unit.coords,
+              "technology":{"defense": unit.defense,"attack": unit.attack,"movement": unit.movement},
+              "hits_left":unit.armor,
+              'turn_created':unit.turn_made
+              }for unit in self.combat_order(coord) if unit.exists==True and unit.name!= "Colony"] 
       return combat_dict
 
 
@@ -75,7 +86,7 @@ class CombatEngine:
           for unit in order:
             if unit.exists and combat_coord in [key for key in self.locate_combat()] and self.game.winner==None and unit.name!="Colony":
               # print(unit.player_index)
-              target=self.locate_combat()[combat_coord][unit.player.strat.decide_which_unit_to_attack(self.locate_combat(),self.locate_combat(), combat_coord,unit.unit_index)]
+              target=self.locate_combat()[combat_coord][unit.player.strat.decide_which_unit_to_attack(self.game.generate_state(),self.locate_combat(), combat_coord,unit.unit_index)]
 
               enemy="no"
               for vs_unit in self.combat_order(combat_coord):

@@ -5,6 +5,7 @@ class ElijahLevel3:
     def __init__(self, player_index):
         self.player_index = player_index
         self.priorities = ["Colony", "Shipyard", "Scout"]
+        self.name = 'Eli'
 
     def decide_ship_movement(self, unit_index, hidden_game_state):
         enemy = hidden_game_state['players'][1-self.player_index]
@@ -22,10 +23,10 @@ class ElijahLevel3:
 
     # Attack shipyards first, then scouts
     def decide_which_unit_to_attack(self, hidden_game_state_for_combat, combat_state, coords, attacker_index):
-        return sorted(
-            ((x, i) for i, x in enumerate(combat_state[coords]) if x['player'] != self.player_index),
-            key=lambda x: self.priorities.index(x[0]['type'])
-        )[0][1]
+        units = [(i, x['unit_num']) for i, x in enumerate(combat_state[coords]) if x['player'] != self.player_index]
+        opponent_units = hidden_game_state_for_combat['players'][1-self.player_index]['units']
+        units = [(j, next(x for x in opponent_units if x['unit_num'] == i)) for j, i in units]
+        return min(units, key=lambda x: self.priorities.index(x[1]['type']))[0]
 
     # Buy all possible scouts
     def decide_purchases(self, game_state):
