@@ -31,7 +31,7 @@ class CombatEngine:
               combat_dict[coord]={}
               combat_dict[coord]= [
               {"type": unit.name,"player":unit.player_index,
-              "unit_num":unit.unit_index,'tactics':unit.tactics,
+              "num":unit.unit_index,'tactics':unit.tactics,
               "coords":unit.coords,
               "technology":{"defense": unit.defense,"attack": unit.attack,"movement": unit.movement},
               "hits_left":unit.armor,
@@ -41,7 +41,7 @@ class CombatEngine:
               combat_dict[coord]={}
               combat_dict[coord]= [
               {"type": unit.name,"player":unit.player_index,
-              "unit_num":unit.unit_index,'tactics':unit.tactics,
+              "num":unit.unit_index,'tactics':unit.tactics,
               "coords":unit.coords,
               "technology":{"defense": unit.defense,"attack": unit.attack,"movement": unit.movement},
               "hits_left":unit.armor,
@@ -85,12 +85,10 @@ class CombatEngine:
           order = self.combat_order(combat_coord)
           for unit in order:
             if unit.exists and combat_coord in [key for key in self.locate_combat()] and self.game.winner==None and unit.name!="Colony":
-              # print(unit.player_index)
-              target=self.locate_combat()[combat_coord][unit.player.strat.decide_which_unit_to_attack(self.game.generate_state(),self.locate_combat(), combat_coord,unit.unit_index)]
-
-              enemy="no"
+              target=self.locate_combat()[combat_coord][unit.player.strat.decide_which_unit_to_attack(self.locate_combat()[combat_coord], combat_coord,unit.name,unit.unit_index)['number']]
+              enemy="no" 
               for vs_unit in self.combat_order(combat_coord):
-                if vs_unit.unit_index==target["unit_num"] and vs_unit.player_index!=unit.player_index:
+                if vs_unit.unit_index==target["num"] and vs_unit.player_index!=unit.player_index:
                   enemy=vs_unit
               if enemy != "no":
                 self.do_combat(unit,enemy)

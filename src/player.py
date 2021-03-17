@@ -45,7 +45,7 @@ class Player:
         unit.update_index()
 
     def movement_phase(self,phase):
-      self.game.log("Player "+str(self.player_index)+" Phase "+str(phase)+":")
+      # self.game.log("Player "+str(self.player_index)+" Phase "+str(phase)+":")
       for unit in self.units:
           self.game.movement.move(phase, unit,self.game.generate_state())
 

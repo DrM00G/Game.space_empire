@@ -17,7 +17,7 @@ class Colonyship(Unit):
       self.exists=False
     def state(self):
       return {"type": self.name,
-            "unit_num":self.unit_index,
+            "num":self.unit_index,
             "coords":self.coords,
             "technology":{"defense": self.defense,"attack": self.attack,"movement": self.movement},
             "hits_left":self.armor,
