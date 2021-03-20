@@ -21,15 +21,12 @@ class MovementEngine:
                     Move = unit.player.strat.decide_ship_movement(unit.name,unit.unit_index,game_state)
                     # print(str(unit.coords)+","+str(Move))
                     self.board.update_position(unit, Move)
-          
-                    unit.player.game.log("Player "+str(unit.player_index)+" "+str(unit.name)+" "+str(unit.unit_index)+": "+str(unit.coords)+" -> "+str((unit.coords[0]+Move[0],
-                                            unit.coords[1]+Move[1])))
-
+                    if unit.coords!=(unit.coords[0]+Move[0],unit.coords[1]+Move[1]):
+                        unit.player.game.log("Player "+str(unit.player_index)+" "+str(unit.name)+" "+str(unit.unit_index)+": "+str(unit.coords)+" -> "+str((unit.coords[0]+Move[0],unit.coords[1]+Move[1])))
                     
-                    unit.coords = (unit.coords[0]+Move[0],
-                                            unit.coords[1]+Move[1])
-                else:
-                  unit.player.game.log("Unit at "+str(unit.coords)+" stopped to fight")
+                    unit.coords = (unit.coords[0]+Move[0],unit.coords[1]+Move[1])
+                # else:
+                #   unit.player.game.log("Unit at "+str(unit.coords)+" stopped to fight")
 
             
                     

@@ -13,9 +13,6 @@ from strategies.level2strats.slinkystrats.Berserkerstrat import BerserkerStrateg
 def run_individual_game(stratA, stratB, game_numb):
     # print("Game numb:"+str(game_numb))
     random.seed(game_numb+1)
-    numb_collect = []
-    for n in range(5):
-        numb_collect.append(math.ceil(10*random.random()))
 
     stratA.player_index = 0
     stratB.player_index = 1
@@ -27,8 +24,7 @@ def run_individual_game(stratA, stratB, game_numb):
     player1 = Player(1, stratB, (3, 6), game=new_game)
     new_game.setup([player0, player1])
     winner = new_game.run_until_winner()
-    print(winner)
-    print(numb_collect)
+    print("Winner: "+str(winner))
     return(winner)
 
 

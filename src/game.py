@@ -72,11 +72,14 @@ class Game:
         self.log("")
         for player in self.players:
             for unit in player.units:
-                self.log("Player "+str(player.player_index)+" " +
+                if unit.name!="Colony":
+                    self.log("Player "+str(player.player_index)+" " +
                          unit.name+" "+str(unit.unit_index)+": "+str(unit.coords))
-        self.log("")
+                else:
+                    self.log("Player "+str(player.player_index)+" Homeworld "+": "+str(unit.coords))
+            self.log("")
+        
         self.log("END OF TURN "+str(self.turn_numb)+" MOVEMENT PHASE")
-        self.log("")
 
     def combat_phase(self):
         self.phase = "Combat"
@@ -84,9 +87,7 @@ class Game:
         self.log("BEGINNING OF TURN "+str(self.turn_numb)+" COMBAT PHASE")
         self.log("")
         self.combat.complete_combat_phase()
-        self.log("")
         self.log("END OF TURN "+str(self.turn_numb)+" COMBAT PHASE")
-        self.log("")
 
     def choose_winner(self, loser):
         # print("Winner is Player"+str(abs(loser-1)))
@@ -106,11 +107,10 @@ class Game:
             # self.log(self.board.board_dict)
             # print("Fight")
             self.combat_phase()
-            if self.level >= 3 and self.winner == None:
-                self.economic_phase()
+            # if self.level >= 3 and self.winner == None:
+            #     self.economic_phase()
             # if self.turn_numb>50:
             #   print(self.board.board_dict)
-            print(self.turn_numb)
             self.turn_numb += 1
             if self.turn_numb > 5:
                 self.winner = 2

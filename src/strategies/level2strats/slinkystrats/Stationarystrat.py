@@ -12,6 +12,7 @@ class StationaryStrategy:
         for unit in combat_state:
             if unit['player'] != self.player_number:
                 if unit['type'] not in ['Homeworld', 'Colony']:
+                    # print(str(self.player_number)+" vs "+str(unit['player'])+"   1")
                     return {
                         'player': unit['player'],
                         'type': unit['type'],
@@ -20,6 +21,7 @@ class StationaryStrategy:
 
         for unit in combat_state:
             if unit['player'] != self.player_number:
+                # print(str(self.player_number)+" vs "+str(unit['player'])+"   2")
                 return {
                     'player': unit['player'],
                     'type': unit['type'],

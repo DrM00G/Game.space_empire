@@ -15,7 +15,7 @@ class EconomicEngine:
       self.get_cp(player.units)
       self.game.log("CP: "+str(player.CP))
       self.maintnance(player.units,player)
-      # self.buy_stuff(player)
+      self.buy_stuff(player)
 
     def get_cp(self,units):
       for unit in units:

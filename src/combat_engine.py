@@ -61,34 +61,33 @@ class CombatEngine:
         order=[]
         for unit in self.board.board_dict[coord]["units"]:
             order.append(unit)
-        # seperations=[[]for n in range(6)]
-        # for player in range(2):
-        #   for unit in self.board.board_dict[coord]["units"]:
-        #     if unit.player_index == player:
-        #       if unit.screaned == False and unit.exists==True:
-        #         seperations[unit.tactics].append(unit)
-        # seperations=seperations[::-1]
-        # for i in range(6):
-        #   for unit in seperations[i]:
-        #     order.append(unit)
         return sorted(order,key = lambda unit:(unit.tactics,-unit.player.player_index,-unit.unit_index),reverse=True)
 
     def complete_combat_phase(self):
         self.kill_bystanders(self.locate_combat())
+        if len(self.locate_combat())>0:
+            self.game.log("Combat Locations:")
         for key in self.locate_combat():
-          self.game.log([(unit.unit_index,unit.player_index) for unit in self.combat_order(key)])
+            for unit in self.combat_order(key):
+                self.game.log("Player "+str(unit.player_index)+" "+str(unit.name)+" "+str(unit.unit_index))
+        next_coord=[key for key in self.locate_combat()][0]
         while len(self.locate_combat())>0 and self.game.winner==None:
           combat_coord=[key for key in self.locate_combat()][0]
-          if(len(self.locate_combat())==1):
-            self.game.log("New combat tile")
+          if(len(self.locate_combat())==next_coord):
+            self.game.log("Combat at "+str(next_coord))
+            if len(self.locate_combat())>1:
+                next_coord=[key for key in self.locate_combat()][1]
+            else:
+                next_coord=None
           #SCREAN
           order = self.combat_order(combat_coord)
           for unit in order:
             if unit.exists and combat_coord in [key for key in self.locate_combat()] and self.game.winner==None and unit.name!="Colony":
-              target=self.locate_combat()[combat_coord][unit.player.strat.decide_which_unit_to_attack(self.locate_combat()[combat_coord], combat_coord,unit.name,unit.unit_index)['number']]
+              target=unit.player.strat.decide_which_unit_to_attack(self.locate_combat()[combat_coord], combat_coord,unit.name,unit.unit_index)
+            #   print(target)
               enemy="no" 
               for vs_unit in self.combat_order(combat_coord):
-                if vs_unit.unit_index==target["num"] and vs_unit.player_index!=unit.player_index:
+                if vs_unit.unit_index==target["number"] and vs_unit.player_index!=unit.player_index:
                   enemy=vs_unit
               if enemy != "no":
                 self.do_combat(unit,enemy)
